@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Busine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL", "SQL\SQL.csproj", "{0578B8AE-D389-411B-AC19-EFB045D467E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppClinica", "WebAppClinica\WebAppClinica.csproj", "{9B9F231B-A744-4A76-B451-A1F6809918F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0578B8AE-D389-411B-AC19-EFB045D467E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0578B8AE-D389-411B-AC19-EFB045D467E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0578B8AE-D389-411B-AC19-EFB045D467E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B9F231B-A744-4A76-B451-A1F6809918F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9F231B-A744-4A76-B451-A1F6809918F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9F231B-A744-4A76-B451-A1F6809918F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9F231B-A744-4A76-B451-A1F6809918F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
