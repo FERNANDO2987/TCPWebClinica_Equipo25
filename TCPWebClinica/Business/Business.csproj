@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccesoSQL\AccesoDatos.cs" />
+    <Compile Include="Interfaces\IAccesoDatos.cs" />
+    <Compile Include="Interfaces\IEspecialidadModule.cs" />
     <Compile Include="Models\Especialidad.cs" />
     <Compile Include="Models\EstadoTurno.cs" />
     <Compile Include="Models\HorarioDeTrabajo.cs" />
@@ -49,14 +52,11 @@
     <Compile Include="Models\Paciente.cs" />
     <Compile Include="Models\Turno.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Modules\EspecialidadModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Modules\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

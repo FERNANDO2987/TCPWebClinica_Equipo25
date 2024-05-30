@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\classdiagram2.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
       "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\classdiagram2.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\modules\\especialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\modules\\especialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\interfaces\\iespecialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\interfaces\\iespecialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\accesosql\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\accesosql\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\interfaces\\iaccesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\interfaces\\iaccesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,8 +59,8 @@
       "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\horariodetrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 170,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -73,20 +97,114 @@
               "Name": "ST:1330258491:0:{71f361cc-493f-47c0-923f-f2570b6f8618}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Tablas.sql ",
+              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
+              "RelativeDocumentMoniker": "SQL\\Tablas\\Tablas.sql",
+              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
+              "RelativeToolTip": "SQL\\Tablas\\Tablas.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-30T01:43:56.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ClassDiagram2.cd",
               "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\ClassDiagram2.cd",
               "RelativeDocumentMoniker": "Business\\ClassDiagram2.cd",
               "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\ClassDiagram2.cd",
               "RelativeToolTip": "Business\\ClassDiagram2.cd",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2024-05-30T00:29:01.432Z",
+              "WhenOpened": "2024-05-30T01:37:36.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "EspecialidadModule.cs",
+              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Modules\\EspecialidadModule.cs",
+              "RelativeDocumentMoniker": "Business\\Modules\\EspecialidadModule.cs",
+              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Modules\\EspecialidadModule.cs",
+              "RelativeToolTip": "Business\\Modules\\EspecialidadModule.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAADsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T01:29:45.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Turno.cs",
+              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Turno.cs",
+              "RelativeDocumentMoniker": "Business\\Models\\Turno.cs",
+              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Turno.cs",
+              "RelativeToolTip": "Business\\Models\\Turno.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:07:38.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Especialidad.cs",
+              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Especialidad.cs",
+              "RelativeDocumentMoniker": "Business\\Models\\Especialidad.cs",
+              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Especialidad.cs",
+              "RelativeToolTip": "Business\\Models\\Especialidad.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T00:13:49.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IEspecialidadModule.cs",
+              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Interfaces\\IEspecialidadModule.cs",
+              "RelativeDocumentMoniker": "Business\\Interfaces\\IEspecialidadModule.cs",
+              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Interfaces\\IEspecialidadModule.cs",
+              "RelativeToolTip": "Business\\Interfaces\\IEspecialidadModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T01:30:18.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\AccesoSQL\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "Business\\AccesoSQL\\AccesoDatos.cs",
+              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\AccesoSQL\\AccesoDatos.cs",
+              "RelativeToolTip": "Business\\AccesoSQL\\AccesoDatos.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T01:25:40.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IAccesoDatos.cs",
+              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Interfaces\\IAccesoDatos.cs",
+              "RelativeDocumentMoniker": "Business\\Interfaces\\IAccesoDatos.cs",
+              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Interfaces\\IAccesoDatos.cs",
+              "RelativeToolTip": "Business\\Interfaces\\IAccesoDatos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-30T01:24:55.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "ObraSocial.cs",
               "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\ObraSocial.cs",
               "RelativeDocumentMoniker": "Business\\Models\\ObraSocial.cs",
@@ -99,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "EstadoTurno.cs",
               "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\EstadoTurno.cs",
               "RelativeDocumentMoniker": "Business\\Models\\EstadoTurno.cs",
@@ -112,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "Usuario.cs",
               "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Business\\Models\\Usuario.cs",
@@ -125,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "Medico.cs",
               "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Medico.cs",
               "RelativeDocumentMoniker": "Business\\Models\\Medico.cs",
@@ -138,20 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Turno.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Turno.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\Turno.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Turno.cs",
-              "RelativeToolTip": "Business\\Models\\Turno.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:07:38.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "Paciente.cs",
               "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Paciente.cs",
               "RelativeDocumentMoniker": "Business\\Models\\Paciente.cs",
@@ -164,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "HorarioDeTrabajo.cs",
               "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\HorarioDeTrabajo.cs",
               "RelativeDocumentMoniker": "Business\\Models\\HorarioDeTrabajo.cs",
@@ -173,19 +278,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-30T00:16:33.749Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Especialidad.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Especialidad.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\Especialidad.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Especialidad.cs",
-              "RelativeToolTip": "Business\\Models\\Especialidad.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:13:49.877Z",
               "EditorCaption": ""
             }
           ]
