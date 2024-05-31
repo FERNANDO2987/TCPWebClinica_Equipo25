@@ -50,6 +50,7 @@
     <Compile Include="Models\Medico.cs" />
     <Compile Include="Models\ObraSocial.cs" />
     <Compile Include="Models\Paciente.cs" />
+    <Compile Include="Models\Recepcionista.cs" />
     <Compile Include="Models\Turno.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Modules\EspecialidadModule.cs" />
