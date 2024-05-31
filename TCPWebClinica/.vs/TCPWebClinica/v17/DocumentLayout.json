@@ -1,66 +1,82 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\",
+  "WorkspaceRootPath": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\agregarusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\agregarusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\classdiagram2.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\classdiagram2.cd||{59B0B277-7DDF-4E36-A3ED-02DAC5B9E2FA}|"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\modificarusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\modificarusuario.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\especialidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\especialidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\modules\\especialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\modules\\especialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\agregarespecialidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\agregarespecialidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\interfaces\\iespecialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\interfaces\\iespecialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\modificarespecialidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\modificarespecialidad.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\accesosql\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\accesosql\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\modificarobrasocial.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\modificarobrasocial.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\interfaces\\iaccesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\interfaces\\iaccesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\obrassociales.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\obrassociales.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\agregarobrasocial.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\agregarobrasocial.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\modificarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\modificarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\obrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\obrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\agregarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\agregarturno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\estadoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\estadoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\turnos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\turnos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\modificarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\modificarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\horariodetrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\horariodetrabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\agregarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\agregarmedico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpwebclinica_equipo25\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\medicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\medicos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\modificarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\modificarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\agregarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\agregarpaciente.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\pacientes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\pacientes.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\webappclinica\\mimaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{9B9F231B-A744-4A76-B451-A1F6809918F3}|WebAppClinica\\WebAppClinica.csproj|solutionrelative:webappclinica\\mimaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,327 +86,266 @@
       "DocumentGroups": [
         {
           "DockedWidth": 170,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0504ff91-9d61-11d0-a794-00a0c9110051}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1330258491:0:{71f361cc-493f-47c0-923f-f2570b6f8618}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Tablas.sql ",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
-              "RelativeDocumentMoniker": "SQL\\Tablas\\Tablas.sql",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
-              "RelativeToolTip": "SQL\\Tablas\\Tablas.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-30T01:43:56.657Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ClassDiagram2.cd",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\ClassDiagram2.cd",
-              "RelativeDocumentMoniker": "Business\\ClassDiagram2.cd",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\ClassDiagram2.cd",
-              "RelativeToolTip": "Business\\ClassDiagram2.cd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000463|",
-              "WhenOpened": "2024-05-30T01:37:36.244Z",
+              "DocumentIndex": 5,
+              "Title": "ModificarEspecialidad.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarEspecialidad.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\ModificarEspecialidad.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarEspecialidad.aspx",
+              "RelativeToolTip": "WebAppClinica\\ModificarEspecialidad.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:51:00.665Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "EspecialidadModule.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Modules\\EspecialidadModule.cs",
-              "RelativeDocumentMoniker": "Business\\Modules\\EspecialidadModule.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Modules\\EspecialidadModule.cs",
-              "RelativeToolTip": "Business\\Modules\\EspecialidadModule.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAAADsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:29:45.319Z",
+              "Title": "AgregarEspecialidad.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarEspecialidad.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\AgregarEspecialidad.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarEspecialidad.aspx",
+              "RelativeToolTip": "WebAppClinica\\AgregarEspecialidad.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:50:39.533Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Turno.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Turno.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\Turno.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Turno.cs",
-              "RelativeToolTip": "Business\\Models\\Turno.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:07:38.288Z",
+              "Title": "Especialidad.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Especialidad.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\Especialidad.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Especialidad.aspx",
+              "RelativeToolTip": "WebAppClinica\\Especialidad.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:50:22.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModificarUsuario.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarUsuario.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\ModificarUsuario.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarUsuario.aspx",
+              "RelativeToolTip": "WebAppClinica\\ModificarUsuario.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:49:23.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Especialidad.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Especialidad.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\Especialidad.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Especialidad.cs",
-              "RelativeToolTip": "Business\\Models\\Especialidad.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:13:49.877Z",
+              "Title": "AgregarUsuario.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarUsuario.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\AgregarUsuario.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarUsuario.aspx",
+              "RelativeToolTip": "WebAppClinica\\AgregarUsuario.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:49:04.248Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IEspecialidadModule.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Interfaces\\IEspecialidadModule.cs",
-              "RelativeDocumentMoniker": "Business\\Interfaces\\IEspecialidadModule.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Interfaces\\IEspecialidadModule.cs",
-              "RelativeToolTip": "Business\\Interfaces\\IEspecialidadModule.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:30:18.857Z",
+              "DocumentIndex": 0,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Login.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\Login.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Login.aspx",
+              "RelativeToolTip": "WebAppClinica\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:48:17.377Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "AccesoDatos.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\AccesoSQL\\AccesoDatos.cs",
-              "RelativeDocumentMoniker": "Business\\AccesoSQL\\AccesoDatos.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\AccesoSQL\\AccesoDatos.cs",
-              "RelativeToolTip": "Business\\AccesoSQL\\AccesoDatos.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAAABwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:25:40.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IAccesoDatos.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Interfaces\\IAccesoDatos.cs",
-              "RelativeDocumentMoniker": "Business\\Interfaces\\IAccesoDatos.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Interfaces\\IAccesoDatos.cs",
-              "RelativeToolTip": "Business\\Interfaces\\IAccesoDatos.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T01:24:55.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ObraSocial.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\ObraSocial.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\ObraSocial.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\ObraSocial.cs",
-              "RelativeToolTip": "Business\\Models\\ObraSocial.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:24:35.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "EstadoTurno.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\EstadoTurno.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\EstadoTurno.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\EstadoTurno.cs",
-              "RelativeToolTip": "Business\\Models\\EstadoTurno.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:21:38.325Z",
+              "Title": "ModificarObraSocial.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarObraSocial.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\ModificarObraSocial.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarObraSocial.aspx",
+              "RelativeToolTip": "WebAppClinica\\ModificarObraSocial.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:46:54.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\Usuario.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Usuario.cs",
-              "RelativeToolTip": "Business\\Models\\Usuario.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:18:02.281Z",
+              "Title": "AgregarObraSocial.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarObraSocial.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\AgregarObraSocial.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarObraSocial.aspx",
+              "RelativeToolTip": "WebAppClinica\\AgregarObraSocial.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:45:28.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Medico.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Medico.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\Medico.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Medico.cs",
-              "RelativeToolTip": "Business\\Models\\Medico.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:11:57.471Z",
+              "DocumentIndex": 7,
+              "Title": "ObrasSociales.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ObrasSociales.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\ObrasSociales.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ObrasSociales.aspx",
+              "RelativeToolTip": "WebAppClinica\\ObrasSociales.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:44:55.765Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Paciente.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Paciente.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\Paciente.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Paciente.cs",
-              "RelativeToolTip": "Business\\Models\\Paciente.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAABQAAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T23:49:35.515Z",
+              "Title": "ModificarTurno.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarTurno.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\ModificarTurno.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarTurno.aspx",
+              "RelativeToolTip": "WebAppClinica\\ModificarTurno.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:43:54.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AgregarTurno.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarTurno.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\AgregarTurno.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarTurno.aspx",
+              "RelativeToolTip": "WebAppClinica\\AgregarTurno.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:43:34.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Turnos.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Turnos.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\Turnos.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Turnos.aspx",
+              "RelativeToolTip": "WebAppClinica\\Turnos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:43:16.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ModificarMedico.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarMedico.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\ModificarMedico.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarMedico.aspx",
+              "RelativeToolTip": "WebAppClinica\\ModificarMedico.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:42:22.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "HorarioDeTrabajo.cs",
-              "DocumentMoniker": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\HorarioDeTrabajo.cs",
-              "RelativeDocumentMoniker": "Business\\Models\\HorarioDeTrabajo.cs",
-              "ToolTip": "D:\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\HorarioDeTrabajo.cs",
-              "RelativeToolTip": "Business\\Models\\HorarioDeTrabajo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-30T00:16:33.749Z",
+              "Title": "AgregarMedico.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarMedico.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\AgregarMedico.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarMedico.aspx",
+              "RelativeToolTip": "WebAppClinica\\AgregarMedico.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:42:03.585Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 230,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Medicos.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Medicos.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\Medicos.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Medicos.aspx",
+              "RelativeToolTip": "WebAppClinica\\Medicos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:41:13.225Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ModificarPaciente.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarPaciente.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\ModificarPaciente.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\ModificarPaciente.aspx",
+              "RelativeToolTip": "WebAppClinica\\ModificarPaciente.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:40:41.089Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AgregarPaciente.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarPaciente.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\AgregarPaciente.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\AgregarPaciente.aspx",
+              "RelativeToolTip": "WebAppClinica\\AgregarPaciente.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:39:51.777Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Pacientes.aspx",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Pacientes.aspx",
+              "RelativeDocumentMoniker": "WebAppClinica\\Pacientes.aspx",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\Pacientes.aspx",
+              "RelativeToolTip": "WebAppClinica\\Pacientes.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:39:09.558Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:135:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:138:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:137:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:141:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:143:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:144:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MiMaster.Master",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\MiMaster.Master",
+              "RelativeDocumentMoniker": "WebAppClinica\\MiMaster.Master",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebAppClinica\\MiMaster.Master",
+              "RelativeToolTip": "WebAppClinica\\MiMaster.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-31T20:37:40.185Z",
+              "EditorCaption": ""
             }
           ]
         }
