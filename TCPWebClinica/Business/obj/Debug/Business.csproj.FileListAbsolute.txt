@@ -4,3 +4,9 @@ C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\
 C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
 C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.dll
 C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.pdb
+D:\TCPFinal\TCPWebClinica\Business\bin\Debug\Business.dll
+D:\TCPFinal\TCPWebClinica\Business\bin\Debug\Business.pdb
+D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.csproj.AssemblyReference.cache
+D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.dll
+D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.pdb

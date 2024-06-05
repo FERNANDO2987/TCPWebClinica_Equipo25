@@ -1,0 +1,44 @@
+﻿body {
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1px;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+
+.product-image {
+    max-width: 280px; /* Establece el ancho máximo de la imagen */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+}
+
+
+
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+   
+}
+
+
+.bold-text {
+    font-weight: bold;
+}
+
+

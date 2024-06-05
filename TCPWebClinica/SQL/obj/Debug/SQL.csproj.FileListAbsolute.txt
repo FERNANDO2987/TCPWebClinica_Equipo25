@@ -1,0 +1,6 @@
+D:\TCPFinal\TCPWebClinica\SQL\bin\Debug\SQL.dll
+D:\TCPFinal\TCPWebClinica\SQL\bin\Debug\SQL.pdb
+D:\TCPFinal\TCPWebClinica\SQL\obj\Debug\SQL.csproj.AssemblyReference.cache
+D:\TCPFinal\TCPWebClinica\SQL\obj\Debug\SQL.csproj.CoreCompileInputs.cache
+D:\TCPFinal\TCPWebClinica\SQL\obj\Debug\SQL.dll
+D:\TCPFinal\TCPWebClinica\SQL\obj\Debug\SQL.pdb

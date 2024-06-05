@@ -1,0 +1,27 @@
+﻿body {
+}
+
+
+
+.card-img-top {
+    width: 50%; /* Asegura que la imagen ocupe el ancho completo del contenedor */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    object-fit: cover; /* Corta la imagen para llenar el contenedor sin distorsión */
+}
+
+#imageContainer {
+    width: 20%;
+    overflow: hidden;
+    position: relative;
+}
+
+    #imageContainer img {
+        width: 40%;
+        height: auto;
+        display: none; /* Oculta todas las imágenes por defecto */
+        transition: opacity 0.5s ease;
+    }
+
+        #imageContainer img:first-child {
+            display: block; /* Muestra solo la primera imagen al cargar */
+        }

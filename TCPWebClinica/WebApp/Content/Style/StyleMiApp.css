@@ -1,0 +1,17 @@
+﻿body {
+
+}
+
+.bienvenidos-message {
+    font-size: 5em;
+    text-align: center;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+}
