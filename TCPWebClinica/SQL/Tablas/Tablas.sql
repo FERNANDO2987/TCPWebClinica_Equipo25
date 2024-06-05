@@ -5,7 +5,10 @@ GO
 
 Create Table[dbo].[Especialidad]
 (
-  Id int Identity(1,1) Primary Key,
-  Nombre Nvarchar(100) not null
+  [Id] int Identity(1,1) Primary Key,
+  [Nombre] Nvarchar(100) NOT NULL,
+  [CreatedDate] [datetime] NOT NULL,
+  [Deleted] [bit] NOT NULL,
+  [DeleteDate] [datetime] NULL,
    
 )
