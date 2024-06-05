@@ -15,6 +15,7 @@ namespace Business.Modules
         public EspecialidadModule(IAccesoDatos accesoDatos)
         {
             _accesoDatos = accesoDatos;
+            listarEspecialidad();
         }
         public Especialidad agregarEspecialidad(Especialidad especialidad)
         {
@@ -31,7 +32,7 @@ namespace Business.Modules
             var result = new List<Especialidad>();
             try
             {
-                _accesoDatos.setearConsulta("Select Id,Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio  From ARTICULOS");
+                _accesoDatos.setearConsulta("ObtenerEspecialidad");
                 _accesoDatos.ejecutarLectura();
 
                 while (_accesoDatos.Lector.Read())
