@@ -21,6 +21,9 @@ namespace WebApp
             // Crear una instancia de AccesoDatos 
             IAccesoDatos accesoDatos = new AccesoDatos();
 
+            EspecialidadModule especialidadModule = new EspecialidadModule(accesoDatos);
+            especialidadModule.listarEspecialidad();
+
        /*     // Crear una instancia de ImagenesModule, pasando el accesoDatos
             DetalleModule moduloDetalle = new DetalleModule(accesoDatos);
 
