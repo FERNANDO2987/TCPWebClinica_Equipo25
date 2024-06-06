@@ -12,7 +12,14 @@ Create Table[dbo].[Especialidad]
   [DeleteDate] [datetime] NULL,
    
 )
-
+CREATE TABLE[dbo].[ObraSocial](
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Nombre] VARCHAR(50) NOT NULL,
+	[Descripcion] VARCHAR(100) NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+)
 go
 
 --Caso para insertar

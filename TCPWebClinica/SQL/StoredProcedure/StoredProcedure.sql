@@ -89,3 +89,52 @@ BEGIN
     -- Devuelve el resultado
     SELECT CAST(@Result AS BIT) AS 'Result';
 END;
+
+GO
+USE [TCPClinica_DB]
+GO
+/****** Object:  StoredProcedure [dbo].[AgregarObraSocial]    Script Date: 6/6/2024 16:27:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[AgregarObraSocial] @Nombre varchar(50), @Descripcion varchar(100)
+AS
+INSERT INTO ObraSocial(Nombre,Descripcion,CreatedDate,Deleted,DeleteDate)
+VALUES(@Nombre,@Descripcion,GETDATE(),0,NULL)
+GO
+/****** Object:  StoredProcedure [dbo].[EliminarObraSocial]    Script Date: 6/6/2024 16:27:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EliminarObraSocial] @Id int
+AS
+UPDATE ObraSocial
+SET Deleted = 1, DeleteDate = GETDATE()
+WHERE Id = @Id
+
+GO
+/****** Object:  StoredProcedure [dbo].[LeerObrasSociales]    Script Date: 6/6/2024 16:27:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[LeerObrasSociales]
+AS
+SELECT Id, Nombre, Descripcion FROM ObraSocial
+WHERE Deleted = 0
+
+GO
+/****** Object:  StoredProcedure [dbo].[ModificarObraSocial]    Script Date: 6/6/2024 16:27:50 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[ModificarObraSocial] @Nombre varchar(50), @Descripcion varchar(100), @Id int
+AS
+UPDATE ObraSocial
+SET Nombre = @Nombre, Descripcion = @Descripcion
+WHERE Id = @Id
+
+GO
