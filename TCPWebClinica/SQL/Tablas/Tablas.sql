@@ -12,3 +12,8 @@ Create Table[dbo].[Especialidad]
   [DeleteDate] [datetime] NULL,
    
 )
+
+go
+
+--Caso para insertar
+INSERT INTO Especialidad(Nombre,CreatedDate,Deleted,DeleteDate) VALUES ('Pediatria','2024-06-05',0,null);
