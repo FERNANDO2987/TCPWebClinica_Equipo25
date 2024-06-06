@@ -3,40 +3,24 @@
   "WorkspaceRootPath": "D:\\TCPFinal\\TCPWebClinica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|d:\\tcpfinal\\tcpwebclinica\\webapp\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|d:\\tcpfinal\\tcpwebclinica\\webapp\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|D:\\TCPFinal\\TCPWebClinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|d:\\tcpfinal\\tcpwebclinica\\webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|d:\\tcpfinal\\tcpwebclinica\\webapp\\detalle.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\detalle.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpfinal\\tcpwebclinica\\business\\modules\\especialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\modules\\especialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|d:\\tcpfinal\\tcpwebclinica\\webapp\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|d:\\tcpfinal\\tcpwebclinica\\webapp\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|D:\\TCPFinal\\TCPWebClinica\\sql\\storedprocedure\\storedprocedure.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\storedprocedure\\storedprocedure.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpfinal\\tcpwebclinica\\business\\modules\\especialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\modules\\especialidadmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpfinal\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|d:\\tcpfinal\\tcpwebclinica\\webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|d:\\tcpfinal\\tcpwebclinica\\webapp\\productos.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 170,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -95,6 +79,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Tablas.sql ",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
+              "RelativeDocumentMoniker": "SQL\\Tablas\\Tablas.sql",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
+              "RelativeToolTip": "SQL\\Tablas\\Tablas.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-06T00:21:31.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Productos.aspx",
               "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx",
               "RelativeDocumentMoniker": "WebApp\\Productos.aspx",
@@ -107,84 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Productos.aspx.cs",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx.cs",
-              "RelativeDocumentMoniker": "WebApp\\Productos.aspx.cs",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx.cs",
-              "RelativeToolTip": "WebApp\\Productos.aspx.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAAB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T01:46:50.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Detalle.aspx.cs",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Detalle.aspx.cs",
-              "RelativeDocumentMoniker": "WebApp\\Detalle.aspx.cs",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Detalle.aspx.cs",
-              "RelativeToolTip": "WebApp\\Detalle.aspx.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAACMAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T01:45:33.013Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Tablas.sql ",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
-              "RelativeDocumentMoniker": "SQL\\Tablas\\Tablas.sql",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
-              "RelativeToolTip": "SQL\\Tablas\\Tablas.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-05T01:38:08.645Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Carrito.aspx",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Carrito.aspx",
-              "RelativeDocumentMoniker": "WebApp\\Carrito.aspx",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Carrito.aspx",
-              "RelativeToolTip": "WebApp\\Carrito.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-05T01:48:57.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Carrito.aspx.cs",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Carrito.aspx.cs",
-              "RelativeDocumentMoniker": "WebApp\\Carrito.aspx.cs",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Carrito.aspx.cs",
-              "RelativeToolTip": "WebApp\\Carrito.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T01:46:21.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Default.aspx.cs",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Default.aspx.cs",
-              "RelativeDocumentMoniker": "WebApp\\Default.aspx.cs",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Default.aspx.cs",
-              "RelativeToolTip": "WebApp\\Default.aspx.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T01:46:19.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "StoredProcedure.sql ",
               "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\SQL\\StoredProcedure\\StoredProcedure.sql",
               "RelativeDocumentMoniker": "SQL\\StoredProcedure\\StoredProcedure.sql",
@@ -196,20 +115,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
+              "Title": "Productos.aspx.cs",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx.cs",
+              "RelativeDocumentMoniker": "WebApp\\Productos.aspx.cs",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx.cs",
+              "RelativeToolTip": "WebApp\\Productos.aspx.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAACMAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-05T01:46:50.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "EspecialidadModule.cs",
               "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Modules\\EspecialidadModule.cs",
               "RelativeDocumentMoniker": "Business\\Modules\\EspecialidadModule.cs",
               "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\Business\\Modules\\EspecialidadModule.cs",
               "RelativeToolTip": "Business\\Modules\\EspecialidadModule.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAABkAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T01:39:24.081Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Productos.aspx.designer.cs",
               "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx.designer.cs",
               "RelativeDocumentMoniker": "WebApp\\Productos.aspx.designer.cs",
@@ -222,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Detalle.aspx",
               "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Detalle.aspx",
               "RelativeDocumentMoniker": "WebApp\\Detalle.aspx",
@@ -235,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "Recepcionista.cs",
               "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Models\\Recepcionista.cs",
               "RelativeDocumentMoniker": "Business\\Models\\Recepcionista.cs",
