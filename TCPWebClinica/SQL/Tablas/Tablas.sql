@@ -20,6 +20,16 @@ CREATE TABLE[dbo].[ObraSocial](
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
 )
+CREATE TABLE [dbo].[Usuarios](
+	[Id] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	[NombreUsuario] [varchar](50) NOT NULL UNIQUE,
+	[Password] [varchar](50) NOT NULL,
+	[Email] [varchar](100) NOT NULL,
+	[Rol] [char](1) NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+	)
 go
 
 --Caso para insertar

@@ -13,7 +13,7 @@ namespace Business.Models
         public string Apellido { get; set; }
         public string Email { get; set; }
         public string Contraseña { get; set; }
-        public string Rol { get; set; }  // Puede ser "Usuario" o "Admin"
+        public char Rol { get; set; }  // Puede ser 'A', 'R' o  'M'
 
     }
 }
