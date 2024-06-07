@@ -28,32 +28,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="Productos.aspx">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Cartilla.aspx">Cartilla</a>
-                            </li>
+                           
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="Turnos.aspx">Turnos</a>
-                            </li>
+                         
 
-                            <li class="nav-item">
-                                <a class="nav-link" href="Pacientes.aspx">Pacientes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Recepcionistas.aspx">Recepcionistas</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="Obras Sociales.aspx">Obras Sociales</a>
-                            </li>
+                         
 
                         </ul>
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link carrito-link" href="Carrito.aspx">
-                                    <img src="Content/Imagenes/carrito3.jpg" alt="Carrito" class="carrito-img">
-                                </a>
-                            </li>
-                        </ul>
+                       
                     </div>
                 </div>
             </nav>

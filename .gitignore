@@ -39,3 +39,5 @@ TCPWebClinica/.vs/TCPWebClinica/v17/.suo
 TCPWebClinica/.vs/TCPWebClinica/config/applicationhost.config
 /TCPWebClinica/.vs/TCPWebClinica/FileContentIndex/4ee0986d-2399-4408-a647-8965adf7749e.vsidx
 /TCPWebClinica/.vs/TCPWebClinica/FileContentIndex
+TCPWebClinica/Business/bin/Debug/Business.dll
+TCPWebClinica/Business/bin/Debug/Business.pdb
