@@ -19,43 +19,62 @@ namespace Business.Modules
         }
         public Especialidad agregarEspecialidad(Especialidad especialidad)
         {
-            var error = "";
-            var result = new Especialidad();
-
+           
 
             try
             {
-                _accesoDatos.setearConsulta("AgregarEspecilidad");
+                // Set the stored procedure and parameters
+                _accesoDatos.setearConsulta("AgregarEspecialidad");
+                _accesoDatos.setearParametro("@Id", especialidad.Id.ToString()); // Assuming Id is provided for updates, else should be set to a default value
+                _accesoDatos.setearParametro("@Nombre", especialidad.Nombre ?? throw new ArgumentException("La descripción de la categoría no puede ser nula o vacía.", nameof(especialidad.Nombre)));
 
-                _accesoDatos.setearParametro("@Nombre", especialidad.Nombre ?? throw new ArgumentException("El código del artículo no puede ser nulo o vacío.", nameof(categorias.Descripcion)));
 
-                // Ejecutar la consulta y obtener el ID generado automáticamente
+                // Execute the query
                 _accesoDatos.ejecutarLectura();
 
+                // Verifica si la lectura tiene filas y obtiene el ID generado
                 if (_accesoDatos.Lector.HasRows)
                 {
                     while (_accesoDatos.Lector.Read())
                     {
-                        result.Id = Convert.ToInt32(_accesoDatos.Lector[0]);
-                        result.Nombre= especialidad.Nombre;
+                        var idValue = _accesoDatos.Lector[0];
+                        if (idValue is int idInt)
+                        {
+                            especialidad.Id = idInt;
+                        }
+                        else if (idValue is decimal idDecimal)
+                        {
+                            especialidad.Id = (int)idDecimal;
+                        }
+                        else if (idValue is long idLong)
+                        {
+                            especialidad.Id = (int)idLong;
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException("Tipo de ID desconocido.");
+                        }
                     }
                 }
 
-                
+              
+             
 
             }
             catch (Exception ex)
             {
-                error = "Error de conexion de SQL " + ex.Message;
+                // Handle exceptions appropriately
+                throw new Exception("Error de conexión de SQL: " + ex.Message, ex);
             }
             finally
             {
+                // Ensure the connection is closed
                 _accesoDatos.cerrarConexion();
             }
 
-            return result;
-
+            return especialidad;
         }
+
 
         public bool eliminarEspecilidad(int id)
         {
