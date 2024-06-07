@@ -30,7 +30,7 @@ namespace Business.AccesoSQL
 
         public void setearConsulta(string consulta)
         {
-            comando.CommandType = System.Data.CommandType.Text;
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.CommandText = consulta;
 
 
