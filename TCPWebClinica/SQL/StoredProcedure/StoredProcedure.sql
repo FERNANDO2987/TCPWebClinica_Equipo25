@@ -137,4 +137,49 @@ UPDATE ObraSocial
 SET Nombre = @Nombre, Descripcion = @Descripcion
 WHERE Id = @Id
 
+GO            
+            /****** SP [dbo].[Usuarios] ******/ 
+
+/****** Object:  StoredProcedure [dbo].[AgregarUsuario]    Script Date: 7/6/2024 18:31:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[AgregarUsuario] @NombreUsuario varchar(50), @Password varchar(50), @Email varchar(100), @Rol char(1)
+AS
+INSERT INTO Usuarios( NombreUsuario, Password, Email, Rol, CreatedDate, Deleted, DeleteDate)
+VALUES(@NombreUsuario, @Password, @Email, @Rol, GETDATE(), 0, NULL)
+GO
+
+/****** Object:  StoredProcedure [dbo].[EliminarUsuario]    Script Date: 7/6/2024 18:31:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EliminarUsuario] @Id int
+AS
+UPDATE Usuarios
+SET Deleted = 1, DeleteDate = GETDATE()
+WHERE Id = @Id 
+GO
+/****** Object:  StoredProcedure [dbo].[LeerUsuarios]    Script Date: 7/6/2024 18:31:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[LeerUsuarios]
+AS
+Select Id, NombreUsuario, Password, Email, Rol FROM Usuarios
+WHERE Deleted = 0
+GO
+/****** Object:  StoredProcedure [dbo].[ModificarUsuario]    Script Date: 7/6/2024 18:31:28 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[ModificarUsuario] @Id int, @NombreUsuario varchar(50), @Password varchar(50), @Email varchar(100), @Rol char(1)
+AS
+UPDATE Usuarios
+SET NombreUsuario = @NombreUsuario, Password = @Password, Email = @Email, Rol = @Rol
+WHERE Id = @Id
 GO
