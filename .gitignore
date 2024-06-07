@@ -37,3 +37,15 @@ TCPWebClinica/WebApp/bin/WebApp.pdb
 TCPWebClinica/.vs/TCPWebClinica/v17/DocumentLayout.json
 TCPWebClinica/.vs/TCPWebClinica/v17/.suo
 TCPWebClinica/.vs/TCPWebClinica/config/applicationhost.config
+*.vsidx
+TCPWebClinica/.vs/TCPWebClinica/v17/DocumentLayout.json
+TCPWebClinica/Business/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.cache
+TCPWebClinica/.vs/TCPWebClinica/v17/.suo
+*.dll
+TCPWebClinica/Business/bin/Debug/Business.dll
+TCPWebClinica/Business/obj/Debug/Business.dll
+TCPWebClinica/Business/obj/Debug/Business.pdb
+*.config
+/TCPWebClinica
+TCPWebClinica/.vs/TCPWebClinica/config/applicationhost.config
