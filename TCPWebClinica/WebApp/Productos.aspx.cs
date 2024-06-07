@@ -24,6 +24,15 @@ namespace WebApp
             EspecialidadModule especialidadModule = new EspecialidadModule(accesoDatos);
             especialidadModule.listarEspecialidad();
 
+            var especialidad = new Especialidad()
+            {
+           
+                Nombre = "UCO 2"
+
+            };
+
+            var result = especialidadModule.agregarEspecialidad(especialidad);
+
        /*     // Crear una instancia de ImagenesModule, pasando el accesoDatos
             DetalleModule moduloDetalle = new DetalleModule(accesoDatos);
 
