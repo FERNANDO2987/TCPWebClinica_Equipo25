@@ -183,3 +183,135 @@ UPDATE Usuarios
 SET NombreUsuario = @NombreUsuario, Password = @Password, Email = @Email, Rol = @Rol
 WHERE Id = @Id
 GO
+            /****** SP [dbo].[Administrador] ******/ 
+/****** Object:  StoredProcedure [dbo].[AgregarAdministrador]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[AgregarAdministrador] @Nombre varchar(50), @Apellido varchar(50), @Email varchar(100)
+AS
+INSERT INTO Administrador(Nombre, Apellido, Email, CreatedDate, Deleted, DeleteDate)
+VALUES(@Nombre,@Apellido,@Email,GETDATE(),0,NULL)
+GO
+/****** Object:  StoredProcedure [dbo].[EliminarAdministrador]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EliminarAdministrador] @Id int
+AS
+UPDATE Administrador
+SET Deleted = 1, DeleteDate = GETDATE()
+where Id = @Id
+GO
+/****** Object:  StoredProcedure [dbo].[LeerAdministradores]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[LeerAdministradores]
+AS 
+SELECT Id, Nombre, Apellido, Email FROM Administrador
+WHERE Deleted = 0
+GO
+/****** Object:  StoredProcedure [dbo].[ModificarAdministrador]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[ModificarAdministrador] @Id int, @Nombre varchar(50), @Apellido varchar(50), @Email varchar(100)
+AS
+UPDATE Administrador
+SET Nombre = @Nombre, Apellido = @Apellido, Email = @Email
+where Id = @Id
+GO
+            /****** SP [dbo].[Recepcionista] ******/ 
+/****** Object:  StoredProcedure [dbo].[AgregarRecepcionista]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[AgregarRecepcionista] @Nombre varchar(50), @Apellido varchar(50), @Email varchar(100)
+AS
+INSERT INTO Recepcionista(Nombre, Apellido, Email, CreatedDate, Deleted, DeleteDate)
+VALUES(@Nombre,@Apellido,@Email,GETDATE(),0,NULL)
+GO
+/****** Object:  StoredProcedure [dbo].[EliminarRecepcionista]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EliminarRecepcionista] @Id int
+AS
+UPDATE Recepcionista
+SET Deleted = 1, DeleteDate = GETDATE()
+where Id = @Id
+GO
+/****** Object:  StoredProcedure [dbo].[LeerRecepcionistas]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[LeerRecepcionistas]
+AS 
+SELECT Id, Nombre, Apellido, Email FROM Recepcionista
+WHERE Deleted = 0
+GO
+/****** Object:  StoredProcedure [dbo].[ModificarRecepcionista]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[ModificarRecepcionista] @Id int, @Nombre varchar(50), @Apellido varchar(50), @Email varchar(100)
+AS
+UPDATE Recepcionista
+SET Nombre = @Nombre, Apellido = @Apellido, Email = @Email
+where Id = @Id
+GO
+
+            /****** SP [dbo].[EstadoTurno] ******/ 
+/****** Object:  StoredProcedure [dbo].[AgregarEstadoTurno]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[AgregarEstadoTurno] @Estado varchar(50)
+AS
+INSERT INTO EstadoTurno(Estado, CreatedDate, Deleted, DeleteDate)
+VALUES(@Estado,GETDATE(),0,NULL)
+GO
+/****** Object:  StoredProcedure [dbo].[EliminarEstadoTurno]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[EliminarEstadoTurno] @Id int
+AS
+UPDATE EstadoTurno
+SET Deleted = 1, DeleteDate = GETDATE()
+where Id = @Id
+GO
+/****** Object:  StoredProcedure [dbo].[LeerEstadoTurno]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[LeerEstadoTurno]
+AS 
+SELECT Id, Estado FROM EstadoTurno
+WHERE Deleted = 0
+GO
+/****** Object:  StoredProcedure [dbo].[ModificarEstadoTurno]    Script Date: 8/6/2024 00:04:49 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[ModificarEstadoTurno] @Id int, @Estado varchar(50)
+AS
+UPDATE EstadoTurno
+SET Estado = @Estado
+where Id = @Id
+GO
+
+

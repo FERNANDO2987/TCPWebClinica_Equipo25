@@ -30,6 +30,31 @@ CREATE TABLE [dbo].[Usuarios](
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
 	)
+	CREATE TABLE [dbo].[Administrador](
+	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY,
+	[Nombre] [varchar](50) NOT NULL,
+	[Apellido] [varchar](50) NOT NULL,
+	[Email] [varchar](100) NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+	)
+CREATE TABLE [dbo].[Recepcionista](
+	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY,
+	[Nombre] [varchar](50) NOT NULL,
+	[Apellido] [varchar](50) NOT NULL,
+	[Email] [varchar](100) NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+	)
+CREATE TABLE [dbo].[EstadoTurno](
+	[Id] [int] NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Estado] [varchar](50) NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+)
 go
 
 --Caso para insertar
