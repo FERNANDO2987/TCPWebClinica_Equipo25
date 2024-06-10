@@ -41,3 +41,7 @@ TCPWebClinica/.vs/TCPWebClinica/config/applicationhost.config
 /TCPWebClinica/.vs/TCPWebClinica/FileContentIndex
 TCPWebClinica/Business/bin/Debug/Business.dll
 TCPWebClinica/Business/bin/Debug/Business.pdb
+TCPWebClinica/.vs/TCPWebClinica/v17/DocumentLayout.json
+TCPWebClinica/Business/obj/Debug/Business.csproj.CoreCompileInputs.cache
+TCPWebClinica/Business/obj/Debug/DesignTimeResolveAssemblyReferences.cache
+*.cache
