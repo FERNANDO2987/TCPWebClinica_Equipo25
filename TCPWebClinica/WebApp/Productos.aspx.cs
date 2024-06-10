@@ -14,12 +14,13 @@ namespace WebApp
 {
     public partial class Productos : System.Web.UI.Page
     {
-      /*  protected List<ListarArticulosEimagen> Imagenes { get; set; }*/
+        /*  protected List<ListarArticulosEimagen> Imagenes { get; set; }*/
+
+        // Crear una instancia de AccesoDatos 
+        IAccesoDatos accesoDatos = new AccesoDatos();
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            // Crear una instancia de AccesoDatos 
-            IAccesoDatos accesoDatos = new AccesoDatos();
 
             EspecialidadModule especialidadModule = new EspecialidadModule(accesoDatos);
             especialidadModule.listarEspecialidad();
@@ -33,14 +34,39 @@ namespace WebApp
 
             var result = especialidadModule.agregarEspecialidad(especialidad);
 
-       /*     // Crear una instancia de ImagenesModule, pasando el accesoDatos
-            DetalleModule moduloDetalle = new DetalleModule(accesoDatos);
-
-            // Llamar al método listarImagenes()
-            Imagenes = moduloDetalle.listarArticulosEimagnes();
-*/
+            UsuariosModule usuariosModule = new UsuariosModule(accesoDatos);
 
 
+
+            /*
+                        var usuario = new Usuario
+                        {
+                            Id = 0, 
+                            Nombre = "TestUser", 
+                            Contraseña = "Test",
+                            Email = "a",
+                            Rol = new Rol
+                           {
+                               Id = 3
+                           }
+                        };
+                        var resultUsuario = usuariosModule.agregarUsuario(usuario);*/
+            /*
+                        var listar = usuariosModule.listarUsuarios();
+
+                        var r = listar;*/
+
+
+/*
+            var result2 = usuariosModule.eliminarUsuario(1);
+
+            var r = result2;*/
+
+              RolModule rolModule = new RolModule(accesoDatos);
+
+            var r = rolModule.ObtenerRolPorId(3);
+
+            var m = r;
 
         }
 
