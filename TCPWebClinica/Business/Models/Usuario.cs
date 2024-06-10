@@ -10,10 +10,9 @@ namespace Business.Models
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
         public string Email { get; set; }
         public string Contraseña { get; set; }
-        public char Rol { get; set; }  // Puede ser 'A', 'R' o  'M'
+        public Rol Rol { get; set; }  // Puede ser 'A', 'R' o  'M'
 
     }
 }
