@@ -12,7 +12,7 @@ namespace Business.Interfaces
         List<ObraSocial> listarObraSociales();
         ObraSocial agregarObraSocial(ObraSocial obraSocial);
         bool eliminarObraSocial(int id);
-        void modificarObraSocial(ObraSocial obraSocial);
+  
 
     }
 }
