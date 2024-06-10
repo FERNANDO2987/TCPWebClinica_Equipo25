@@ -32,6 +32,7 @@ namespace Business.AccesoSQL
         {
             comando.CommandType = System.Data.CommandType.StoredProcedure;
             comando.CommandText = consulta;
+            comando.Parameters.Clear(); // Limpiar parámetros antes de cada ejecución
 
 
         }
@@ -50,7 +51,7 @@ namespace Business.AccesoSQL
             catch (Exception ex)
             {
 
-                throw ex;
+                throw new Exception("Error al ejecutar la lectura: " + ex.Message, ex);
             }
 
         }
