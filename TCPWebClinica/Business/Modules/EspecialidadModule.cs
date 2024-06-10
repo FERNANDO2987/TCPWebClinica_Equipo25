@@ -84,8 +84,13 @@ namespace Business.Modules
                 _accesoDatos.setearParametro("@Id", id.ToString()); // Convertir el ID a string
                 _accesoDatos.ejecutarLectura(); // Ejecutar la acción de eliminación
 
+                if (_accesoDatos.Lector.Read())
+                {
+                    bool resultado = _accesoDatos.Lector.GetBoolean(0);
+                    return resultado;
+                }
 
-                return true;
+                return false;
             }
             catch (Exception ex)
             {
@@ -132,27 +137,6 @@ namespace Business.Modules
             }
         }
 
-        public void modificarEspecilidad(Especialidad especialidad)
-        {
-            string error = "";
-
-            try
-            {
-                _accesoDatos.setearConsulta("ModificarEspecilidad");
-                _accesoDatos.setearParametro("@Id", especialidad.Id.ToString());
-                _accesoDatos.setearParametro("@Nombre", especialidad.Nombre);
-
-
-                _accesoDatos.ejecutarLectura();
-            }
-            catch (Exception ex)
-            {
-                error = "Error de conexion de SQL " + ex.Message;
-            }
-            finally
-            {
-                _accesoDatos.cerrarConexion();
-            }
-        }
+     
     }
 }
