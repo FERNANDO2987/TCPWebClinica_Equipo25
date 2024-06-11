@@ -44,6 +44,9 @@
     <Compile Include="AccesoSQL\AccesoDatos.cs" />
     <Compile Include="Interfaces\IAccesoDatos.cs" />
     <Compile Include="Interfaces\IEspecialidadModule.cs" />
+    <Compile Include="Interfaces\IObraSocialModule.cs" />
+    <Compile Include="Interfaces\IRolModule.cs" />
+    <Compile Include="Interfaces\IUsuariosModule.cs" />
     <Compile Include="Models\Especialidad.cs" />
     <Compile Include="Models\EstadoTurno.cs" />
     <Compile Include="Models\HorarioDeTrabajo.cs" />
@@ -54,6 +57,9 @@
     <Compile Include="Models\Turno.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Modules\EspecialidadModule.cs" />
+    <Compile Include="Modules\ObraSocialModule.cs" />
+    <Compile Include="Modules\RolModule.cs" />
+    <Compile Include="Modules\UsuariosModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

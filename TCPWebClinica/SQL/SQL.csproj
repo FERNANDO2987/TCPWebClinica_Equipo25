@@ -44,7 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StoredProcedure\StoredProcedure.sql" />
+    <Content Include="StoredProcedure\SPEspecialidades.sql" />
+    <Content Include="StoredProcedure\SPObraSocial.sql" />
+    <Content Include="StoredProcedure\SPRol.sql" />
+    <Content Include="StoredProcedure\SPUsuario.sql" />
     <Content Include="Tablas\Tablas.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
