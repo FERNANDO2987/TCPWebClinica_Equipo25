@@ -57,5 +57,17 @@ CREATE TABLE [dbo].[EstadoTurno](
 )
 go
 
+--Estado de Turno
+Create Table[dbo].[EstadoTurno]
+(
+  [Id] int Identity(1,1) Primary Key,
+  [Codigo] Nvarchar(50) NOT NULL,
+  [Nombre] Nvarchar(100) NOT NULL,
+  [CreatedDate] [datetime] NOT NULL,
+  [Deleted] [bit] NOT NULL,
+  [DeleteDate] [datetime] NULL,
+   
+)
+
 --Caso para insertar
 INSERT INTO Especialidad(Nombre,CreatedDate,Deleted,DeleteDate) VALUES ('Pediatria','2024-06-05',0,null);
