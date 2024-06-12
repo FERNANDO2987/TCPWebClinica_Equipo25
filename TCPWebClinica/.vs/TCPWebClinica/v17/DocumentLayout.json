@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\webapp\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\sql\\storedprocedure\\sppacientes.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\storedprocedure\\sppacientes.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\sql\\storedprocedure\\storedprocedure.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\storedprocedure\\storedprocedure.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\webapp\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\masterpage.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\carde\\source\\repos\\tpc\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebApp\\Turnos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
@@ -42,6 +42,10 @@
       "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\recepcionista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\sql\\storedprocedure\\sppacientes.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\storedprocedure\\sppacientes.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|c:\\users\\maximo\\desktop\\tcpwebclinica_equipo25\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
       "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
@@ -53,7 +57,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 170,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -69,20 +73,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "SPPacientes.sql ",
+              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\StoredProcedure\\SPPacientes.sql",
+              "RelativeDocumentMoniker": "SQL\\StoredProcedure\\SPPacientes.sql",
+              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\StoredProcedure\\SPPacientes.sql",
+              "RelativeToolTip": "SQL\\StoredProcedure\\SPPacientes.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-12T20:51:35.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "Business\\Models\\Usuario.cs",
               "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\Business\\Models\\Usuario.cs",
               "RelativeToolTip": "Business\\Models\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABDAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-07T21:07:06.53Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "MasterPage.Master",
               "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebApp\\MasterPage.Master",
               "RelativeDocumentMoniker": "WebApp\\MasterPage.Master",
@@ -90,11 +106,12 @@
               "RelativeToolTip": "WebApp\\MasterPage.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-07T19:29:51.125Z"
+              "WhenOpened": "2024-06-07T19:29:51.125Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Tablas.sql ",
               "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
               "RelativeDocumentMoniker": "SQL\\Tablas\\Tablas.sql",
@@ -106,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Productos.aspx",
               "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\WebApp\\Productos.aspx",
               "RelativeDocumentMoniker": "WebApp\\Productos.aspx",
@@ -114,18 +131,8 @@
               "RelativeToolTip": "WebApp\\Productos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-06-05T01:50:30.082Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StoredProcedure.sql ",
-              "DocumentMoniker": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\StoredProcedure\\StoredProcedure.sql",
-              "RelativeDocumentMoniker": "SQL\\StoredProcedure\\StoredProcedure.sql",
-              "ToolTip": "C:\\Users\\Maximo\\Desktop\\TCPWebClinica_Equipo25\\TCPWebClinica\\SQL\\StoredProcedure\\StoredProcedure.sql",
-              "RelativeToolTip": "SQL\\StoredProcedure\\StoredProcedure.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-05T01:39:00.771Z"
+              "WhenOpened": "2024-06-05T01:50:30.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

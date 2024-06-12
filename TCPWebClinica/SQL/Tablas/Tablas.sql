@@ -74,6 +74,30 @@ CREATE TABLE [dbo].[EstadoTurno](
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
 )
+create table [dbo].[Medicos](
+	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY,
+	[Nombre] [varchar](50) NOT NULL,
+	[Apellido] [varchar](50) NOT NULL,
+	[Email] [varchar](100) NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+)
+create table [dbo].[Especialidades_X_Medico](
+	[IdMedico] [int] not null foreign key references Medicos(id),
+	[IdEspecialidad] [int] not null foreign key references Especialidad(id),
+	primary key (IdMedico, IdEspecialidad)
+)
+create table [dbo].[Turnos](
+	[Id] [int] not null primary key identity(1,1),
+	[IdPaciente] [int] not null foreign key references Pacientes(id),
+	[IdMedico] [int] not null foreign key references Medicos(id),
+	[IdEspecialidad] [int] not null foreign key references Especialidad(id), 
+	[Observaciones] [varchar](500) null,
+	[FechaTurno] [datetime] not null,
+	[IdEstadoTurno] [int] not null foreign key references EstadoTurno(id),
+	[IdObraSocial] [int] null foreign key references ObraSocial(id)
+)
 go
 
 --Estado de Turno
