@@ -53,6 +53,20 @@ CREATE TABLE [dbo].[Recepcionista](
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
 	)
+CREATE TABLE [dbo].[Pacientes](
+	[Id] [int] NOT NULL PRIMARY KEY IDENTITY(1,1),
+    [Apellido] [varchar](50) NOT NULL,
+    [Nombre] [varchar](50) NOT NULL,
+	[FechaNacimiento] [date] NOT NULL,
+	[DNI] [varchar] (15),
+	[Email] [varchar](100) NULL,
+	[Telefono] [varchar](20) NOT NULL,
+	[Sexo] [char] NOT NULL,
+	[IdObrasocial] [int] NULL FOREIGN KEY REFERENCES ObraSocial(id),
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+)
 CREATE TABLE [dbo].[EstadoTurno](
 	[Id] [int] NOT NULL PRIMARY KEY IDENTITY(1,1),
 	[Estado] [varchar](50) NOT NULL,
