@@ -25,9 +25,13 @@ namespace Business.Modules
                 // Set the stored procedure and parameters
                 _accesoDatos.setearConsulta("AgregarObraSocial");
                 _accesoDatos.setearParametro("@Id", obraSocial.Id.ToString()); // Assuming Id is provided for updates, else should be set to a default value
-                _accesoDatos.setearParametro("@Nombre", obraSocial.Nombre ?? throw new ArgumentException("El nombre no puede ser nulo o vacía.", nameof(obraSocial.Nombre)));
-                _accesoDatos.setearParametro("@Descripcion", obraSocial.Descripcion ?? throw new ArgumentException("La Descripcion no puede ser nula o vacía.", nameof(obraSocial.Descripcion)));
-
+                _accesoDatos.setearParametro("@Nombre", obraSocial.Nombre ?? throw new ArgumentException("El nombre no puede ser null o vacía.", nameof(obraSocial.Nombre)));
+                _accesoDatos.setearParametro("@Descripcion", obraSocial.Descripcion ?? throw new ArgumentException("La Descripcion no puede ser null o vacía.", nameof(obraSocial.Descripcion)));
+                _accesoDatos.setearParametro("@Direccion", obraSocial.Direccion ?? throw new ArgumentException("La Direccion no puede ser null o vacía.", nameof(obraSocial.Direccion)));
+                _accesoDatos.setearParametro("@Telefono", obraSocial.Telefono ?? throw new ArgumentException("El Telefono no puede ser null o vacía.", nameof(obraSocial.Telefono)));
+                _accesoDatos.setearParametro("@Email", obraSocial.Email ?? throw new ArgumentException("El Email no puede ser null o vacía.", nameof(obraSocial.Email)));
+                _accesoDatos.setearParametro("@Website", obraSocial.Website ?? throw new ArgumentException("El sitio Web no puede ser null o vacía.", nameof(obraSocial.Website)));
+                _accesoDatos.setearParametro("@Activo", obraSocial.Activo.ToString());
                 // Execute the query
                 _accesoDatos.ejecutarLectura();
 
@@ -115,6 +119,11 @@ namespace Business.Modules
                     aux.Id = (int)_accesoDatos.Lector["Id"];
                     aux.Nombre = (string)_accesoDatos.Lector["Nombre"];
                     aux.Descripcion = (string)_accesoDatos.Lector["Descripcion"];
+                    aux.Direccion = (string)_accesoDatos.Lector["Direccion"];
+                    aux.Telefono = (string)_accesoDatos.Lector["Telefono"];
+                    aux.Email = (string)_accesoDatos.Lector["Email"];
+                    aux.Website = (string)_accesoDatos.Lector["Website"];
+                    aux.Activo = (bool)_accesoDatos.Lector["Activo"];
 
                     result.Add(aux);
 

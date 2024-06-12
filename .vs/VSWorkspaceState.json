@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\TCPWebClinica",
+    "\\TCPWebClinica\\Business",
+    "\\TCPWebClinica\\SQL",
+    "\\TCPWebClinica\\SQL\\StoredProcedure"
   ],
-  "SelectedNode": "\\TCPWebClinica.sln",
+  "SelectedNode": "\\TCPWebClinica\\TCPWebClinica.sln",
   "PreviewInSolutionExplorer": false
 }

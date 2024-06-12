@@ -14,8 +14,13 @@ Create Table[dbo].[Especialidad]
 )
 CREATE TABLE[dbo].[ObraSocial](
 	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-	[Nombre] VARCHAR(50) NOT NULL,
-	[Descripcion] VARCHAR(100) NULL,
+	[Nombre] NVARCHAR(100) NOT NULL,
+	[Descripcion] NVARCHAR(200) NOT NULL,
+	[Direccion] NVARCHAR(100) NOT NULL,
+	[Telefono] NVARCHAR(100) NOT NULL,
+	[Email] NVARCHAR(100) NOT NULL,
+	[Website] NVARCHAR(100) NULL,
+	[Activo] BIT NOT NULL,
 	[CreatedDate] [datetime] NOT NULL,
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
@@ -69,5 +74,6 @@ Create Table[dbo].[EstadoTurno]
    
 )
 
---Caso para insertar
-INSERT INTO Especialidad(Nombre,CreatedDate,Deleted,DeleteDate) VALUES ('Pediatria','2024-06-05',0,null);
+
+
+

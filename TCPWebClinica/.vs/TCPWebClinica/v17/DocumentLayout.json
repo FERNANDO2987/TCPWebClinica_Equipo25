@@ -3,30 +3,52 @@
   "WorkspaceRootPath": "D:\\TCPFinal\\TCPWebClinica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpfinal\\tcpwebclinica\\sql\\storedprocedure\\sprol.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\storedprocedure\\sprol.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpfinal\\tcpwebclinica\\business\\modules\\obrasocialmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\modules\\obrasocialmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|D:\\TCPFinal\\TCPWebClinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpfinal\\tcpwebclinica\\business\\models\\obrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\obrasocial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpfinal\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
       "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|d:\\tcpfinal\\tcpwebclinica\\business\\modules\\estadoturnomodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\modules\\estadoturnomodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|D:\\TCPFinal\\TCPWebClinica\\business\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|D:\\TCPFinal\\TCPWebClinica\\business\\models\\recepcionista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\models\\recepcionista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|D:\\TCPFinal\\TCPWebClinica\\webapp\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\FPALACIO\\AppData\\Local\\Temp\\.vsdbgsrc\\fad30302b237d92069815b81c40b3d20103d2bcbac9cabbd0533beb0fb93026c\\PipelineRuntime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|D:\\TCPFinal\\TCPWebClinica\\webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{A0800ECF-413C-4B81-9226-A85626FF2E83}|WebApp\\WebApp.csproj|solutionrelative:webapp\\productos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\FPALACIO\\AppData\\Local\\Temp\\.vsdbgsrc\\f874287db157d1fea2f37e0eeda1c2b261e68ba5047d571e08083492d3c41742\\Control.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|D:\\TCPFinal\\TCPWebClinica\\sql\\storedprocedure\\spestadoturno.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\storedprocedure\\spestadoturno.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpfinal\\tcpwebclinica\\sql\\storedprocedure\\spusuario.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\storedprocedure\\spusuario.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|D:\\TCPFinal\\TCPWebClinica\\business\\modules\\usuariosmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\modules\\usuariosmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpfinal\\tcpwebclinica\\sql\\storedprocedure\\sprol.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\storedprocedure\\sprol.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|D:\\TCPFinal\\TCPWebClinica\\business\\interfaces\\iestadoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7868D00-4A49-4176-A7D3-8476058609D7}|Business\\Business.csproj|solutionrelative:business\\interfaces\\iestadoturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|d:\\tcpfinal\\tcpwebclinica\\sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{0578B8AE-D389-411B-AC19-EFB045D467E4}|SQL\\SQL.csproj|solutionrelative:sql\\tablas\\tablas.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -69,70 +91,111 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SPRol.sql",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\SQL\\StoredProcedure\\SPRol.sql",
-              "RelativeDocumentMoniker": "SQL\\StoredProcedure\\SPRol.sql",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\SQL\\StoredProcedure\\SPRol.sql",
-              "RelativeToolTip": "SQL\\StoredProcedure\\SPRol.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-10T01:20:42.334Z",
+              "Title": "ObraSocialModule.cs",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Modules\\ObraSocialModule.cs",
+              "RelativeDocumentMoniker": "Business\\Modules\\ObraSocialModule.cs",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\Business\\Modules\\ObraSocialModule.cs",
+              "RelativeToolTip": "Business\\Modules\\ObraSocialModule.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAAAH0AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:32:34.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Tablas.sql ",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
-              "RelativeDocumentMoniker": "SQL\\Tablas\\Tablas.sql",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
-              "RelativeToolTip": "SQL\\Tablas\\Tablas.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-10T00:48:42.267Z"
+              "DocumentIndex": 4,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Models\\Paciente.cs",
+              "RelativeDocumentMoniker": "Business\\Models\\Paciente.cs",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\Business\\Models\\Paciente.cs",
+              "RelativeToolTip": "Business\\Models\\Paciente.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:19:49.893Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "Recepcionista.cs",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Models\\Recepcionista.cs",
+              "RelativeDocumentMoniker": "Business\\Models\\Recepcionista.cs",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\Business\\Models\\Recepcionista.cs",
+              "RelativeToolTip": "Business\\Models\\Recepcionista.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:19:24.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EstadoTurnoModule.cs",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Modules\\EstadoTurnoModule.cs",
+              "RelativeDocumentMoniker": "Business\\Modules\\EstadoTurnoModule.cs",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\Business\\Modules\\EstadoTurnoModule.cs",
+              "RelativeToolTip": "Business\\Modules\\EstadoTurnoModule.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAUwEYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T23:46:59.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Productos.aspx",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx",
+              "RelativeDocumentMoniker": "WebApp\\Productos.aspx",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx",
+              "RelativeToolTip": "WebApp\\Productos.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-06-12T00:05:30.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SPEstadoTurno.sql ",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\SQL\\StoredProcedure\\SPEstadoTurno.sql",
+              "RelativeDocumentMoniker": "SQL\\StoredProcedure\\SPEstadoTurno.sql",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\SQL\\StoredProcedure\\SPEstadoTurno.sql",
+              "RelativeToolTip": "SQL\\StoredProcedure\\SPEstadoTurno.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-11T23:48:57.98Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Productos.aspx.cs",
               "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx.cs",
               "RelativeDocumentMoniker": "WebApp\\Productos.aspx.cs",
               "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\WebApp\\Productos.aspx.cs",
               "RelativeToolTip": "WebApp\\Productos.aspx.cs",
-              "ViewState": "AQIAAC8AAAAAAAAAAAAAAEIAAAAMAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAUwFYAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-09T23:52:59.562Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SPUsuario.sql",
-              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\SQL\\StoredProcedure\\SPUsuario.sql",
-              "RelativeDocumentMoniker": "SQL\\StoredProcedure\\SPUsuario.sql",
-              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\SQL\\StoredProcedure\\SPUsuario.sql",
-              "RelativeToolTip": "SQL\\StoredProcedure\\SPUsuario.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-06-10T01:20:51.405Z"
+              "DocumentIndex": 9,
+              "Title": "UsuariosModule.cs",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Modules\\UsuariosModule.cs",
+              "RelativeDocumentMoniker": "Business\\Modules\\UsuariosModule.cs",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\Business\\Modules\\UsuariosModule.cs",
+              "RelativeToolTip": "Business\\Modules\\UsuariosModule.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAAAI4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T23:49:38.939Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Control.cs",
-              "DocumentMoniker": "C:\\Users\\FPALACIO\\AppData\\Local\\Temp\\.vsdbgsrc\\f874287db157d1fea2f37e0eeda1c2b261e68ba5047d571e08083492d3c41742\\Control.cs",
-              "ToolTip": "C:\\Users\\FPALACIO\\AppData\\Local\\Temp\\.vsdbgsrc\\f874287db157d1fea2f37e0eeda1c2b261e68ba5047d571e08083492d3c41742\\Control.cs [Solo lectura]",
-              "ViewState": "AQIAAOYKAAAAAAAAAAAwwPUKAAADAAAA",
+              "DocumentIndex": 10,
+              "Title": "IEstadoTurno.cs",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Interfaces\\IEstadoTurno.cs",
+              "RelativeDocumentMoniker": "Business\\Interfaces\\IEstadoTurno.cs",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\Business\\Interfaces\\IEstadoTurno.cs",
+              "RelativeToolTip": "Business\\Interfaces\\IEstadoTurno.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T22:53:10.8Z",
-              "EditorCaption": " [Solo lectura]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PipelineRuntime.cs",
-              "DocumentMoniker": "C:\\Users\\FPALACIO\\AppData\\Local\\Temp\\.vsdbgsrc\\fad30302b237d92069815b81c40b3d20103d2bcbac9cabbd0533beb0fb93026c\\PipelineRuntime.cs",
-              "ToolTip": "C:\\Users\\FPALACIO\\AppData\\Local\\Temp\\.vsdbgsrc\\fad30302b237d92069815b81c40b3d20103d2bcbac9cabbd0533beb0fb93026c\\PipelineRuntime.cs [Solo lectura]",
-              "ViewState": "AQIAAOMBAAAAAAAAAAAwwPIBAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T00:30:19.26Z",
-              "EditorCaption": " [Solo lectura]"
+              "WhenOpened": "2024-06-11T23:46:32.732Z"
             }
           ]
         },
@@ -245,6 +308,73 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "15d6c609-8cd8-4b34-bdf7-0402780688ba",
+        "Display": 0,
+        "X": 359,
+        "Y": 149,
+        "Width": 934,
+        "Height": 614,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Tablas.sql ",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
+              "RelativeDocumentMoniker": "SQL\\Tablas\\Tablas.sql",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\SQL\\Tablas\\Tablas.sql",
+              "RelativeToolTip": "SQL\\Tablas\\Tablas.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-12T00:24:52.096Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "6095baaf-a924-414d-ac01-3fc3c63324ac",
+        "Display": 0,
+        "X": 168,
+        "Y": 60,
+        "Width": 1107,
+        "Height": 613,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ObraSocial.cs",
+              "DocumentMoniker": "D:\\TCPFinal\\TCPWebClinica\\Business\\Models\\ObraSocial.cs",
+              "RelativeDocumentMoniker": "Business\\Models\\ObraSocial.cs",
+              "ToolTip": "D:\\TCPFinal\\TCPWebClinica\\Business\\Models\\ObraSocial.cs",
+              "RelativeToolTip": "Business\\Models\\ObraSocial.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABAAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T00:25:28.609Z",
+              "EditorCaption": ""
             }
           ]
         }
