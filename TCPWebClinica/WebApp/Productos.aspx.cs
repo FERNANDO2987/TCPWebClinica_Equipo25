@@ -68,6 +68,22 @@ namespace WebApp
 
             var m = r;
 
+            EstadoTurnoModule estadoTurnoModule = new EstadoTurnoModule(accesoDatos);
+
+            var p = new EstadoTurno()
+            {
+                Codigo = "CON",
+                Descripcion = "Confirmado"
+
+
+            };
+
+            var a = estadoTurnoModule.agregarEstadoTurno(p);
+
+            var l = estadoTurnoModule.listarEstadosTurno();
+
+
+
         }
 
 
