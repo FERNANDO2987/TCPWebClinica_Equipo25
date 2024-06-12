@@ -47,6 +47,7 @@
     <Content Include="StoredProcedure\SPEspecialidades.sql" />
     <Content Include="StoredProcedure\SPEstadoTurno.sql" />
     <Content Include="StoredProcedure\SPObraSocial.sql" />
+    <Content Include="StoredProcedure\SPPacientes.sql" />
     <Content Include="StoredProcedure\SPRol.sql" />
     <Content Include="StoredProcedure\SPUsuario.sql" />
     <Content Include="Tablas\Tablas.sql" />
