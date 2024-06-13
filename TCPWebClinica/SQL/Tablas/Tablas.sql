@@ -112,6 +112,19 @@ Create Table[dbo].[EstadoTurno]
    
 )
 
+--HorarioDeTrabajo
+
+Create Table[dbo].[HorarioDeTrabajo]
+(
+  [Id] [int] not null primary key identity(1,1),
+  [HorarioEntrada] DateTime NOT NULL,
+  [HorarioSalida] DateTime NOT NULL,
+  [CreatedDate] [datetime] NOT NULL,
+  [Deleted] [bit] NOT NULL,
+  [DeleteDate] [datetime] NULL
+   
+)
+
 
 
 
