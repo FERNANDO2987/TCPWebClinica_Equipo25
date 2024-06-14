@@ -2,6 +2,11 @@
 --GO
 USE TCPClinica_DB
 GO
+--Rol
+CREATE TABLE [dbo].[Rol](
+	[Id] [int] not null primary key identity(1,1),
+	[Descripcion] [nvarchar](20) not null
+	)
 
 Create Table[dbo].[Especialidad]
 (
