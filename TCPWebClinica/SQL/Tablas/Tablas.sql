@@ -35,7 +35,7 @@ CREATE TABLE [dbo].[Usuarios](
 	[NombreUsuario] [varchar](50) NOT NULL UNIQUE,
 	[Password] [varchar](50) NOT NULL,
 	[Email] [varchar](100) NOT NULL,
-	[Rol] [char](1) NOT NULL,
+	[IdRol] [int] NOT NULL FOREIGN KEY REFERENCES Rol(id),
 	[CreatedDate] [datetime] NOT NULL,
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
