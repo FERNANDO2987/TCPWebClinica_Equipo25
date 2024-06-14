@@ -141,6 +141,26 @@ Create Table[dbo].[Medico]
 )
 
 
+--Paciente
+
+Create Table[dbo].[Paciente]
+(
+  [Id] [int] not null primary key identity(1,1),
+  [HC] int NOT NULL,
+  [Nombre] nvarchar (100) NOT NULL,
+  [Apellido] nvarchar (100) NOT NULL,
+  [Documento] int NOT NULL,
+  [FechaNacimiento] datetime NOT NULL,
+  [Celular] nvarchar (100) NOT NULL,
+  [Email] nvarchar (100) NULL,
+  [Sexo] bit NOT NULL,
+  [IdObraSocial] int NOT NULL foreign key references ObraSocial(Id),
+  [CreatedDate] [datetime] NOT NULL,
+  [Deleted] [bit] NOT NULL,
+  [DeleteDate] [datetime] NULL
+   
+)
+
 
 
 
