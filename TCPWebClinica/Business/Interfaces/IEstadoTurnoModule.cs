@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Business.Interfaces
 {
-    public interface IEstadoTurno
+    public interface IEstadoTurnoModule
     {
         List<EstadoTurno> listarEstadosTurno();
         EstadoTurno agregarEstadoTurno(EstadoTurno turno);
