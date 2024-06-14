@@ -126,5 +126,21 @@ Create Table[dbo].[HorarioDeTrabajo]
 )
 
 
+--Medico
+
+Create Table[dbo].[Medico]
+(
+  [Id] [int] not null primary key identity(1,1),
+  [Nombre] nvarchar NOT NULL,
+  [Apellido] nvarchar NOT NULL,
+  [Email] nvarchar NOT NULL,
+  [CreatedDate] [datetime] NOT NULL,
+  [Deleted] [bit] NOT NULL,
+  [DeleteDate] [datetime] NULL
+   
+)
+
+
+
 
 
