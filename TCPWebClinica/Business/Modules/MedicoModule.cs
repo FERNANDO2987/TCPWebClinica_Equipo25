@@ -8,25 +8,25 @@ using System.Threading.Tasks;
 
 namespace Business.Modules
 {
-    public class EstadoTurnoModule : IEstadoTurnoModule
+    public class MedicoModule : IMedicoModule
     {
-
         private readonly IAccesoDatos _accesoDatos;
-        public EstadoTurnoModule(IAccesoDatos accesoDatos)
+        public MedicoModule(IAccesoDatos accesoDatos) 
         {
-            _accesoDatos = accesoDatos;
-        }
-        public EstadoTurno agregarEstadoTurno(EstadoTurno turno)
+          _accesoDatos = accesoDatos;
+        }   
+        public Medico agregarMedico(Medico medico)
         {
-
             try
             {
-                // Set the stored procedure and parameters
-                _accesoDatos.setearConsulta("AgregarEstadoTurno");
-                _accesoDatos.setearParametro("@Id", turno.Id.ToString()); // Assuming Id is provided for updates, else should be set to a default value
-                _accesoDatos.setearParametro("@Codigo", turno.Codigo ?? throw new ArgumentException("El codigo del Estado del Turno no puede ser null o vacío.", nameof(turno.Codigo)));
-                _accesoDatos.setearParametro("@Descripcion", turno.Descripcion ?? throw new ArgumentException("La Descripcion del Estado del Turno no puede ser null o vacío.", nameof(turno.Codigo)));
+                _accesoDatos.setearConsulta("AgregarMedico");
 
+                // Asegurarse de que el ID siempre se proporciona. Si no hay ID, asumimos que es una nueva inserción.
+                _accesoDatos.setearParametro("@Id", medico.Id.ToString());
+                _accesoDatos.setearParametro("@Nombre", medico.Nombre);
+                _accesoDatos.setearParametro("@Apellido", medico.Apellido);
+                _accesoDatos.setearParametro("@Email", medico.Email);
+    
                 // Execute the query
                 _accesoDatos.ejecutarLectura();
 
@@ -38,15 +38,15 @@ namespace Business.Modules
                         var idValue = _accesoDatos.Lector[0];
                         if (idValue is int idInt)
                         {
-                            turno.Id = idInt;
+                            medico.Id = idInt;
                         }
                         else if (idValue is decimal idDecimal)
                         {
-                            turno.Id = (int)idDecimal;
+                            medico.Id = (int)idDecimal;
                         }
                         else if (idValue is long idLong)
                         {
-                            turno.Id = (int)idLong;
+                            medico.Id = (int)idLong;
                         }
                         else
                         {
@@ -54,6 +54,7 @@ namespace Business.Modules
                         }
                     }
                 }
+
 
             }
             catch (Exception ex)
@@ -67,15 +68,16 @@ namespace Business.Modules
                 _accesoDatos.cerrarConexion();
             }
 
-            return turno;
+            return medico;
         }
 
-        public bool eliminarEstadoTurno(int id)
+        public bool eliminarMedico(int id)
         {
+
             try
             {
 
-                _accesoDatos.setearConsulta("EliminarEstadoTurno");
+                _accesoDatos.setearConsulta("EliminarMedico");
                 _accesoDatos.setearParametro("@Id", id.ToString()); // Convertir el ID a string
 
                 _accesoDatos.ejecutarLectura(); // Ejecutar la acción de eliminación
@@ -99,21 +101,22 @@ namespace Business.Modules
             }
         }
 
-        public List<EstadoTurno> listarEstadosTurno()
+        public List<Medico> listarMedicos()
         {
-            var result = new List<EstadoTurno>();
+            var result = new List<Medico>();
             try
             {
-                _accesoDatos.setearConsulta("ObtenerEstadosTurno");
+                _accesoDatos.setearConsulta("ObtenerMedico");
                 _accesoDatos.ejecutarLectura();
 
                 while (_accesoDatos.Lector.Read())
                 {
-                    EstadoTurno aux = new EstadoTurno();
+                    Medico aux = new Medico();
                     aux.Id = (int)_accesoDatos.Lector["Id"];
-                    aux.Codigo = (string)_accesoDatos.Lector["Codigo"];
-                    aux.Descripcion = (string)_accesoDatos.Lector["Descripcion"];
-                   
+                    aux.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                    aux.Apellido = (string)_accesoDatos.Lector["Apellido"];
+                    aux.Email = (string)_accesoDatos.Lector["Email"];
+                  
 
                     result.Add(aux);
 
@@ -133,5 +136,7 @@ namespace Business.Modules
                 _accesoDatos.cerrarConexion();
             }
         }
+
     }
 }
+
