@@ -163,6 +163,13 @@ Create Table[dbo].[HorarioDeTrabajo]
    
 )
 
+create table [dbo].[Horario_x_Medico](
+	[IdHorario] [int] not null foreign key references HorarioDeTrabajo(id),
+	[IdMedico] [int] not null foreign key references Medicos(id),
+	primary key(IdHorario,IdMedico)
+
+)
+
 
 
 
