@@ -44,7 +44,7 @@
     <Compile Include="AccesoSQL\AccesoDatos.cs" />
     <Compile Include="Interfaces\IAccesoDatos.cs" />
     <Compile Include="Interfaces\IEspecialidadModule.cs" />
-    <Compile Include="Interfaces\IEstadoTurno.cs" />
+    <Compile Include="Interfaces\IEstadoTurnoModule.cs" />
     <Compile Include="Interfaces\IObraSocialModule.cs" />
     <Compile Include="Interfaces\IRolModule.cs" />
     <Compile Include="Interfaces\ITurnoModule.cs" />
