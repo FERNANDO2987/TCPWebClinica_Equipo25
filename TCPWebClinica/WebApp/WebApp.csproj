@@ -14,7 +14,7 @@
     <RootNamespace>WebApp</RootNamespace>
     <AssemblyName>WebApp</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44377</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
@@ -67,7 +67,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CargarMedicos.aspx" />
     <Content Include="Carrito.aspx" />
+    <Content Include="Cartilla.aspx" />
     <Content Include="Content\Imagenes\carrito3.jpg" />
     <Content Include="Content\Style\Style.css" />
     <Content Include="Content\Style\StyleCarrito.css" />
@@ -84,12 +86,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CargarMedicos.aspx.cs">
+      <DependentUpon>CargarMedicos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CargarMedicos.aspx.designer.cs">
+      <DependentUpon>CargarMedicos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cartilla.aspx.cs">
+      <DependentUpon>Cartilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cartilla.aspx.designer.cs">
+      <DependentUpon>Cartilla.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

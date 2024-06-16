@@ -10,3 +10,9 @@ D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.csproj.AssemblyReference.c
 D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
 D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.dll
 D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.pdb
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\bin\Debug\Business.dll
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\bin\Debug\Business.pdb
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.csproj.AssemblyReference.cache
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.dll
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.pdb

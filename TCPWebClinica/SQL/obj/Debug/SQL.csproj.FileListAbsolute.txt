@@ -4,3 +4,9 @@ D:\TCPFinal\TCPWebClinica\SQL\obj\Debug\SQL.csproj.AssemblyReference.cache
 D:\TCPFinal\TCPWebClinica\SQL\obj\Debug\SQL.csproj.CoreCompileInputs.cache
 D:\TCPFinal\TCPWebClinica\SQL\obj\Debug\SQL.dll
 D:\TCPFinal\TCPWebClinica\SQL\obj\Debug\SQL.pdb
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\bin\Debug\SQL.dll
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\bin\Debug\SQL.pdb
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.csproj.AssemblyReference.cache
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.csproj.CoreCompileInputs.cache
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.dll
+C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.pdb
