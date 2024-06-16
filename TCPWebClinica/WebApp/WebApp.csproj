@@ -79,6 +79,8 @@
     <Content Include="Default.aspx" />
     <Content Include="Detalle.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="NuevoPaciente.aspx" />
+    <Content Include="Pacientes.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Script\AgregarCarrito.js" />
     <Content Include="Script\Filtro.js" />
@@ -130,6 +132,20 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoPaciente.aspx.cs">
+      <DependentUpon>NuevoPaciente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoPaciente.aspx.designer.cs">
+      <DependentUpon>NuevoPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pacientes.aspx.cs">
+      <DependentUpon>Pacientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pacientes.aspx.designer.cs">
+      <DependentUpon>Pacientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>

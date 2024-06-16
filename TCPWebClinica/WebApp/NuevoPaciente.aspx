@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="CargarMedicos.aspx.cs" Inherits="WebApp.CargarMedicos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="NuevoPaciente.aspx.cs" Inherits="WebApp.NuevoPaciente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="display:flex; flex-direction:column; margin-top:1em; box-shadow : 0 0 10px black; padding:2em; justify-content:space-around; align-items:center; margin-top: 2em;">
+    <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-top: 2em;">
 
         <div id="titulo" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; margin-bottom: 2em;">
-            <h3>Agregar nuevo Profesional</h3>
+            <h3>Alta Paciente</h3>
         </div>
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: space-around; width: 100%;">
@@ -35,15 +35,8 @@
                     </asp:RadioButtonList>
 
                 </div>
-                <div id="especialidad-ls" style="padding-top: 20px;">
-                    <asp:DropDownList ID="ddlEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true">
-                        <asp:ListItem Text="Especialidad *" />
-                    </asp:DropDownList>
-                </div>
-
             </div>
             <div class="col-2" id="columna2" style="display: flex; flex-direction: column; justify-content: space-around; width: 45%;">
-
                 <div class="form-floating mb-3">
                     <asp:TextBox type="text" ID="email" placeholder="name@example.com" CssClass="form-control" runat="server" />
                     <label for="email">Email</label>
@@ -62,16 +55,13 @@
                     <asp:TextBox type="tel" CssClass="form-control" ID="telefono" placeholder="Telefono" runat="server" />
                     <label for="telefono">Telefono</label>
                 </div>
-
-
             </div>
         </div>
-
         <div id="agregar" class="col-3" style="display: flex; justify-content: space-between; width: 100%; margin-top: 2em;">
             <p>(*) Campos obligatorios</p>
-            <%--<asp:Button Text="Agregar" cssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />--%>
+            <%--<asp:Button Text="Agregar" CssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />--%>
         </div>
 
 
-</div>
+    </div>
 </asp:Content>

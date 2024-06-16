@@ -24,21 +24,17 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
-
-                            <li class="nav-item">
+<%--                            <li class="nav-item">
                                 <a class="nav-link" href="Productos.aspx">Home</a>
-                            </li>
+                            </li>--%>
                             <li class="nav-item">
                                 <a class="nav-link" href="Cartilla.aspx">Cartilla</a>
                             </li>
-                           
-
-                         
-
-                         
-
+                            <li class="nav-item">
+                                <a class="nav-link" href="Pacientes.aspx">Pacientes</a>
+                            </li>
                         </ul>
-                       
+
                     </div>
                 </div>
             </nav>
