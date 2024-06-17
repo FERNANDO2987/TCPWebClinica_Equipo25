@@ -19,5 +19,10 @@ namespace WebApp
             dgvObraSocial.DataSource = moduleObraSocial.listarObraSociales();
             dgvObraSocial.DataBind();
         }
+        protected void dgvObraSocial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var idRow = int.Parse(dgvObraSocial.SelectedDataKey.Value.ToString());
+            Response.Redirect("#");
+        }
     }
 }

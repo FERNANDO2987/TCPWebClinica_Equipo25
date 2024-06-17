@@ -79,6 +79,7 @@
     <Content Include="Default.aspx" />
     <Content Include="Detalle.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="NuevaObraSocial.aspx" />
     <Content Include="NuevoPaciente.aspx" />
     <Content Include="ObrasSociales.aspx" />
     <Content Include="Pacientes.aspx" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NuevaObraSocial.aspx.cs">
+      <DependentUpon>NuevaObraSocial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevaObraSocial.aspx.designer.cs">
+      <DependentUpon>NuevaObraSocial.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoPaciente.aspx.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>

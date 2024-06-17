@@ -7,7 +7,7 @@
         <div class="col-6">
 
             <h3>Obras Sociales</h3>
-            <asp:GridView ID="dgvObraSocial" cssclass="table" autogeneratecolumns="false" runat="server">
+            <asp:GridView ID="dgvObraSocial" OnSelectedIndexChanged="dgvObraSocial_SelectedIndexChanged" DataKeyNames="Id" cssclass="table" autogeneratecolumns="false" runat="server">
                 <Columns>
                     <asp:BoundField HeaderText="ID" DataField="Id"/>
                     <asp:BoundField HeaderText="Obra Social" DataField="Nombre"/>
@@ -23,8 +23,7 @@
                             <a href='<%# Eval("Website", "http://{0}") %>' target="_blank"><%# Eval("Website") %></a>
                         </ItemTemplate>
                     </asp:TemplateField>
-                    <asp:CommandField ShowEditButton="True" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm" />
-                    <asp:CommandField ShowDeleteButton="True" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm"/>
+                    <asp:CommandField ShowSelectButton="True" SelectText="Seleccionar" ControlStyle-CssClass="btn btn-Alert btn-sm"/>
                 </Columns>
             </asp:GridView>
             <asp:Button ID="btnAgregar" Text="Agregar" runat="server" />
