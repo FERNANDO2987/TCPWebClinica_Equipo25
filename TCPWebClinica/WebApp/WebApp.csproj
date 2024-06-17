@@ -80,6 +80,7 @@
     <Content Include="Detalle.aspx" />
     <Content Include="Global.asax" />
     <Content Include="NuevoPaciente.aspx" />
+    <Content Include="ObrasSociales.aspx" />
     <Content Include="Pacientes.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Script\AgregarCarrito.js" />
@@ -139,6 +140,13 @@
     </Compile>
     <Compile Include="NuevoPaciente.aspx.designer.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ObrasSociales.aspx.cs">
+      <DependentUpon>ObrasSociales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ObrasSociales.aspx.designer.cs">
+      <DependentUpon>ObrasSociales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pacientes.aspx.cs">
       <DependentUpon>Pacientes.aspx</DependentUpon>
