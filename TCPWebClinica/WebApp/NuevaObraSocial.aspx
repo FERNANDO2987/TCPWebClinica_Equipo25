@@ -12,33 +12,33 @@
 
             <div class="col-1" id="columna1" style="width: 45%;">
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="Id" placeholder="Id" ReadOnly="true"  runat="server" />
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtId" placeholder="Id" ReadOnly="true"  runat="server" />
                     <label for="Id">ID </label>
                 </div>
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="nombre" placeholder="Nombre" required="true" runat="server" />
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtNombre" placeholder="Nombre" required="true" runat="server" />
                     <label for="nombre">Nombre *</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="Descripcion" placeholder="Descripcion" required="true" runat="server" />
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtDescripcion" placeholder="Descripcion" required="true" runat="server" />
                     <label for="Descripcion">Descripcion *</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" class="form-control" ID="Direccion" placeholder="Direccion" required="true" runat="server" />
+                    <asp:TextBox type="text" class="form-control" ID="txtDireccion" placeholder="Direccion" required="true" runat="server" />
                     <label for="Direccion">Direccion *</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="tel" CssClass="form-control" ID="telefono" placeholder="Telefono" runat="server" />
+                    <asp:TextBox type="tel" CssClass="form-control" ID="txtTelefono" placeholder="Telefono" runat="server" />
                     <label for="telefono">Telefono *</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" ID="email" placeholder="name@example.com" CssClass="form-control" runat="server" />
+                    <asp:TextBox type="text" ID="txtEmail" placeholder="name@example.com" CssClass="form-control" runat="server" />
                     <label for="email">Email *</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="Website" placeholder="NameExample.com" runat="server" />
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtWebsite" placeholder="NameExample.com" runat="server" />
                     <label for="direccion">Sitio Web *</label>
                 </div>
             </div>

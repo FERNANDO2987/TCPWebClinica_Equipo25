@@ -21,8 +21,8 @@ namespace WebApp
         }
         protected void dgvObraSocial_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var idRow = int.Parse(dgvObraSocial.SelectedDataKey.Value.ToString());
-            Response.Redirect("#");
+            var id = int.Parse(dgvObraSocial.SelectedDataKey.Value.ToString());
+            Response.Redirect("NuevaObraSocial.aspx?id=" + id);
         }
     }
 }

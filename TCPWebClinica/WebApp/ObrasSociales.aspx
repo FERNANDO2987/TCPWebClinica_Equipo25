@@ -26,7 +26,7 @@
                     <asp:CommandField ShowSelectButton="True" SelectText="Seleccionar" ControlStyle-CssClass="btn btn-Alert btn-sm"/>
                 </Columns>
             </asp:GridView>
-            <asp:Button ID="btnAgregar" Text="Agregar" runat="server" />
+            <a class="btn btn-primary" href="NuevaObraSocial.aspx">Agregar</a>
 
         </div>
         <div class="col"></div>
