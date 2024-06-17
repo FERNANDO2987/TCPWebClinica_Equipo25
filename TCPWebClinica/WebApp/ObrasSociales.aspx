@@ -23,10 +23,11 @@
                             <a href='<%# Eval("Website", "http://{0}") %>' target="_blank"><%# Eval("Website") %></a>
                         </ItemTemplate>
                     </asp:TemplateField>
+                    <asp:CommandField ShowEditButton="True" ButtonType="Button" ControlStyle-CssClass="btn btn-primary btn-sm" />
+                    <asp:CommandField ShowDeleteButton="True" ButtonType="Button" ControlStyle-CssClass="btn btn-danger btn-sm"/>
                 </Columns>
             </asp:GridView>
             <asp:Button ID="btnAgregar" Text="Agregar" runat="server" />
-
 
         </div>
         <div class="col"></div>
