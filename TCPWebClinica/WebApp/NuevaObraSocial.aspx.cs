@@ -16,12 +16,14 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
             
             if (Request.QueryString["id"] != null)
             {
+                btnAgregar.Visible = false;
+
                 int id = int.Parse(Request.QueryString["id"].ToString());
-                IAccesoDatos accesoDatos = new AccesoDatos();
-                ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
                 ObraSocial os = moduleObraSocial.listarObraSociales().Find(x => x.Id == id);
 
                 txtId.Text = os.Id.ToString();
@@ -30,8 +32,85 @@ namespace WebApp
                 txtDireccion.Text = os.Direccion;  
                 txtEmail.Text = os.Email;
                 txtTelefono.Text = os.Telefono;
-                txtWebsite.Text = os.Website; 
+                txtWebsite.Text = os.Website;
 
+            }
+            else
+            {
+                btnEliminar.Visible = false;
+                btnModificar.Visible = false;
+            }
+            
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                IAccesoDatos accesoDatos = new AccesoDatos();
+                ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
+
+                ObraSocial os = new ObraSocial();
+                os.Nombre = txtNombre.Text;
+                os.Descripcion = txtDescripcion.Text;
+                os.Direccion = txtDireccion.Text;
+                os.Email = txtEmail.Text;
+                os.Telefono = txtTelefono.Text;
+                os.Website = txtWebsite.Text;
+
+                moduleObraSocial.agregarObraSocial(os);
+                Response.Redirect("ObrasSociales.aspx");
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                IAccesoDatos accesoDatos = new AccesoDatos();
+                ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
+                int id = int.Parse(Request.QueryString["id"].ToString());
+                moduleObraSocial.eliminarObraSocial(id);
+                Response.Redirect("ObrasSociales.aspx");
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                IAccesoDatos accesoDatos = new AccesoDatos();
+                ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
+
+                ObraSocial os = new ObraSocial();
+                os.Nombre = txtNombre.Text;
+                os.Descripcion = txtDescripcion.Text;
+                os.Direccion = txtDireccion.Text;
+                os.Email = txtEmail.Text;
+                os.Telefono = txtTelefono.Text;
+                os.Website = txtWebsite.Text;
+
+                moduleObraSocial.agregarObraSocial(os);
+
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }

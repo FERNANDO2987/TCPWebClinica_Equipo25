@@ -31,7 +31,7 @@ namespace Business.Modules
                 _accesoDatos.setearParametro("@Telefono", obraSocial.Telefono ?? throw new ArgumentException("El Telefono no puede ser null o vacía.", nameof(obraSocial.Telefono)));
                 _accesoDatos.setearParametro("@Email", obraSocial.Email ?? throw new ArgumentException("El Email no puede ser null o vacía.", nameof(obraSocial.Email)));
                 _accesoDatos.setearParametro("@Website", obraSocial.Website ?? throw new ArgumentException("El sitio Web no puede ser null o vacía.", nameof(obraSocial.Website)));
-                _accesoDatos.setearParametro("@Activo", obraSocial.Activo.ToString());
+                //_accesoDatos.setearParametro("@Activo", obraSocial.Activo.ToString());
                 // Execute the query
                 _accesoDatos.ejecutarLectura();
 
