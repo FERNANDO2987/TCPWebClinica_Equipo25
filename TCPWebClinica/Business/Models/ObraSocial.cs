@@ -15,6 +15,6 @@ namespace Business.Models
         public string Telefono { get; set; }
         public string Email { get; set; }
         public string Website { get; set; }
-        public bool Activo { get; set; }
+   
     }
 }

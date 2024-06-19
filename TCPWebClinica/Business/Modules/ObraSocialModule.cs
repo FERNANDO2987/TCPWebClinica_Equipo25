@@ -123,7 +123,7 @@ namespace Business.Modules
                     aux.Telefono = (string)_accesoDatos.Lector["Telefono"];
                     aux.Email = (string)_accesoDatos.Lector["Email"];
                     aux.Website = (string)_accesoDatos.Lector["Website"];
-                    aux.Activo = (bool)_accesoDatos.Lector["Activo"];
+                
 
                     result.Add(aux);
 
