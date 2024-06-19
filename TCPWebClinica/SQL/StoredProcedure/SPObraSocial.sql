@@ -21,31 +21,35 @@ CREATE PROCEDURE [dbo].[AgregarObraSocial]
 	@Email NVARCHAR(100),
 	@Website NVARCHAR(100)
 )
-AS 
-BEGIN 	 
+AS
+
+BEGIN 
+ 
+ 	 
 	if (EXISTS (SELECT * FROM [dbo].[ObraSocial] WHERE Id = @Id ))
-	BEGIN
-		UPDATE [dbo].[ObraSocial] 
-		SET  
-		Nombre = @Nombre, 
-		Descripcion =@Descripcion,
-		Direccion =@Direccion,
-		Telefono =@Telefono,
-		Email=@Email,
-		Website=@Website,
-		Activo=1
-		WHERE Id = @Id 
-	END
-	else
-	BEGIN
-		INSERT INTO [dbo].[ObraSocial]
-		VALUES(@Nombre,@Descripcion,@Direccion,@Telefono,@Email,@Website,1,GETDATE(),0,NULL)
+	UPDATE [dbo].[ObraSocial] SET  Nombre = @Nombre, 
+	                               Descripcion = @Descripcion,
+	                               Direccion = @Direccion,
+								   Telefono = @Telefono,
+								   Email = @Email,
+								   Website = @Website
+	
+	                          WHERE Id = @Id
+
+		else
+			BEGIN
+
+INSERT INTO ObraSocial(Nombre,Descripcion,Direccion,Telefono,Email,Website,CreatedDate,Deleted,DeleteDate)
+
+VALUES(@Nombre,@Descripcion,@Direccion,@Telefono,@Email,@Website,GETDATE(),0,NULL)
+
+
 
 			SELECT SCOPE_IDENTITY()
 		END
-
+	
+	
 END
-GO
 
 
 -- AGREGAR (a la version anterior le faltaban datos ) 
