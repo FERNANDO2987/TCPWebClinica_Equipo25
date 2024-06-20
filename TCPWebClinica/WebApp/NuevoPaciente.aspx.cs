@@ -76,13 +76,13 @@ namespace WebApp
                 paciente.Id = int.Parse(txtId.Text);
                 paciente.Apellido = txtApellido.Text;
                 paciente.Nombre = txtNombre.Text;
+                paciente.FechaNacimeinto = DateTime.Parse(fecha.Text);
                 paciente.Documento = txtDni.Text;
-                paciente.Celular = txtTelefono.Text;
                 paciente.Email = txtEmail.Text;
+                paciente.Celular = txtTelefono.Text;
                 paciente.Sexo = ObtenerSexo();
                 paciente.ObraSocial = new ObraSocial();
                 paciente.ObraSocial.Id = int.Parse(ddlObraSocial.SelectedValue);
-                paciente.FechaNacimeinto = DateTime.Parse(fecha.Text);
 
                 module.agregarPaciente(paciente);
 

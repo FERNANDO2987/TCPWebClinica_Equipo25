@@ -31,7 +31,7 @@ namespace Business.Modules
                 _accesoDatos.setearParametro("@Email", paciente.Email);
                 _accesoDatos.setearParametro("@Telefono", paciente.Celular);
                 _accesoDatos.setearParametro("@Sexo", paciente.Sexo);
-                _accesoDatos.setearParametro("@IdObraSocial", paciente.ObraSocial.ToString());
+                _accesoDatos.setearParametro("@IdObraSocial", paciente.ObraSocial.Id.ToString());
                 // Execute the query
                 _accesoDatos.ejecutarAccion();
             }
