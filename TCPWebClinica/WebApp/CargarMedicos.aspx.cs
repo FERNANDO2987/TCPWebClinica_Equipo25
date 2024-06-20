@@ -59,7 +59,7 @@ namespace WebApp
                     Nombre = string.IsNullOrWhiteSpace(txtNombre.Text) ? string.Empty : txtNombre.Text,
                     Email = string.IsNullOrWhiteSpace(txtEmail.Text) ? string.Empty : txtEmail.Text,
                     Especialidades = new List<Especialidad>() { especialidad },
-                    HorarioDeTrabajo = new List<HorarioDeTrabajo>() { horarioDeTrabajo },
+                    //HorarioDeTrabajo = new List<HorarioDeTrabajo>() { horarioDeTrabajo },
                 };
 
                 module.agregarMedico(medico);
@@ -68,7 +68,7 @@ namespace WebApp
             }
             catch (Exception ex)
             {
-                throw ex;
+                //throw ex;
             }
         }
 

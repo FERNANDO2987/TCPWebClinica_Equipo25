@@ -12,56 +12,61 @@
 
             <div class="col-1" id="columna1" style="width: 45%;">
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="nombre" placeholder="Nombre" required="true" runat="server" />
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtId" placeholder="Id" required="true" runat="server" />
+                    <label for="Id">Id *</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtNombre" placeholder="Nombre" required="true" runat="server" />
                     <label for="nombre">Nombre *</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="Apellido" placeholder="Apellido" required="true" runat="server" />
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtApellido" placeholder="Apellido" required="true" runat="server" />
                     <label for="Apellido">Apellido *</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" class="form-control" ID="Dni" placeholder="Dni" required="true" runat="server" />
+                    <asp:TextBox type="text" class="form-control" ID="txtDni" placeholder="Dni" required="true" runat="server" />
                     <label for="Dni">Dni *</label>
                 </div>
 
                 <div id="sexo">
-
                     <asp:RadioButtonList ID="rblist" runat="server">
                         <asp:ListItem Value="m" cssClass="w3-radio" id="rbtnM">Masculino</asp:ListItem>
                         <asp:ListItem Value="f" cssClass="w3-radio" id="rbtnF">Femenino</asp:ListItem>
                         <asp:ListItem Value="x" cssClass="w3-radio" id="rbtnX">Otro</asp:ListItem>
                     </asp:RadioButtonList>
-
                 </div>
+
             </div>
             <div class="col-2" id="columna2" style="display: flex; flex-direction: column; justify-content: space-around; width: 45%;">
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" ID="email" placeholder="name@example.com" CssClass="form-control" runat="server" />
+                    <asp:TextBox type="text" ID="txtEmail" placeholder="name@example.com" CssClass="form-control" runat="server" />
                     <label for="email">Email</label>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="codigoPostal" placeholder="Codigo Postal" runat="server" />
-                    <label for="codigoPostal">Codigo Postal</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="direccion" placeholder="Direccion" runat="server" />
-                    <label for="direccion">Direccion</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="tel" CssClass="form-control" ID="telefono" placeholder="Telefono" runat="server" />
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtTelefono" placeholder="Telefono" runat="server" />
                     <label for="telefono">Telefono</label>
                 </div>
+
+                <div id="obra_social" style="padding-top: 20px;">
+                    <label for="ddlObraSocial">Obra Social *</label>
+                    <asp:DropDownList ID="ddlObraSocial" runat="server" class="form-select" aria-label="Default select example" required="true">
+                        <asp:ListItem Text="Obra Social *" Enabled="false" />
+                    </asp:DropDownList>
+                </div>
+                    <div id="fecha-ls" style="padding-top:20px;">
+
+                        <label for="fecha">Fecha *</label>
+                        <asp:textbox type="date" id="fecha" class="form-select" AutoPostBack="true" onkeydown="return false;" runat="server" OnTextChanged="fecha_TextChanged"></asp:textbox>
+
+                    </div>
             </div>
         </div>
         <div id="agregar" class="col-3" style="display: flex; justify-content: space-between; width: 100%; margin-top: 2em;">
             <p>(*) Campos obligatorios</p>
-            <%--<asp:Button Text="Agregar" CssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />--%>
+            <asp:Button Text="Agregar" cssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />
         </div>
-
-
     </div>
 </asp:Content>

@@ -21,11 +21,6 @@
                     <label for="Apellido">Apellido *</label>
                 </div>
 
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="text" class="form-control" ID="txtDni" placeholder="Dni" required="true" runat="server" />
-                    <label for="Dni">Dni *</label>
-                </div>
-
                 <div id="horarios">
 
                     <div id="hora-he" style="padding-top:20px;">    
@@ -35,20 +30,7 @@
                        </asp:DropDownList>
                     </div>
 
-<%--                    <div id="hora-hs" style="padding-top:20px;">    
-                        <label for="ddlHorarioSalida">Horario Salida *</label>
-                        <asp:DropDownList id="ddlHorarioSalida"  runat="server" class="form-select" aria-label="Default select example" required="true">
-                            <asp:ListItem Text="Horarios *" Enabled="false"/>
-                       </asp:DropDownList>
-                    </div>--%>
-
                 </div>
-                <div id="especialidad-ls" style="padding-top: 20px;">
-                    <asp:DropDownList ID="ddlEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true">
-                        <asp:ListItem Text="Especialidad *" />
-                    </asp:DropDownList>
-                </div>
-
             </div>
             <div class="col-2" id="columna2" style="display: flex; flex-direction: column; justify-content: space-around; width: 45%;">
 
@@ -56,22 +38,11 @@
                     <asp:TextBox type="text" ID="txtEmail" placeholder="name@example.com" CssClass="form-control" required="true" runat="server" />
                     <label for="email">Email *</label>
                 </div>
-
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="codigoPostal" placeholder="Codigo Postal" runat="server" />
-                    <label for="codigoPostal">Codigo Postal</label>
+                <div id="especialidad-ls" style="padding-top: 20px;">
+                    <asp:DropDownList ID="ddlEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true">
+                        <asp:ListItem Text="Especialidad *" />
+                    </asp:DropDownList>
                 </div>
-
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="direccion" placeholder="Direccion" runat="server" />
-                    <label for="direccion">Direccion</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="tel" CssClass="form-control" ID="telefono" placeholder="Telefono" runat="server" />
-                    <label for="telefono">Telefono</label>
-                </div>
-
-
             </div>
         </div>
 

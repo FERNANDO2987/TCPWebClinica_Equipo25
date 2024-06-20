@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Business.AccesoSQL;
+using Business.Interfaces;
+using Business.Modules;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +14,16 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            PacienteModule module = new PacienteModule(accesoDatos);
+            dgvPacientes.DataSource = module.listarPacientes();
+            dgvPacientes.DataBind();
+        }
 
+        protected void dgvPcaientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var id = int.Parse(dgvPacientes.SelectedDataKey.Value.ToString());
+            Response.Redirect("NuevoPaciente.aspx?id=" + id);
         }
     }
 }
