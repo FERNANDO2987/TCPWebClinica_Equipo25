@@ -83,7 +83,48 @@ namespace Business.Modules
 
         public List<Turno> listarTurnos()
         {
-            throw new NotImplementedException();
+            var result = new List<Turno>();
+            try
+            {
+                _accesoDatos.setearConsulta("ObtenerTurnos");
+                _accesoDatos.ejecutarLectura();
+
+                while (_accesoDatos.Lector.Read())
+                {
+                    Turno aux = new Turno();
+                    aux.Id = (int)_accesoDatos.Lector["Id"];
+                    aux.Paciente = new Paciente();
+                    aux.Paciente.Id = (int)_accesoDatos.Lector["IdPaciente"];
+                    aux.Medico = new Medico();
+                    aux.Medico.Id = (int)_accesoDatos.Lector["IdMedico"];
+                    aux.Especialidad = new Especialidad();
+                    aux.Especialidad.Id = (int)_accesoDatos.Lector["IdEspecialidad"];
+                    aux.Observaciones = (string)_accesoDatos.Lector["Observaciones"];
+                    aux.FechaHora = (DateTime)_accesoDatos.Lector["FechaTurno"];
+                    aux.Estado = new EstadoTurno();
+                    aux.Estado.Id = (int)_accesoDatos.Lector["IdEstadoTurno"];
+                    aux.ObraSocial = new ObraSocial();
+                    aux.ObraSocial.Id = (int)_accesoDatos.Lector["IdObraSocial"];
+
+
+
+                    result.Add(aux);
+
+                }
+
+                return result;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error de conexion a SQL: " + ex.Message);
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion();
+            }
         }
     }
 }
