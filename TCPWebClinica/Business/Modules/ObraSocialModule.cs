@@ -135,7 +135,6 @@ namespace Business.Modules
             }
             catch (Exception ex)
             {
-
                 throw new Exception("Error de conexion a SQL: " + ex.Message);
             }
             finally

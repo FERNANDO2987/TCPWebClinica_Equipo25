@@ -47,7 +47,7 @@ namespace WebApp
         {
             try
             {
-                IAccesoDatos accesoDatos = new AccesoDatos();
+                IAccesoDatos accesoDatos = new AccesoDatos();   
                 ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
 
                 ObraSocial os = new ObraSocial();

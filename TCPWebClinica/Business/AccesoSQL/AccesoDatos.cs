@@ -22,8 +22,8 @@ namespace Business.AccesoSQL
 
         public AccesoDatos()
         {
-            //conexion = new SqlConnection("Server=.\\SQLEXPRESS; database=TCPClinica_DB; integrated security=true");
-            conexion = new SqlConnection("Server=NB0ZCJDX\\SQLEXPRESS01; database=TCPClinica_DB; integrated security=true");
+            conexion = new SqlConnection("Server=.\\SQLEXPRESS; database=TCPClinica_DB; integrated security=true");
+            //conexion = new SqlConnection("Server=NB0ZCJDX\\SQLEXPRESS01; database=TCPClinica_DB; integrated security=true");
             comando = new SqlCommand();
 
         }
@@ -54,6 +54,19 @@ namespace Business.AccesoSQL
                 throw new Exception("Error al ejecutar la lectura: " + ex.Message, ex);
             }
 
+        }
+
+        public void ejecutarAccion()
+        {
+            try
+            {
+                comando.Connection = conexion;
+                conexion.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+            }
         }
 
         public void cerrarConexion()

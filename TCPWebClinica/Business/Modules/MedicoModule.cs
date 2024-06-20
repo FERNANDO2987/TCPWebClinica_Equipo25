@@ -1,4 +1,4 @@
-﻿using Business.Interfaces;
+﻿    using Business.Interfaces;
 using Business.Models;
 using System;
 using System.Collections.Generic;
@@ -28,34 +28,7 @@ namespace Business.Modules
                 _accesoDatos.setearParametro("@Email", medico.Email);
     
                 // Execute the query
-                _accesoDatos.ejecutarLectura();
-
-                // Verifica si la lectura tiene filas y obtiene el ID generado
-                if (_accesoDatos.Lector.HasRows)
-                {
-                    while (_accesoDatos.Lector.Read())
-                    {
-                        var idValue = _accesoDatos.Lector[0];
-                        if (idValue is int idInt)
-                        {
-                            medico.Id = idInt;
-                        }
-                        else if (idValue is decimal idDecimal)
-                        {
-                            medico.Id = (int)idDecimal;
-                        }
-                        else if (idValue is long idLong)
-                        {
-                            medico.Id = (int)idLong;
-                        }
-                        else
-                        {
-                            throw new InvalidOperationException("Tipo de ID desconocido.");
-                        }
-                    }
-                }
-
-
+                _accesoDatos.ejecutarAccion();
             }
             catch (Exception ex)
             {

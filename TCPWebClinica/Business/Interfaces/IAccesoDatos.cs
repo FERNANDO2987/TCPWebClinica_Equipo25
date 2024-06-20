@@ -12,6 +12,7 @@ namespace Business.Interfaces
         SqlDataReader Lector { get; }
         void setearConsulta(string consulta);
         void ejecutarLectura();
+        void ejecutarAccion();
         void cerrarConexion();
         void setearParametro(string nombreParametro, string valor);
         void SetearParametroSeguro(string nombreParametro, string valor);
