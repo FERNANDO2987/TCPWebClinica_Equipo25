@@ -90,14 +90,14 @@ Create Table[dbo].[Medico]
 --  [DeleteDate] [datetime] NULL
    
 --)
-CREATE TABLE [dbo].[Pacientes](
+CREATE TABLE [dbo].[Paciente](
 	[Id] [int] NOT NULL PRIMARY KEY IDENTITY(1,1),
-    [Apellido] [varchar](50) NOT NULL,
-    [Nombre] [varchar](50) NOT NULL,
+    [Apellido] [nvarchar](50) NOT NULL,
+    [Nombre] [nvarchar](50) NOT NULL,
 	[FechaNacimiento] [date] NOT NULL,
-	[DNI] [varchar] (15),
-	[Email] [varchar](100) NULL,
-	[Telefono] [varchar](20) NOT NULL,
+	[DNI] [nvarchar] (15),
+	[Email] [nvarchar](100) NULL,
+	[Telefono] [nvarchar](20) NOT NULL,
 	[Sexo] [char] NOT NULL,
 	[IdObrasocial] [int] NULL FOREIGN KEY REFERENCES ObraSocial(id),
 	[CreatedDate] [datetime] NOT NULL,
@@ -113,9 +113,9 @@ CREATE TABLE [dbo].[Pacientes](
 --)
 create table [dbo].[Medicos](
 	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY,
-	[Nombre] [varchar](50) NOT NULL,
-	[Apellido] [varchar](50) NOT NULL,
-	[Email] [varchar](100) NULL,
+	[Nombre] [nvarchar](50) NOT NULL,
+	[Apellido] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](100) NULL,
 	[CreatedDate] [datetime] NOT NULL,
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
@@ -144,7 +144,10 @@ create table [dbo].[Turnos](
 	[Observaciones] [varchar](500) null,
 	[FechaTurno] [datetime] not null,
 	[IdEstadoTurno] [int] not null foreign key references EstadoTurno(id),
-	[IdObraSocial] [int] null foreign key references ObraSocial(id)
+	[IdObraSocial] [int] null foreign key references ObraSocial(id),
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
 )
 go
 
