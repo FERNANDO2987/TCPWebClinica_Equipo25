@@ -8,7 +8,7 @@ namespace Business.Models
 {
      public class Paciente
     {
-        public int IdPaciente { get; set; }
+        public int Id { get; set; }
         public int HistoriaClinica { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }

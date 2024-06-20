@@ -18,5 +18,10 @@ namespace Business.Models
         public EstadoTurno Estado { get; set; } //Relacion con el Estado del Turno
         public ObraSocial ObraSocial { get; set; }  // Relación con ObraSocial
 
+
+        // Propiedades adicionales para obtener fecha y hora separadas
+        public DateTime Fecha => FechaHora.Date;
+        public TimeSpan Hora => FechaHora.TimeOfDay;
+
     }
 }
