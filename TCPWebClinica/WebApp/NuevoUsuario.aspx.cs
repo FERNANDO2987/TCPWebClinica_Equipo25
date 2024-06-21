@@ -33,14 +33,16 @@ namespace WebApp
             usuario.Nombre = txtNombre.Text;
             usuario.Contraseña = txtContraseña.Text;
             usuario.Email = txtEmail.Text;
-            usuario.Rol.Id = int.Parse(txtRolId.Text);
 
             usuario.Rol = new Rol();
-            Rol rol = (Rol) rolModule.listarRoles().Where(x => x.Id == usuario.Rol.Id);
-            usuario.Rol.Descripcion = rol.Descripcion;
+            usuario.Rol.Id = int.Parse(txtRolId.Text);
+            //Rol rol = (Rol) rolModule.listarRoles().Where(x => x.Id == usuario.Rol.Id);
+            //usuario.Rol.Descripcion = rol.Descripcion;
 
             usuariosModule.agregarUsuario(usuario);
-            
+            Response.Redirect("Usuarios.aspx");
+
+
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
