@@ -5,7 +5,11 @@ GO
 --Rol
 CREATE TABLE [dbo].[Rol](
 	[Id] [int] not null primary key identity(1,1),
-	[Descripcion] [nvarchar](20) not null
+	[Descripcion] [nvarchar](20) not null,
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+
 	)
 
 Create Table[dbo].[Especialidad]
@@ -14,7 +18,7 @@ Create Table[dbo].[Especialidad]
   [Nombre] Nvarchar(100) NOT NULL,
   [CreatedDate] [datetime] NOT NULL,
   [Deleted] [bit] NOT NULL,
-  [DeleteDate] [datetime] NULL,
+  [DeleteDate] [datetime] NULL
    
 )
 CREATE TABLE[dbo].[ObraSocial](
