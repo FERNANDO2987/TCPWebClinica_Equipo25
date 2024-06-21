@@ -3,6 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h3>Usuarios</h3>
+    <a class="btn btn-primary" href="NuevoUsuario.aspx">Agregar</a>
+
     <asp:GridView ID="dgvUsuarios" OnSelectedIndexChanged="dgvUsuarios_SelectedIndexChanged" CssClass="table" DataKeyNames="Id" runat="server" AutoGenerateColumns="false">
         <Columns>
             <asp:BoundField HeaderText="ID" DataField="Id"/>
