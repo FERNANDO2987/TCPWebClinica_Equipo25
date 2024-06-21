@@ -33,9 +33,9 @@ CREATE TABLE[dbo].[ObraSocial](
 CREATE TABLE [dbo].[Usuario](
 	[Id] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	[Nombre] [nvarchar](50) NOT NULL UNIQUE,
-	[Password] [nvarchar](50) NOT NULL,
+	[Contraseña] [nvarchar](50) NOT NULL,
 	[Email] [nvarchar](100) NOT NULL,
-	[IdRol] [int] NOT NULL FOREIGN KEY REFERENCES Rol(id),
+	[RolId] [int] NOT NULL FOREIGN KEY REFERENCES Rol(id),
 	[CreatedDate] [datetime] NOT NULL,
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
