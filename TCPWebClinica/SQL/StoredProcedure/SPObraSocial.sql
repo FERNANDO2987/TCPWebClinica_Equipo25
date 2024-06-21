@@ -1,4 +1,4 @@
-﻿USE TCPClinica_DB
+USE TCPClinica_DB
 GO
 /****** Object:  StoredProcedure [dbo].[ObtenerEspecialidad]    Script Date: 04/06/2024 21:47:54 ******/
 SET ANSI_NULLS ON
@@ -20,6 +20,7 @@ CREATE PROCEDURE [dbo].[AgregarObraSocial]
 	@Telefono NVARCHAR(100),
 	@Email NVARCHAR(100),
 	@Website NVARCHAR(100)
+    
 )
 AS
 
@@ -33,15 +34,15 @@ BEGIN
 								   Telefono = @Telefono,
 								   Email = @Email,
 								   Website = @Website
-	
+                                   
 	                          WHERE Id = @Id
 
 		else
 			BEGIN
 
-INSERT INTO ObraSocial(Nombre,Descripcion,Direccion,Telefono,Email,Website,CreatedDate,Deleted,DeleteDate)
+INSERT INTO ObraSocial(Nombre,Descripcion,Direccion,Telefono,Email,Website,Activo,CreatedDate,Deleted,DeleteDate)
 
-VALUES(@Nombre,@Descripcion,@Direccion,@Telefono,@Email,@Website,GETDATE(),0,NULL)
+VALUES(@Nombre,@Descripcion,@Direccion,@Telefono,@Email,@Website,1,GETDATE(),0,NULL)
 
 
 
@@ -50,7 +51,7 @@ VALUES(@Nombre,@Descripcion,@Direccion,@Telefono,@Email,@Website,GETDATE(),0,NUL
 	
 	
 END
-
+go
 
 -- AGREGAR (a la version anterior le faltaban datos ) 
 --CREATE PROCEDURE [dbo].[AgregarObraSocial]

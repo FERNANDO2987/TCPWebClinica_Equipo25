@@ -73,7 +73,7 @@ namespace WebApp
                 //};
 
                 Paciente paciente = new Paciente();
-                paciente.Id = int.Parse(txtId.Text);
+                //paciente.Id = int.Parse(txtId.Text);
                 paciente.Apellido = txtApellido.Text;
                 paciente.Nombre = txtNombre.Text;
                 paciente.FechaNacimeinto = DateTime.Parse(fecha.Text);

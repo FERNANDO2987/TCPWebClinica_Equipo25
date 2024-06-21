@@ -2,10 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div style="display:flex; flex-direction:column; margin-top:1em; box-shadow : 0 0 10px black; padding:2em; justify-content:space-around; align-items:center; margin-top: 2em;">
+    <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-top: 2em;">
 
-        <div id="titulo" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; margin-bottom: 2em;">
-            <h3>Agregar nuevo Profesional</h3>
+        <div id="titulo" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; margin-bottom: 2em; margin-left: 5em";>
+            <h3>Agregar nuevo Profecional</h3>
         </div>
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: space-around; width: 100%;">
@@ -46,7 +46,7 @@
             </div>
         </div>
 
-        <div id="agregar" class="col-3" style="display: flex; justify-content: space-between; width: 100%; margin-top: 2em;">
+        <div id="agregar" class="col-3" style="display: flex; justify-content: space-between; width: 100%; margin-top: 2em; margin-left 5em;">
             <p>(*) Campos obligatorios</p>
             <asp:Button Text="Agregar" cssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />
         </div>

@@ -1,7 +1,7 @@
-﻿--CREATE DATABASE TCPClinica_DB
---GO
-USE TCPClinica_DB
-GO
+-- CREATE DATABASE TCPClinica_DB
+-- GO
+-- USE TCPClinica_DB
+-- GO
 --Rol
 CREATE TABLE [dbo].[Rol](
 	[Id] [int] not null primary key identity(1,1),
@@ -60,17 +60,17 @@ CREATE TABLE [dbo].[Recepcionista](
 	)
 --Medico
 
-Create Table[dbo].[Medico]
-(
-  [Id] [int] not null primary key identity(1,1),
-  [Nombre] nvarchar(100) NOT NULL,
-  [Apellido] nvarchar (100) NOT NULL,
-  [Email] nvarchar(100) NOT NULL,
-  [CreatedDate] [datetime] NOT NULL,
-  [Deleted] [bit] NOT NULL,
-  [DeleteDate] [datetime] NULL
+-- Create Table[dbo].[Medico]
+-- (
+--   [Id] [int] not null primary key identity(1,1),
+--   [Nombre] nvarchar(100) NOT NULL,
+--   [Apellido] nvarchar (100) NOT NULL,
+--   [Email] nvarchar(100) NOT NULL,
+--   [CreatedDate] [datetime] NOT NULL,
+--   [Deleted] [bit] NOT NULL,
+--   [DeleteDate] [datetime] NULL
    
-)
+-- )
 --Paciente
 
 --Create Table[dbo].[Paciente]
@@ -90,7 +90,7 @@ Create Table[dbo].[Medico]
 --  [DeleteDate] [datetime] NULL
    
 --)
-CREATE TABLE [dbo].[Paciente](
+CREATE TABLE [dbo].[Pacientes](
 	[Id] [int] NOT NULL PRIMARY KEY IDENTITY(1,1),
     [Apellido] [nvarchar](50) NOT NULL,
     [Nombre] [nvarchar](50) NOT NULL,
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Paciente](
 --	[DeleteDate] [datetime] NULL
 --)
 create table [dbo].[Medicos](
-	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY,
+	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY IDENTITY(1,1),
 	[Nombre] [nvarchar](50) NOT NULL,
 	[Apellido] [nvarchar](50) NOT NULL,
 	[Email] [nvarchar](100) NULL,

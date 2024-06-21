@@ -1,5 +1,6 @@
 ﻿using Business.AccesoSQL;
 using Business.Interfaces;
+using Business.Models;
 using Business.Modules;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace WebApp
 {
     public partial class Cartilla : System.Web.UI.Page
     {
+        public List<Medico> medicos {  get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             IAccesoDatos accesoDatos = new AccesoDatos();

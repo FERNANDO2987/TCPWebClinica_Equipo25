@@ -1,4 +1,4 @@
-﻿USE [TCPClinica_DB]
+USE [TCPClinica_DB]
 GO
 /****** Object:  StoredProcedure [dbo].[AgregarMedico]    Script Date: 13/06/2024 21:55:14 ******/
 SET ANSI_NULLS ON
@@ -22,7 +22,7 @@ CREATE PROCEDURE [dbo].[AgregarMedico]
 )
 AS
 BEGIN
-    IF (EXISTS (SELECT * FROM [dbo].[Medico] WHERE Id = @Id))
+    IF (EXISTS (SELECT * FROM [dbo].[Medicos] WHERE Id = @Id))
         UPDATE [dbo].[Medico]
         SET Nombre = @Nombre,
             Apellido = @Apellido,
@@ -31,7 +31,7 @@ BEGIN
         WHERE Id = @Id;
     ELSE
         BEGIN
-            INSERT INTO Medico(Nombre, Apellido, Email, CreatedDate, Deleted, DeleteDate)
+            INSERT INTO Medicos(Nombre, Apellido, Email, CreatedDate, Deleted, DeleteDate)
             VALUES(@Nombre, @Apellido, @Email, GETDATE(), 0, NULL);
             
             SELECT SCOPE_IDENTITY();
@@ -57,10 +57,10 @@ BEGIN
     DECLARE @Result BIT;
 
     -- Verificar si el registro existe
-    IF EXISTS (SELECT 1 FROM [dbo].[Medico] WHERE [Id] = @Id)
+    IF EXISTS (SELECT 1 FROM [dbo].[Medicos] WHERE [Id] = @Id)
     BEGIN
         -- Actualizar solo el registro con el Id proporcionado
-        UPDATE [dbo].[Medico]
+        UPDATE [dbo].[Medicos]
         SET [Deleted] = 1,
             [DeleteDate] = GETDATE()
         WHERE [Id] = @Id;
@@ -88,7 +88,7 @@ GO
 CREATE PROCEDURE [dbo].[ObtenerMedico]
 AS
 BEGIN	
-	select * from [dbo].[Medico] 
+	select * from [dbo].[Medicos] 
 	Where Deleted = 0
 
   

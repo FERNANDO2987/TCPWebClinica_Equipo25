@@ -23,7 +23,7 @@ namespace Business.Modules
                 _accesoDatos.setearConsulta("AgregarPaciente");
 
                 // Asegurarse de que el ID siempre se proporciona. Si no hay ID, asumimos que es una nueva inserción.
-                _accesoDatos.setearParametro("@Id", paciente.Id.ToString());
+                //_accesoDatos.setearParametro("@Id", paciente.Id.ToString());
                 _accesoDatos.setearParametro("@Apellido", paciente.Apellido);
                 _accesoDatos.setearParametro("@Nombre", paciente.Nombre);
                 _accesoDatos.setearParametro("@FechaNacimiento", paciente.FechaNacimeinto.ToString());
