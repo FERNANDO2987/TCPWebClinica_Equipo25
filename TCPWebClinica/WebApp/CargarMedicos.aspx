@@ -46,11 +46,12 @@
             </div>
         </div>
 
-        <div id="agregar" class="col-3" style="display: flex; justify-content: space-between; width: 100%; margin-top: 2em; margin-left 5em;">
-            <p>(*) Campos obligatorios</p>
+        <div id="agregar" class="col-3" style="display: flex; justify-content:end; width: 100%; margin-top: 2em;margin-right: 15em">
             <asp:Button Text="Agregar" cssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />
         </div>
-
-
+        <br />
+        <div>
+            <p>(*) Campos obligatorios</p>
+        </div>
 </div>
 </asp:Content>

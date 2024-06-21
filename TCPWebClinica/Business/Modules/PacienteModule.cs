@@ -26,24 +26,22 @@ namespace Business.Modules
                 //_accesoDatos.setearParametro("@Id", paciente.Id.ToString());
                 _accesoDatos.setearParametro("@Apellido", paciente.Apellido);
                 _accesoDatos.setearParametro("@Nombre", paciente.Nombre);
-                _accesoDatos.setearParametro("@FechaNacimiento", paciente.FechaNacimeinto.ToString());
+                _accesoDatos.setearParametro("@FechaNacimiento", paciente.FechaNacimiento.ToString());
                 _accesoDatos.setearParametro("@DNI", paciente.Documento.ToString());
                 _accesoDatos.setearParametro("@Email", paciente.Email);
                 _accesoDatos.setearParametro("@Telefono", paciente.Celular);
                 _accesoDatos.setearParametro("@Sexo", paciente.Sexo);
                 _accesoDatos.setearParametro("@IdObraSocial", paciente.ObraSocial.Id.ToString());
-                // Execute the query
+                
                 _accesoDatos.ejecutarAccion();
             }
             catch (Exception ex)
             {
-                // Handle exceptions appropriately
-                throw new Exception("Error de conexión de SQL: " + ex.Message, ex);
+                 throw new Exception("Error de conexión de SQL: " + ex.Message, ex);
             }
             finally
             {
-                // Ensure the connection is closed
-                _accesoDatos.cerrarConexion();
+                             _accesoDatos.cerrarConexion();
             }
 
             return paciente;
@@ -90,12 +88,12 @@ namespace Business.Modules
                     aux.Id = (int)_accesoDatos.Lector["Id"];
                     aux.Apellido = (string)_accesoDatos.Lector["Apellido"];
                     aux.Nombre = (string)_accesoDatos.Lector["Nombre"];
-                    aux.FechaNacimeinto = (DateTime)_accesoDatos.Lector["FechaNacimiento"];
+                    aux.FechaNacimiento = (DateTime)_accesoDatos.Lector["FechaNacimiento"];
                     aux.Documento = (string)_accesoDatos.Lector["DNI"];
                     aux.Email = (string)_accesoDatos.Lector["Email"];
                     aux.Celular = (string)_accesoDatos.Lector["Telefono"];
                     aux.Sexo = (string)_accesoDatos.Lector["Sexo"];
-                    aux.ObraSocial.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                    //aux.ObraSocial.Nombre = (string)_accesoDatos.Lector["Nombre"];
 
                     result.Add(aux);
 
@@ -112,6 +110,36 @@ namespace Business.Modules
             {
                 _accesoDatos.cerrarConexion();
             }
+        }
+
+        public Paciente modificarPaciente(Paciente paciente)
+        {
+            try
+            {
+                _accesoDatos.setearConsulta("ModificarPaciente");
+
+                _accesoDatos.setearParametro("@Apellido", paciente.Apellido);
+                _accesoDatos.setearParametro("@Nombre", paciente.Nombre);
+                _accesoDatos.setearParametro("@FechaNacimiento", paciente.FechaNacimiento.ToString());
+                _accesoDatos.setearParametro("@DNI", paciente.Documento.ToString());
+                _accesoDatos.setearParametro("@Email", paciente.Email);
+                _accesoDatos.setearParametro("@Telefono", paciente.Celular);
+                _accesoDatos.setearParametro("@Sexo", paciente.Sexo);
+                _accesoDatos.setearParametro("@IdObraSocial", paciente.ObraSocial.Id.ToString());
+                
+                _accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                                throw new Exception("Error de conexión de SQL: " + ex.Message, ex);
+            }
+            finally
+            {
+               
+                _accesoDatos.cerrarConexion();
+            }
+
+            return paciente;
         }
     }
 }

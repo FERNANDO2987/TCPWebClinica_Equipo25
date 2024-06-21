@@ -11,10 +11,7 @@
         <div id="form" style="display: flex; flex-direction: row; justify-content: space-around; width: 100%;">
 
             <div class="col-1" id="columna1" style="width: 45%;">
-<%--                <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="txtId" placeholder="Id" required="true" runat="server" />
-                    <label for="Id">Id *</label>
-                </div>--%>
+
                 <div class="form-floating mb-3">
                     <asp:TextBox type="text" CssClass="form-control" ID="txtNombre" placeholder="Nombre" required="true" runat="server" />
                     <label for="nombre">Nombre *</label>
@@ -64,9 +61,15 @@
                     </div>
             </div>
         </div>
-        <div id="agregar" class="col-3" style="display: flex; justify-content: space-between; width: 100%; margin-top: 2em; margin-left 5em;">
+        <div id="agregar" class="col-3" style="display: flex; justify-content: end; width: 100%; margin-top: 2em; margin-right: 15em">
+            <asp:Button Text="Agregar" CssClass="btn btn-outline-success" ID="btnAgregar" OnClick="btnAgregar_Click" runat="server" />
+            <asp:Button Text="Modificar" CssClass="btn btn-outline-success m-1" ID="btnModificar" OnClick="btnModificar_Click" runat="server" />
+            <asp:Button Text="Eliminar" CssClass="btn btn-outline-danger m-1" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" />
+        </div>
+        <br />
+        <div>
             <p>(*) Campos obligatorios</p>
-            <asp:Button Text="Agregar" cssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />
         </div>
     </div>
 </asp:Content>
+

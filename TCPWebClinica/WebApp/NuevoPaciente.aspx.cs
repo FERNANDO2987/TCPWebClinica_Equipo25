@@ -27,17 +27,42 @@ namespace WebApp
                 if (fecha.Text == hoy.ToString("yyyy-MM-dd"))
                 {
                     fecha.BorderColor = System.Drawing.Color.Red;
-                    //Response.Redirect("/Solicitar_Turno.aspx?ex=1");
                 }
 
-                if (Request.QueryString["ex"] != null)
+            }
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            PacienteModule pacienteModule = new PacienteModule(accesoDatos);
+
+            if (Request.QueryString["id"] != null)
+            {
+                btnAgregar.Visible = false;
+
+                int id = int.Parse(Request.QueryString["id"].ToString());
+                Paciente paciente = pacienteModule.listarPacientes().Find(x => x.Id == id);
+
+                txtApellido.Text = paciente.Apellido;
+                txtNombre.Text = paciente.Nombre;
+                txtDni.Text = paciente.Documento;
+                txtTelefono.Text = paciente.Celular;
+                txtEmail.Text = paciente.Email;
+                ddlObraSocial.SelectedValue = paciente.ObraSocial.Nombre;
+                if (paciente.Sexo == "f" || paciente.Sexo == "F")
                 {
-                    var ex = int.Parse(Request.QueryString["ex"]);
-                    if (ex == 1)
-                    {
-                        fecha.BorderColor = System.Drawing.Color.Red;
-                    }
+                    rbtnF.Selected = true;
                 }
+                if (paciente.Sexo == "m" || paciente.Sexo == "M")
+                {
+                    rbtnM.Selected = true;
+                }
+                if (paciente.Sexo == "x" || paciente.Sexo == "X")
+                {
+                    rbtnX.Selected = true;
+                }
+            }
+            else
+            {
+                btnEliminar.Visible = false;
+                btnModificar.Visible = false;
             }
         }
         private void CargarObrasSociales(DropDownList ddlObraSocial)
@@ -49,10 +74,6 @@ namespace WebApp
             ddlObraSocial.DataTextField = "Nombre";
             ddlObraSocial.DataBind();
 
-            //foreach (var obrasocial in obrassociales)
-            //{
-            //    ddlObraSocial.Items.Add(new ListItem(obrasocial.Nombre, obrasocial.Nombre));
-            //}
         }
 
         protected void fecha_TextChanged(object sender, EventArgs e)
@@ -67,16 +88,11 @@ namespace WebApp
             {
                 PacienteModule module = new PacienteModule(new AccesoDatos());
 
-                //ObraSocial obraSocial = new ObraSocial()
-                //{
-                //    Nombre = ddlObraSocial.SelectedValue,
-                //};
-
                 Paciente paciente = new Paciente();
-                //paciente.Id = int.Parse(txtId.Text);
+                
                 paciente.Apellido = txtApellido.Text;
                 paciente.Nombre = txtNombre.Text;
-                paciente.FechaNacimeinto = DateTime.Parse(fecha.Text);
+                paciente.FechaNacimiento = DateTime.Parse(fecha.Text);
                 paciente.Documento = txtDni.Text;
                 paciente.Email = txtEmail.Text;
                 paciente.Celular = txtTelefono.Text;
@@ -111,6 +127,52 @@ namespace WebApp
             }
 
             return string.Empty;
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                IAccesoDatos accesoDatos = new AccesoDatos();
+                PacienteModule pacienteModule = new PacienteModule(accesoDatos);
+                int id = int.Parse(Request.QueryString["id"].ToString());
+                pacienteModule.eliminarPaciente(id);
+                Response.Redirect("Pacientes.aspx");
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                IAccesoDatos accesoDatos = new AccesoDatos();
+                PacienteModule pacienteModule = new PacienteModule(accesoDatos);
+
+                Paciente paciente = new Paciente();
+                paciente.Apellido = txtApellido.Text;
+                paciente.Nombre = txtNombre.Text;
+                paciente.FechaNacimiento = DateTime.Parse(fecha.Text);
+                paciente.Documento = txtDni.Text;
+                paciente.Email = txtEmail.Text;
+                paciente.Celular = txtTelefono.Text;
+                paciente.Sexo = ObtenerSexo();
+                paciente.ObraSocial = new ObraSocial();
+                paciente.ObraSocial.Id = int.Parse(ddlObraSocial.SelectedValue);
+
+                pacienteModule.modificarPaciente(paciente);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }   
 }

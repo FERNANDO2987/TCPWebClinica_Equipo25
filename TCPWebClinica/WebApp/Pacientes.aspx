@@ -11,17 +11,12 @@
                 <Columns>
                     <asp:BoundField HeaderText="Apellido" DataField="Apellido"/>
                     <asp:BoundField HeaderText="Nombre" DataField="Nombre"/>
-                    <asp:BoundField HeaderText="Nro Documento" DataField="Dni"/>
-                    <asp:BoundField HeaderText="Direccion" DataField="Direccion"/>
-                    <asp:BoundField HeaderText="Telefono" DataField="Telefono"/>
+                    <asp:BoundField HeaderText="DNI" DataField="Documento"/>
+                    <asp:BoundField HeaderText="Fecha de Nacimiento" DataField="FechaNacimiento"/>
+                    <asp:BoundField HeaderText="Telefono" DataField="Celular"/>
                     <asp:TemplateField HeaderText="Email">
                         <ItemTemplate>
                             <a href='mailto:<%# Eval("Email") %>' class="mailto"><%# Eval("Email") %></a>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:TemplateField HeaderText="Sitio Web">
-                        <ItemTemplate>
-                            <a href='<%# Eval("Website", "http://{0}") %>' target="_blank"><%# Eval("Website") %></a>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:CommandField ShowSelectButton="True" SelectText="Seleccionar" ControlStyle-CssClass="btn btn-Alert btn-sm"/>
