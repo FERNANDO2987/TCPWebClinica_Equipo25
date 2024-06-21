@@ -1,5 +1,5 @@
-﻿--CREATE DATABASE TCPClinica_DB
---GO
+﻿CREATE DATABASE TCPClinica_DB
+GO
 USE TCPClinica_DB
 GO
 --Rol
@@ -30,18 +30,18 @@ CREATE TABLE[dbo].[ObraSocial](
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
 )
-CREATE TABLE [dbo].[Usuarios](
+CREATE TABLE [dbo].[Usuario](
 	[Id] [int] IDENTITY(1,1) NOT NULL PRIMARY KEY,
-	[NombreUsuario] [varchar](50) NOT NULL UNIQUE,
-	[Password] [varchar](50) NOT NULL,
-	[Email] [varchar](100) NOT NULL,
+	[Nombre] [nvarchar](50) NOT NULL UNIQUE,
+	[Password] [nvarchar](50) NOT NULL,
+	[Email] [nvarchar](100) NOT NULL,
 	[IdRol] [int] NOT NULL FOREIGN KEY REFERENCES Rol(id),
 	[CreatedDate] [datetime] NOT NULL,
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
 	)
 	CREATE TABLE [dbo].[Administrador](
-	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY,
+	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuario(Id) PRIMARY KEY,
 	[Nombre] [varchar](50) NOT NULL,
 	[Apellido] [varchar](50) NOT NULL,
 	[Email] [varchar](100) NULL,
@@ -50,7 +50,7 @@ CREATE TABLE [dbo].[Usuarios](
 	[DeleteDate] [datetime] NULL
 	)
 CREATE TABLE [dbo].[Recepcionista](
-	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY,
+	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuario(Id) PRIMARY KEY,
 	[Nombre] [varchar](50) NOT NULL,
 	[Apellido] [varchar](50) NOT NULL,
 	[Email] [varchar](100) NULL,
@@ -112,7 +112,7 @@ CREATE TABLE [dbo].[Paciente](
 --	[DeleteDate] [datetime] NULL
 --)
 create table [dbo].[Medicos](
-	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuarios(Id) PRIMARY KEY,
+	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuario(Id) PRIMARY KEY,
 	[Nombre] [nvarchar](50) NOT NULL,
 	[Apellido] [nvarchar](50) NOT NULL,
 	[Email] [nvarchar](100) NULL,
@@ -121,7 +121,7 @@ create table [dbo].[Medicos](
 	[DeleteDate] [datetime] NULL
 )
 create table [dbo].[Especialidades_X_Medico](
-	[IdMedico] [int] not null foreign key references Medicos(id),
+	[IdMedico] [int] not null foreign key references Medico(id),
 	[IdEspecialidad] [int] not null foreign key references Especialidad(id),
 	primary key (IdMedico, IdEspecialidad)
 )
@@ -138,8 +138,8 @@ Create Table[dbo].[EstadoTurno]
 )
 create table [dbo].[Turnos](
 	[Id] [int] not null primary key identity(1,1),
-	[IdPaciente] [int] not null foreign key references Pacientes(id),
-	[IdMedico] [int] not null foreign key references Medicos(id),
+	[IdPaciente] [int] not null foreign key references Paciente(id),
+	[IdMedico] [int] not null foreign key references Medico(id),
 	[IdEspecialidad] [int] not null foreign key references Especialidad(id), 
 	[Observaciones] [varchar](500) null,
 	[FechaTurno] [datetime] not null,
@@ -168,7 +168,7 @@ Create Table[dbo].[HorarioDeTrabajo]
 
 create table [dbo].[Horario_x_Medico](
 	[IdHorario] [int] not null foreign key references HorarioDeTrabajo(id),
-	[IdMedico] [int] not null foreign key references Medicos(id),
+	[IdMedico] [int] not null foreign key references Medico(id),
 	primary key(IdHorario,IdMedico)
 
 )
