@@ -29,7 +29,6 @@ CREATE TABLE[dbo].[ObraSocial](
 	[Telefono] NVARCHAR(100) NOT NULL,
 	[Email] NVARCHAR(100) NOT NULL,
 	[Website] NVARCHAR(100) NULL,
-	[Activo] BIT NOT NULL,
 	[CreatedDate] [datetime] NOT NULL,
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
