@@ -4,17 +4,17 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-top: 2em;">
 
-        <div id="titulo" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; margin-bottom: 2em;">
+        <div id="titulo" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; margin-bottom: 2em; margin-left: 5em";>
             <h3>Alta Paciente</h3>
         </div>
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: space-around; width: 100%;">
 
             <div class="col-1" id="columna1" style="width: 45%;">
-                <div class="form-floating mb-3">
+<%--                <div class="form-floating mb-3">
                     <asp:TextBox type="text" CssClass="form-control" ID="txtId" placeholder="Id" required="true" runat="server" />
                     <label for="Id">Id *</label>
-                </div>
+                </div>--%>
                 <div class="form-floating mb-3">
                     <asp:TextBox type="text" CssClass="form-control" ID="txtNombre" placeholder="Nombre" required="true" runat="server" />
                     <label for="nombre">Nombre *</label>
@@ -64,7 +64,7 @@
                     </div>
             </div>
         </div>
-        <div id="agregar" class="col-3" style="display: flex; justify-content: space-between; width: 100%; margin-top: 2em;">
+        <div id="agregar" class="col-3" style="display: flex; justify-content: space-between; width: 100%; margin-top: 2em; margin-left 5em;">
             <p>(*) Campos obligatorios</p>
             <asp:Button Text="Agregar" cssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />
         </div>
