@@ -12,6 +12,7 @@ namespace Business.Interfaces
         List<Medico> listarMedicos();
         Medico agregarMedico(Medico medico);
         bool eliminarMedico(int id);
+     
 
     }
 }
