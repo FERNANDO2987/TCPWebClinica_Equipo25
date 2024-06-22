@@ -8,6 +8,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Security.Policy;
 
 namespace WebApp
 {
@@ -60,7 +61,26 @@ namespace WebApp
 
         protected void btnModificar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                AccesoDatos accesoDatos = new AccesoDatos();
+                UsuariosModule usuariosModule = new UsuariosModule(accesoDatos);
+                Usuario aux = new Usuario();     
+                
+                aux.Id = int.Parse(txtId.Text);
+                aux.Nombre = txtNombre.Text;
+                aux.Email = txtEmail.Text;
+                aux.Contraseña = txtContraseña.Text;
+                aux.Rol = new Rol();    
+                aux.Rol.Id = int.Parse(txtRolId.Text);
 
+                usuariosModule.agregarUsuario(aux);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
