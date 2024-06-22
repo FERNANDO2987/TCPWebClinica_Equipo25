@@ -23,8 +23,8 @@ namespace Business.Modules
                 // Set the stored procedure and parameters
                 _accesoDatos.setearConsulta("AgregarHorarioDeTrabajo");
                 _accesoDatos.setearParametro("@Id", horarioDeTrabajo.Id.ToString()); // Assuming Id is provided for updates, else should be set to a default value
-                _accesoDatos.setearParametro("@HoraEntrada", horarioDeTrabajo.HoraEntrada.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Entrada.", nameof(horarioDeTrabajo.HoraEntrada)));
-                _accesoDatos.setearParametro("@HoraSalida", horarioDeTrabajo.HoraSalida.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Salida.", nameof(horarioDeTrabajo.HoraSalida)));
+                _accesoDatos.setearParametro("@HorarioEntrada", horarioDeTrabajo.HoraEntrada.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Entrada.", nameof(horarioDeTrabajo.HoraEntrada)));
+                _accesoDatos.setearParametro("@HorarioSalida", horarioDeTrabajo.HoraSalida.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Salida.", nameof(horarioDeTrabajo.HoraSalida)));
 
                 // Execute the query
                 _accesoDatos.ejecutarLectura();
@@ -108,8 +108,8 @@ namespace Business.Modules
                 {
                     HorarioDeTrabajo aux = new HorarioDeTrabajo();
                     aux.Id = (int)_accesoDatos.Lector["Id"];
-                    aux.HoraEntrada = (DateTime)_accesoDatos.Lector["HoraEntrada"];
-                    aux.HoraSalida = (DateTime)_accesoDatos.Lector["HoraSalida"];
+                    aux.HoraEntrada = (DateTime)_accesoDatos.Lector["HorarioEntrada"];
+                    aux.HoraSalida = (DateTime)_accesoDatos.Lector["HorarioSalida"];
 
                     result.Add(aux);
 
@@ -129,5 +129,37 @@ namespace Business.Modules
                 _accesoDatos.cerrarConexion();
             }
         }
+
+        public List<HorarioDeTrabajo> listarHorarioTrabajoPorMedico(int idMedico)
+        {
+            var result = new List<HorarioDeTrabajo>();
+            try
+            {
+                _accesoDatos.setearConsulta("ObtenerHorariosPorMedico");
+                _accesoDatos.setearParametro("@IdMedico", idMedico.ToString());
+                _accesoDatos.ejecutarLectura();
+
+                while (_accesoDatos.Lector.Read())
+                {
+                    HorarioDeTrabajo aux = new HorarioDeTrabajo();
+                    aux.Id = (int)_accesoDatos.Lector["Id"];
+                    aux.HoraEntrada = (DateTime)_accesoDatos.Lector["HorarioEntrada"];
+                    aux.HoraSalida = (DateTime)_accesoDatos.Lector["HorarioSalida"];
+
+                    result.Add(aux);
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener los horarios de trabajo por médico: " + ex.Message);
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion();
+            }
+        }
+
     }
 }
