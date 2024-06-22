@@ -12,7 +12,7 @@ namespace Business.Models
         public int HistoriaClinica { get; set; }
         public string Nombre { get; set; }
         public string Apellido { get; set; }
-        public string Documento { get; set; }
+        public int Documento { get; set; }
         public DateTime FechaNacimeinto { get; set; }
         public string Celular {  get; set; }
         public string Email {  get; set; }
