@@ -12,5 +12,13 @@ namespace Business.Models
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSalida { get; set; }
 
+        public string FechaYHora
+        {
+            get
+            {
+                return $"Entrada: {HoraEntrada.ToString("yyyy-MM-dd HH:mm:ss")}, Salida: {HoraSalida.ToString("yyyy-MM-dd HH:mm:ss")}";
+            }
+        }
+
     }
 }
