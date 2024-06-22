@@ -15,10 +15,23 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            AccesoDatos accesoDatos = new AccesoDatos();
+            UsuariosModule usuariosModule = new UsuariosModule(accesoDatos);
             if(!IsPostBack)
             {
-                
+                if (Request.QueryString["id"] != null)
+                {
+                    Usuario usuario = new Usuario();
+                    int idUrl = int.Parse(Request.QueryString["id"]);
+                    usuario =(Usuario) usuariosModule.listarUsuarios().FirstOrDefault(x => x.Id == idUrl); 
+                    txtId.Text = Request.QueryString["id"];
+                    txtNombre.Text = usuario.Nombre;
+                    txtContraseña.Text = usuario.Contraseña;
+                    txtEmail.Text = usuario.Email;
+                    txtRolId.Text = usuario.Rol.Id.ToString();
+                }
+
+
             }
 
         }
@@ -53,6 +66,22 @@ namespace WebApp
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                AccesoDatos accesoDatos = new AccesoDatos();
+                UsuariosModule usuariosModule = new UsuariosModule(accesoDatos);
+                int idUrl = int.Parse(Request.QueryString["id"]);
+
+                usuariosModule.eliminarUsuario(idUrl);
+                Response.Redirect("Usuario.aspx");
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
         }
     }
 }
