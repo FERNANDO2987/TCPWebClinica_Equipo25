@@ -77,7 +77,7 @@ namespace WebApp
                 paciente.Apellido = txtApellido.Text;
                 paciente.Nombre = txtNombre.Text;
                 paciente.FechaNacimeinto = DateTime.Parse(fecha.Text);
-                paciente.Documento = txtDni.Text;
+                paciente.Documento = int.Parse(txtDni.Text);
                 paciente.Email = txtEmail.Text;
                 paciente.Celular = txtTelefono.Text;
                 paciente.Sexo = ObtenerSexo();
