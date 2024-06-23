@@ -1,4 +1,8 @@
 ﻿using System;
+using Business.AccesoSQL;
+using Business.Interfaces;
+using Business.Models;
+using Business.Modules;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,10 +16,32 @@ namespace WebApp
         protected void Page_Load(object sender, EventArgs e)
         {
 
+            if(!IsPostBack)
+            {
+                
+            }
+
         }
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
+            AccesoDatos accesoDatos = new AccesoDatos();
+            RolModule rolModule = new RolModule(accesoDatos);
+            UsuariosModule usuariosModule = new UsuariosModule(accesoDatos);
+
+            Usuario usuario = new Usuario();
+            usuario.Nombre = txtNombre.Text;
+            usuario.Contraseña = txtContraseña.Text;
+            usuario.Email = txtEmail.Text;
+
+            usuario.Rol = new Rol();
+            usuario.Rol.Id = int.Parse(txtRolId.Text);
+            //Rol rol = (Rol) rolModule.listarRoles().Where(x => x.Id == usuario.Rol.Id);
+            //usuario.Rol.Descripcion = rol.Descripcion;
+
+            usuariosModule.agregarUsuario(usuario);
+            Response.Redirect("Usuarios.aspx");
+
 
         }
 
