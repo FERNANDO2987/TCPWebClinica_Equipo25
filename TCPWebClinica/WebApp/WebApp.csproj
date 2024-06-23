@@ -43,9 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
-      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -83,14 +80,14 @@
     <Content Include="Global.asax" />
     <Content Include="NuevaObraSocial.aspx" />
     <Content Include="NuevoPaciente.aspx" />
-    <Content Include="NuevoTurno.aspx" />
+    <Content Include="NuevoUsuario.aspx" />
     <Content Include="ObrasSociales.aspx" />
     <Content Include="Pacientes.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Script\AgregarCarrito.js" />
     <Content Include="Script\Filtro.js" />
     <Content Include="Script\JavaScriptNavegacion.js" />
-    <Content Include="Turno.aspx" />
+    <Content Include="Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -146,12 +143,12 @@
     <Compile Include="NuevoPaciente.aspx.designer.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NuevoTurno.aspx.cs">
-      <DependentUpon>NuevoTurno.aspx</DependentUpon>
+    <Compile Include="NuevoUsuario.aspx.cs">
+      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NuevoTurno.aspx.designer.cs">
-      <DependentUpon>NuevoTurno.aspx</DependentUpon>
+    <Compile Include="NuevoUsuario.aspx.designer.cs">
+      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="ObrasSociales.aspx.cs">
       <DependentUpon>ObrasSociales.aspx</DependentUpon>
@@ -175,12 +172,12 @@
       <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Turno.aspx.cs">
-      <DependentUpon>Turno.aspx</DependentUpon>
+    <Compile Include="Usuarios.aspx.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Turno.aspx.designer.cs">
-      <DependentUpon>Turno.aspx</DependentUpon>
+    <Compile Include="Usuarios.aspx.designer.cs">
+      <DependentUpon>Usuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
