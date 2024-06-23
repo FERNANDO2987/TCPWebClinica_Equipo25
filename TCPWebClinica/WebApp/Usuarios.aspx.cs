@@ -27,7 +27,8 @@ namespace WebApp
 
         protected void dgvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var id = int.Parse(dgvUsuarios.SelectedDataKey.Value.ToString());
+            Response.Redirect("NuevoUsuario.aspx?id=" + id);
         }
     }
 }

@@ -43,6 +43,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=20.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.20.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -68,7 +71,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CargarMedicos.aspx" />
-    <Content Include="Carrito.aspx" />
     <Content Include="Cartilla.aspx" />
     <Content Include="Content\Imagenes\carrito3.jpg" />
     <Content Include="Content\Style\Style.css" />
@@ -81,14 +83,14 @@
     <Content Include="Global.asax" />
     <Content Include="NuevaObraSocial.aspx" />
     <Content Include="NuevoPaciente.aspx" />
-    <Content Include="NuevoUsuario.aspx" />
+    <Content Include="NuevoTurno.aspx" />
     <Content Include="ObrasSociales.aspx" />
     <Content Include="Pacientes.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Script\AgregarCarrito.js" />
     <Content Include="Script\Filtro.js" />
     <Content Include="Script\JavaScriptNavegacion.js" />
-    <Content Include="Usuarios.aspx" />
+    <Content Include="Turno.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -98,13 +100,6 @@
     </Compile>
     <Compile Include="CargarMedicos.aspx.designer.cs">
       <DependentUpon>CargarMedicos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Carrito.aspx.cs">
-      <DependentUpon>Carrito.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Carrito.aspx.designer.cs">
-      <DependentUpon>Carrito.aspx</DependentUpon>
     </Compile>
     <Compile Include="Cartilla.aspx.cs">
       <DependentUpon>Cartilla.aspx</DependentUpon>
@@ -151,12 +146,12 @@
     <Compile Include="NuevoPaciente.aspx.designer.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="NuevoUsuario.aspx.cs">
-      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
+    <Compile Include="NuevoTurno.aspx.cs">
+      <DependentUpon>NuevoTurno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="NuevoUsuario.aspx.designer.cs">
-      <DependentUpon>NuevoUsuario.aspx</DependentUpon>
+    <Compile Include="NuevoTurno.aspx.designer.cs">
+      <DependentUpon>NuevoTurno.aspx</DependentUpon>
     </Compile>
     <Compile Include="ObrasSociales.aspx.cs">
       <DependentUpon>ObrasSociales.aspx</DependentUpon>
@@ -180,12 +175,12 @@
       <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuarios.aspx.cs">
-      <DependentUpon>Usuarios.aspx</DependentUpon>
+    <Compile Include="Turno.aspx.cs">
+      <DependentUpon>Turno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Usuarios.aspx.designer.cs">
-      <DependentUpon>Usuarios.aspx</DependentUpon>
+    <Compile Include="Turno.aspx.designer.cs">
+      <DependentUpon>Turno.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -29,6 +29,31 @@ namespace Business.Modules
     
                 // Execute the query
                 _accesoDatos.ejecutarAccion();
+
+                // Verifica si la lectura tiene filas y obtiene el ID generado
+                if (_accesoDatos.Lector.HasRows)
+                {
+                    while (_accesoDatos.Lector.Read())
+                    {
+                        var idValue = _accesoDatos.Lector[0];
+                        if (idValue is int idInt)
+                        {
+                            medico.Id = idInt;
+                        }
+                        else if (idValue is decimal idDecimal)
+                        {
+                            medico.Id = (int)idDecimal;
+                        }
+                        else if (idValue is long idLong)
+                        {
+                            medico.Id = (int)idLong;
+                        }
+                        else
+                        {
+                            throw new InvalidOperationException("Tipo de ID desconocido.");
+                        }
+                    }
+                }
             }
             catch (Exception ex)
             {

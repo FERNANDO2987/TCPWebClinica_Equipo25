@@ -39,3 +39,26 @@ BEGIN
     SELECT IdHorario, IdMedico FROM [dbo].[Horario_x_Medico]
 	WHERE IdMedico = @IdMedico
 END
+GO
+
+
+-- =============================================
+-- Author:	    Palacios Fernando
+-- Create date: 22/06/2024
+-- Description:	Obtiene los horarios de Trabajo por Medico
+-- =============================================
+
+CREATE PROCEDURE [dbo].[ObtenerHorariosPorMedico](
+@IdMedico INT
+)
+AS
+BEGIN	
+	Set NOCOUNT ON;
+
+	Select HT.Id, HT.HorarioEntrada, HT.HorarioSalida 
+	From HorarioDeTrabajo HT
+	INNER JOIN Horario_x_Medico HM ON HT.Id = HM.IdHorario
+	Where HM.IdMedico = @IdMedico
+
+  
+END
