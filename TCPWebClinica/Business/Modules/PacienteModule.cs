@@ -167,7 +167,7 @@ namespace Business.Modules
                     aux.HistoriaClinica = (int)_accesoDatos.Lector["HC"];
                     aux.Nombre = (string)_accesoDatos.Lector["Nombre"];
                     aux.FechaNacimiento = (DateTime)_accesoDatos.Lector["FechaNacimiento"];
-                    aux.Documento = (string)_accesoDatos.Lector["DNI"];
+                    aux.Documento = (int)_accesoDatos.Lector["DNI"];
                     aux.Email = (string)_accesoDatos.Lector["Email"];
                     aux.Celular = (string)_accesoDatos.Lector["Telefono"];
                     aux.Sexo = (string)_accesoDatos.Lector["Sexo"];

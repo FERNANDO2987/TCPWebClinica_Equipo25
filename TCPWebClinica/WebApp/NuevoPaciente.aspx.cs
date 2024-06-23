@@ -42,7 +42,7 @@ namespace WebApp
 
                 txtApellido.Text = paciente.Apellido;
                 txtNombre.Text = paciente.Nombre;
-                txtDni.Text = paciente.Documento;
+                txtDni.Text = paciente.Documento.ToString();
                 txtTelefono.Text = paciente.Celular;
                 txtEmail.Text = paciente.Email;
                 ddlObraSocial.SelectedValue = paciente.ObraSocial.Nombre;
@@ -93,7 +93,7 @@ namespace WebApp
                 paciente.Apellido = txtApellido.Text;
                 paciente.Nombre = txtNombre.Text;
                 paciente.FechaNacimiento = DateTime.Parse(fecha.Text);
-                paciente.Documento = txtDni.Text;
+                paciente.Documento = int.Parse(txtDni.Text);
                 paciente.Email = txtEmail.Text;
                 paciente.Celular = txtTelefono.Text;
                 paciente.Sexo = ObtenerSexo();
@@ -159,7 +159,7 @@ namespace WebApp
                 paciente.Apellido = txtApellido.Text;
                 paciente.Nombre = txtNombre.Text;
                 paciente.FechaNacimiento = DateTime.Parse(fecha.Text);
-                paciente.Documento = txtDni.Text;
+                paciente.Documento = int.Parse(txtDni.Text);
                 paciente.Email = txtEmail.Text;
                 paciente.Celular = txtTelefono.Text;
                 paciente.Sexo = ObtenerSexo();
