@@ -16,5 +16,13 @@ namespace Business.Models
         public List<Turno> Turnos { get; set; }
         public List<HorarioDeTrabajo> HorarioDeTrabajo { get; set; }
 
+        public string NombreCompleto
+        {
+            get
+            {
+                return $"{Apellido} {Nombre}";
+            }
+        }
+
     }
 }

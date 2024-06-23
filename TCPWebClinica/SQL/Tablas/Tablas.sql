@@ -5,7 +5,11 @@ GO
 --Rol
 CREATE TABLE [dbo].[Rol](
 	[Id] [int] not null primary key identity(1,1),
-	[Descripcion] [nvarchar](20) not null
+	[Descripcion] [nvarchar](20) not null,
+	[CreatedDate] [datetime] NOT NULL,
+	[Deleted] [bit] NOT NULL,
+	[DeleteDate] [datetime] NULL
+
 	)
 
 Create Table[dbo].[Especialidad]
@@ -14,7 +18,7 @@ Create Table[dbo].[Especialidad]
   [Nombre] Nvarchar(100) NOT NULL,
   [CreatedDate] [datetime] NOT NULL,
   [Deleted] [bit] NOT NULL,
-  [DeleteDate] [datetime] NULL,
+  [DeleteDate] [datetime] NULL
    
 )
 CREATE TABLE[dbo].[ObraSocial](
@@ -25,7 +29,6 @@ CREATE TABLE[dbo].[ObraSocial](
 	[Telefono] NVARCHAR(100) NOT NULL,
 	[Email] NVARCHAR(100) NOT NULL,
 	[Website] NVARCHAR(100) NULL,
-	[Activo] BIT NOT NULL,
 	[CreatedDate] [datetime] NOT NULL,
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
@@ -73,32 +76,16 @@ Create Table[dbo].[Medico]
 )
 --Paciente
 
---Create Table[dbo].[Paciente]
---(
---  [Id] [int] not null primary key identity(1,1),
---  [HC] int NOT NULL,
---  [Nombre] nvarchar (100) NOT NULL,
---  [Apellido] nvarchar (100) NOT NULL,
---  [Documento] int NOT NULL,
---  [FechaNacimiento] datetime NOT NULL,
---  [Celular] nvarchar (100) NOT NULL,
---  [Email] nvarchar (100) NULL,
---  [Sexo] bit NOT NULL,
---  [IdObraSocial] int NOT NULL foreign key references ObraSocial(Id),
---  [CreatedDate] [datetime] NOT NULL,
---  [Deleted] [bit] NOT NULL,
---  [DeleteDate] [datetime] NULL
-   
---)
 CREATE TABLE [dbo].[Paciente](
 	[Id] [int] NOT NULL PRIMARY KEY IDENTITY(1,1),
-    [Apellido] [nvarchar](50) NOT NULL,
-    [Nombre] [nvarchar](50) NOT NULL,
+	[HC] [INT]NOT NULL,
+    [Apellido] [nvarchar](100) NOT NULL,
+    [Nombre] [nvarchar](100) NOT NULL,
 	[FechaNacimiento] [date] NOT NULL,
-	[DNI] [nvarchar] (15),
+	[Docuemnto] [int],
 	[Email] [nvarchar](100) NULL,
-	[Telefono] [nvarchar](20) NOT NULL,
-	[Sexo] [char] NOT NULL,
+	[Celular] [nvarchar](100) NOT NULL,
+	[Sexo] [nvarchar] NOT NULL,
 	[IdObrasocial] [int] NULL FOREIGN KEY REFERENCES ObraSocial(id),
 	[CreatedDate] [datetime] NOT NULL,
 	[Deleted] [bit] NOT NULL,

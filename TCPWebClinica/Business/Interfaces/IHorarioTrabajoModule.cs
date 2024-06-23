@@ -13,5 +13,6 @@ namespace Business.Interfaces
         HorarioDeTrabajo agregarHorarioTrabajo(HorarioDeTrabajo horarioDeTrabajo);
         bool eliminarHorarioTrabajo(int id);
 
+        List<HorarioDeTrabajo> listarHorarioTrabajoPorMedico(int idMedico);
     }
 }

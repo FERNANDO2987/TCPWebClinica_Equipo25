@@ -11,7 +11,16 @@ namespace WebApp
 {
 
 
-    public partial class Carrito
+    public partial class Turno
     {
+
+        /// <summary>
+        /// Control dgvTurnos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView dgvTurnos;
     }
 }
