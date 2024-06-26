@@ -18,7 +18,7 @@ namespace WebApp
             if (!IsPostBack)
             {
                 // Cargar datos iniciales
-                CargarEspecialidades();
+               // CargarEspecialidades();
 
                 //Cargar datos de Medicos
                 CargarMedicos();
@@ -40,15 +40,15 @@ namespace WebApp
             
             IAccesoDatos accesoDatos = new AccesoDatos();
             EspecialidadModule especialidadModule = new EspecialidadModule(accesoDatos);
-   
+
             // Cargar las especialidades en un DropDownList
-            ddlEspecialidad.DataSource = especialidadModule.listarEspecialidad();
-            ddlEspecialidad.DataTextField = "Nombre"; // Nombre de la propiedad en Especialidad
-            ddlEspecialidad.DataValueField = "Id";    // ID de la propiedad en Especialidad
-            ddlEspecialidad.DataBind();
+            dllEspecialidad.DataSource = especialidadModule.listarEspecialidad();
+            dllEspecialidad.DataTextField = "Nombre"; // Nombre de la propiedad en Especialidad
+            dllEspecialidad.DataValueField = "Id";    // ID de la propiedad en Especialidad
+            dllEspecialidad.DataBind();
 
             // Agregar un elemento vacío para selección inicial
-            ddlEspecialidad.Items.Insert(0, new ListItem("-- Seleccione Especialidad --", "0"));
+            dllEspecialidad.Items.Insert(0, new ListItem("-- Seleccione Especialidad --", "0"));
 
         }
 
@@ -68,6 +68,8 @@ namespace WebApp
 
             // Agregar evento para cargar horarios al seleccionar un médico
             ddlMedicos.SelectedIndexChanged += new EventHandler(ddlMedicos_SelectedIndexChanged);
+
+        
         }
 
         private void CargarEstadoTurno()
@@ -118,6 +120,7 @@ namespace WebApp
         {
             int medicoId = int.Parse(ddlMedicos.SelectedValue);
             CargarHorariosDeMedico(medicoId);
+            CargarEspecilidadXMedico(medicoId);
         }
 
         private void CargarHorariosDeMedico(int medicoId)
@@ -142,6 +145,38 @@ namespace WebApp
                 throw new Exception("Error al cargar los horarios de trabajo por médico: " + ex.Message);
             }
         }
+
+     /*   protected void ddlMedicosXEspecilidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int medicoId = int.Parse(ddlMedicos.SelectedValue);
+            CargarEspecilidadXMedico(medicoId);
+        }*/
+
+        private void CargarEspecilidadXMedico(int medicoId)
+        {
+            try
+            {
+                EspecialidadModule especialidadModule = new EspecialidadModule(new AccesoDatos());
+                List<Especialidad> especialidad = especialidadModule.listarEspecilidadPorMedico(medicoId);
+
+                // Lógica para cargar las Especialidades
+                dllEspecialidad.DataSource = especialidad;
+                dllEspecialidad.DataValueField = "Id";
+                dllEspecialidad.DataTextField = "Nombre";
+                dllEspecialidad.DataBind();
+
+                // Agregar un elemento vacío para selección inicial
+                dllEspecialidad.Items.Insert(0, new ListItem("-- Seleccionar Especilidad--", "0"));
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción adecuadamente
+                throw new Exception("Error al cargar los horarios de trabajo por médico: " + ex.Message);
+            }
+
+        }
+
+
 
      /*   private void CargarHorarioTrabajo()
         {

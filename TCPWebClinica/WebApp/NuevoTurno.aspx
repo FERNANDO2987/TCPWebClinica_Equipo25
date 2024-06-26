@@ -36,22 +36,24 @@
                     <label for="horarioTrabajo">Hora</label>
                 </div>
 
+                <div class="form-floating mb-3">
+                    <asp:DropDownList ID="dllEspecialidad" CssClass="form-select" runat="server"></asp:DropDownList>
+                    <label for="especialidad">Especialidad</label>
+                </div>
+
+
             </div>
 
             <div class="col-2" id="columna2" style="width: 45%;">
                 <p class="color:red;">(*) Campos obligatorios</p>
 
 
-
                 <div class="form-floating mb-3">
-                    <asp:DropDownList ID="ddlEspecialidad" CssClass="form-select" runat="server"></asp:DropDownList>
-                    <label for="especialidad">Especialidad</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                   <asp:DropDownList ID="ddlMedicos" CssClass="form-select" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlMedicos_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlMedicos" CssClass="form-select" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlMedicos_SelectedIndexChanged"></asp:DropDownList>
                     <label for="medicos">Medicos</label>
                 </div>
+
+
 
                 <div class="form-floating mb-3">
                     <asp:DropDownList ID="ddlEstadoTurno" CssClass="form-select" runat="server"></asp:DropDownList>
@@ -63,6 +65,8 @@
                     <asp:DropDownList ID="ddlObraSocial" CssClass="form-select" runat="server"></asp:DropDownList>
                     <label for="obraSocial">ObraSocial</label>
                 </div>
+
+
             </div>
 
         </div>
