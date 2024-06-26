@@ -12,7 +12,10 @@ namespace Business.Interfaces
         List<Especialidad> listarEspecialidad();
         Especialidad agregarEspecialidad(Especialidad especialidad);
         bool eliminarEspecilidad(int id);
-     
+
+        List<Especialidad> listarEspecilidadPorMedico(int idMedico);
+
+
 
     }
 }
