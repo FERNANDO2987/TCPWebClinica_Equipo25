@@ -20,23 +20,28 @@
                     <asp:TextBox type="text" CssClass="form-control" ID="txtApellido" placeholder="Apellido" required="true" runat="server" />
                     <label for="Apellido">Apellido *</label>
                 </div>
-
-                <div id="horarios">
-
-                    <div id="hora-he" style="padding-top:20px;">    
-                        <label for="ddlHorarioEntrada">Horario Entrada *</label>
-                        <asp:DropDownList id="ddlHorarioEntrada"  runat="server" class="form-select" aria-label="Default select example" required="true">
-                            <asp:ListItem Text="Horarios *" Enabled="false"/>
-                       </asp:DropDownList>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-2" id="columna2" style="display: flex; flex-direction: column; justify-content: space-around; width: 45%;">
-
                 <div class="form-floating mb-3">
                     <asp:TextBox type="text" ID="txtEmail" placeholder="name@example.com" CssClass="form-control" required="true" runat="server" />
                     <label for="email">Email *</label>
+                </div>
+
+            </div>
+            <di v class="col-2" id="columna2" style="display: flex; flex-direction: column; justify-content: space-around; width: 45%;">
+
+                <div id="horarios">
+
+                    <div id="hora-he" style="padding-top: 20px;">
+                        <label for="ddlHorarioEntrada">Horario Entrada *</label>
+                        <asp:DropDownList ID="ddlHorarioEntrada" runat="server" class="form-select" aria-label="Default select example" required="true">
+                            <asp:ListItem Text="Horario de entrada*" Enabled="false" />
+                        </asp:DropDownList>
+                    </div>
+                    <div id="hora-hs" style="padding-top: 20px;">
+                        <label for="ddlHorarioSalida">Horario Salida *</label>
+                        <asp:DropDownList ID="ddlHorarioSalida" runat="server" class="form-select" aria-label="Default select example" required="true">
+                            <asp:ListItem Text="Horario de salida *" Enabled="false" />
+                        </asp:DropDownList>
+                    </div>
                 </div>
                 <div id="especialidad-ls" style="padding-top: 20px;">
                     <asp:DropDownList ID="ddlEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true">
@@ -44,7 +49,6 @@
                     </asp:DropDownList>
                 </div>
             </div>
-        </div>
 
         <div id="agregar" class="col-3" style="display: flex; justify-content:end; width: 100%; margin-top: 2em;margin-right: 15em">
             <asp:Button Text="Agregar" cssClass="btn btn-outline-success" ID="Agregar" OnClick="btnAgregar_Click" runat="server" />

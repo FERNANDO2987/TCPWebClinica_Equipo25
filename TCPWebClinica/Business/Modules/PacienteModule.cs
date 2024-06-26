@@ -164,14 +164,22 @@ namespace Business.Modules
                 {
                     Paciente aux = new Paciente();
                     aux.Id = (int)_accesoDatos.Lector["Id"];
-                    aux.HistoriaClinica = (int)_accesoDatos.Lector["HC"];
+                    //aux.HistoriaClinica = (int)_accesoDatos.Lector["HC"];
+                    aux.Apellido = (string)_accesoDatos.Lector["Apellido"];
                     aux.Nombre = (string)_accesoDatos.Lector["Nombre"];
                     aux.FechaNacimiento = (DateTime)_accesoDatos.Lector["FechaNacimiento"];
-                    aux.Documento = (int)_accesoDatos.Lector["DNI"];
+
+                    if (_accesoDatos.Lector["DNI"] != System.DBNull.Value)
+                    {
+                        aux.Documento = (int)_accesoDatos.Lector["DNI"];
+                    }
+
                     aux.Email = (string)_accesoDatos.Lector["Email"];
                     aux.Celular = (string)_accesoDatos.Lector["Telefono"];
                     aux.Sexo = (string)_accesoDatos.Lector["Sexo"];
-                    //aux.ObraSocial.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                    aux.ObraSocial = new ObraSocial();
+                    aux.ObraSocial.Id = (int)_accesoDatos.Lector["Id"];
+                    aux.ObraSocial.Nombre = (string)_accesoDatos.Lector["Nombre"];
 
                     result.Add(aux);
 

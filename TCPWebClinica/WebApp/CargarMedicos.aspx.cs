@@ -18,8 +18,8 @@ namespace WebApp
         {
             if (!Page.IsPostBack)
             {
-                CargarHorarios(ddlHorarioEntrada);
-                //CargarHorarios(ddlHorarioSalida);
+                CargarHorarioEntrada(ddlHorarioEntrada);
+                CargarHorarioSalida(ddlHorarioSalida);
                 CargarEspecialidades(ddlEspecialidad);
             }
         }
@@ -40,7 +40,7 @@ namespace WebApp
             {
                 MedicoModule module = new MedicoModule(new AccesoDatos());
                 int horarioEntrada = int.Parse(ddlHorarioEntrada.SelectedValue.Replace(":00hs", ""));
-                //int horarioSalida = int.Parse(ddlHorarioSalida.SelectedValue.Replace(":00hs", ""));
+                int horarioSalida = int.Parse(ddlHorarioSalida.SelectedValue.Replace(":00hs", ""));
 
                 Especialidad especialidad = new Especialidad()
                 {
@@ -50,7 +50,7 @@ namespace WebApp
                 HorarioDeTrabajo horarioDeTrabajo = new HorarioDeTrabajo()
                 {
                     HoraEntrada = new DateTime(2024,1,1, horarioEntrada,0,0),
-                    //HoraSalida = new DateTime(2024, 1, 1, horarioSalida, 0, 0),
+                    HoraSalida = new DateTime(2024, 1, 1, horarioSalida, 0, 0),
                 };
 
                 Medico medico = new Medico()
@@ -59,7 +59,7 @@ namespace WebApp
                     Nombre = string.IsNullOrWhiteSpace(txtNombre.Text) ? string.Empty : txtNombre.Text,
                     Email = string.IsNullOrWhiteSpace(txtEmail.Text) ? string.Empty : txtEmail.Text,
                     Especialidades = new List<Especialidad>() { especialidad },
-                    //HorarioDeTrabajo = new List<HorarioDeTrabajo>() { horarioDeTrabajo },
+                    HorarioDeTrabajo = new List<HorarioDeTrabajo>() { horarioDeTrabajo },
                 };
 
                 module.agregarMedico(medico);
@@ -72,11 +72,21 @@ namespace WebApp
             }
         }
 
-        private void CargarHorarios(DropDownList horario)
+        private void CargarHorarioEntrada(DropDownList horario)
         {
             for (int i = 7; i <= 22; i++)
             {
-                var descripcion = $"{i.ToString()} :00hs - {i + 1.ToString()} :00hs";
+                var descripcion = $"{i.ToString()} :00hs";
+                ListItem horariosParaCargar = new ListItem(descripcion, descripcion);
+                horario.Items.Add(horariosParaCargar);
+            }
+        }
+
+        private void CargarHorarioSalida(DropDownList horario)
+        {
+            for (int i = 7; i <= 22; i++)
+            {
+                var descripcion = $"{i.ToString()}:00hs";
                 ListItem horariosParaCargar = new ListItem(descripcion, descripcion);
                 horario.Items.Add(horariosParaCargar);
             }

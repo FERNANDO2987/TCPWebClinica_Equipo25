@@ -7,7 +7,7 @@
         <div class="col-6">
 
             <h3>Pacientes</h3>
-            <asp:GridView ID="dgvPacientes" DataKeyNames="Id" cssclass="table" autogeneratecolumns="false" runat="server">
+            <asp:GridView ID="dgvPacientes" OnSelectedIndexChanged="dgvPcaientes_SelectedIndexChanged" DataKeyNames="Id" cssclass="table" autogeneratecolumns="false" runat="server">
                 <Columns>
                     <asp:BoundField HeaderText="Apellido" DataField="Apellido"/>
                     <asp:BoundField HeaderText="Nombre" DataField="Nombre"/>

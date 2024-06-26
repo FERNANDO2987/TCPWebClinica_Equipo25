@@ -39,13 +39,14 @@ namespace WebApp
 
                 int id = int.Parse(Request.QueryString["id"].ToString());
                 Paciente paciente = pacienteModule.listarPacientes().Find(x => x.Id == id);
-
+                DateTime fechan = paciente.FechaNacimiento;
                 txtApellido.Text = paciente.Apellido;
                 txtNombre.Text = paciente.Nombre;
                 txtDni.Text = paciente.Documento.ToString();
                 txtTelefono.Text = paciente.Celular;
                 txtEmail.Text = paciente.Email;
-                ddlObraSocial.SelectedValue = paciente.ObraSocial.Nombre;
+                ddlObraSocial.SelectedValue = paciente.Id.ToString();
+                fecha.Text = fechan.ToString("yyyy-MM-dd");
                 if (paciente.Sexo == "f" || paciente.Sexo == "F")
                 {
                     rbtnF.Selected = true;
@@ -64,7 +65,7 @@ namespace WebApp
                 btnEliminar.Visible = false;
                 btnModificar.Visible = false;
             }
-        }
+            }
         private void CargarObrasSociales(DropDownList ddlObraSocial)
         {
             List<ObraSocial> obrassociales = obrasocialmodule.listarObraSociales();
