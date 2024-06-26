@@ -137,6 +137,37 @@ namespace Business.Modules
             }
         }
 
-     
+        public List<Especialidad> listarEspecilidadPorMedico(int idMedico)
+        {
+            var result = new List<Especialidad>();
+            try
+            {
+                _accesoDatos.setearConsulta("ObtenerEspecialidadPorMedico");
+                _accesoDatos.setearParametro("@idMedico", idMedico.ToString());
+                _accesoDatos.ejecutarLectura();
+
+                while (_accesoDatos.Lector.Read())
+                {
+                    Especialidad aux = new Especialidad();
+                    aux.Id = (int)_accesoDatos.Lector["Id"];
+                    aux.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                
+
+                    result.Add(aux);
+                }
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al obtener los horarios de trabajo por médico: " + ex.Message);
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion();
+            }
+        }
+
+
     }
 }
