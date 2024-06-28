@@ -197,7 +197,19 @@ namespace WebApp
         }*/
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-          
+            EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
+            enviarEmailModule.ArmarCorreo("fernandopalacios51@gmail.com","Esto es una prueba piloto","Hola que tal...");
+
+            try
+            {
+                enviarEmailModule.EnviarEmail();
+
+            }
+            catch (Exception ex)
+            {
+
+                Session.Add("Error al Enviar E-mail",ex);
+            }
 
         }
 
