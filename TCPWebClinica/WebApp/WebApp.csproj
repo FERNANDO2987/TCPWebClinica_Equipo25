@@ -80,6 +80,7 @@
     <Content Include="Global.asax" />
     <Content Include="NuevaObraSocial.aspx" />
     <Content Include="NuevoPaciente.aspx" />
+    <Content Include="NuevoTurno.aspx" />
     <Content Include="NuevoUsuario.aspx" />
     <Content Include="ObrasSociales.aspx" />
     <Content Include="Pacientes.aspx" />
@@ -87,6 +88,7 @@
     <Content Include="Script\AgregarCarrito.js" />
     <Content Include="Script\Filtro.js" />
     <Content Include="Script\JavaScriptNavegacion.js" />
+    <Content Include="Turno.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -143,6 +145,13 @@
     <Compile Include="NuevoPaciente.aspx.designer.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="NuevoTurno.aspx.cs">
+      <DependentUpon>NuevoTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoTurno.aspx.designer.cs">
+      <DependentUpon>NuevoTurno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="NuevoUsuario.aspx.cs">
       <DependentUpon>NuevoUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -172,6 +181,13 @@
       <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Turno.aspx.cs">
+      <DependentUpon>Turno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Turno.aspx.designer.cs">
+      <DependentUpon>Turno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Usuarios.aspx.cs">
       <DependentUpon>Usuarios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

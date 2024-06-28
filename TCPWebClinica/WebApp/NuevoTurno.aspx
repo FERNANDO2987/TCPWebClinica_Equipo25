@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="NuevoTurno.aspx.cs" Inherits="WebApp.NuevoTurno" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
 
 
 
@@ -25,12 +25,10 @@
                     <label for="observaciones">Observaciones</label>
                 </div>
 
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="txtFecha" placeholder="Fecha" runat="server" />
-                    <label for="txtFecha">Fecha</label>
-                    <asp:CalendarExtender ID="CalendarExtender1" runat="server" TargetControlID="txtFecha" Format="dd/MM/yyyy"></asp:CalendarExtender>
+                <div id="fecha-ls" style="padding-top: 20px;">
+                    <label for="fecha">Fecha *</label>
+                    <asp:TextBox type="date" ID="fecha" class="form-select" AutoPostBack="true" onkeydown="return false;" runat="server" OnTextChanged="fecha_TextChanged"></asp:TextBox>
                 </div>
-
                 <div class="form-floating mb-3">
                     <asp:DropDownList ID="ddlHorarioTrabajo" CssClass="form-select" runat="server"></asp:DropDownList>
                     <label for="horarioTrabajo">Hora</label>

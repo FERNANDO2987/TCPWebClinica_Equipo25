@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AccesoSQL\AccesoDatos.cs" />
     <Compile Include="Interfaces\IAccesoDatos.cs" />
+    <Compile Include="Interfaces\IEnviarMailModule.cs" />
     <Compile Include="Interfaces\IEspecialidadModule.cs" />
     <Compile Include="Interfaces\IEstadoTurnoModule.cs" />
     <Compile Include="Interfaces\IHorarioTrabajoModule.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Turno.cs" />
     <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Modules\EnviarEmailModule.cs" />
     <Compile Include="Modules\EspecialidadModule.cs" />
     <Compile Include="Modules\EstadoTurnoModule.cs" />
     <Compile Include="Modules\HorarioTrabajoModule.cs" />
