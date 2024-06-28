@@ -1,13 +1,16 @@
 ﻿using Business.AccesoSQL;
 using Business.Interfaces;
-using Business.Models;
+
 using Business.Modules;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Business.Models;
 
 namespace WebApp
 {
@@ -15,6 +18,8 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DateTime hoy = DateTime.Today;
+
             if (!IsPostBack)
             {
                 // Cargar datos iniciales
@@ -29,12 +34,45 @@ namespace WebApp
                 //Cargar Obras Sociales
                 CargarObraSocial();
 
-              
+                if (fechaTurno.Text == hoy.ToString("yyyy-MM-dd"))
+                {
+                    fechaTurno.BorderColor = System.Drawing.Color.Red;
+                }
+
+
+            }
+
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            TurnoModule turnoModule = new TurnoModule(accesoDatos);
+
+            if (Request.QueryString["id"] != null)
+            {
+                btnAgregar.Visible = false;
+
+                int id = int.Parse(Request.QueryString["id"].ToString());
+                Business.Models.Turno turno = turnoModule.listarTurnos().Find(x => x.Id == id);
+                DateTime fecha = turno.FechaHora;
+                ddlMedicos.SelectedIndex = turno.Id;
+                //Falta paciente
+                dllEspecialidad.SelectedIndex = turno.Id;
+                txtObservaciones.Text = turno.Observaciones;
+                ddlEstadoTurno.SelectedIndex = turno.Id;
+                ddlObraSocial.SelectedIndex = turno.Id;
+                fechaTurno.Text = fecha.ToString("yyyy-MM-dd");
+
+            }
+            else
+            {
+                btnEliminar.Visible = false;
+                btnModificar.Visible = false;
             }
 
         }
 
-
+        protected void fechaTurno_TextChanged(object sender, EventArgs e)
+        {
+            // Tu lógica aquí
+        }
         private void CargarEspecialidades()
         {
             

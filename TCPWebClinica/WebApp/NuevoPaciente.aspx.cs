@@ -23,7 +23,7 @@ namespace WebApp
             if (!Page.IsPostBack)
             {
                 CargarObrasSociales(ddlObraSocial);
-               
+
                 if (fecha.Text == hoy.ToString("yyyy-MM-dd"))
                 {
                     fecha.BorderColor = System.Drawing.Color.Red;
@@ -65,7 +65,7 @@ namespace WebApp
                 btnEliminar.Visible = false;
                 btnModificar.Visible = false;
             }
-            }
+        }
         private void CargarObrasSociales(DropDownList ddlObraSocial)
         {
             List<ObraSocial> obrassociales = obrasocialmodule.listarObraSociales();
@@ -79,7 +79,7 @@ namespace WebApp
 
         protected void fecha_TextChanged(object sender, EventArgs e)
         {
-    
+
 
         }
 
@@ -90,7 +90,7 @@ namespace WebApp
                 PacienteModule module = new PacienteModule(new AccesoDatos());
 
                 Paciente paciente = new Paciente();
-                
+
                 paciente.Apellido = txtApellido.Text;
                 paciente.Nombre = txtNombre.Text;
                 paciente.FechaNacimiento = DateTime.Parse(fecha.Text);
@@ -147,6 +147,7 @@ namespace WebApp
                 throw ex;
             }
 
+
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
@@ -175,5 +176,5 @@ namespace WebApp
                 throw ex;
             }
         }
-    }   
+    }
 }
