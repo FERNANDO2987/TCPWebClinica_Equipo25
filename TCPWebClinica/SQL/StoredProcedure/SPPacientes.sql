@@ -127,3 +127,28 @@ BEGIN
     FROM [dbo].[ObraSocial]
     WHERE Id = @obraSocialId;
 END;
+GO
+
+-- =============================================
+-- Author:	    Palacios Fernando
+-- Create date: 28/06/2024
+-- Description:	Busca en la tabla paciente por criterio, Nombre,Apellido,HC y Documento
+-- =============================================
+
+CREATE PROCEDURE [dbo].[BuscarPaciente]
+(
+  @Criterio varchar(100)
+)
+AS
+BEGIN
+	Set NOCOUNT ON;
+
+	SELECT *
+	FROM Paciente
+	WHERE
+	    HC LIKE '%' + @Criterio + '%' OR
+		Nombre LIKE '%' + @Criterio + '%' OR
+		Apellido LIKE '%' + @Criterio + '%' OR
+		Documento LIKE '%' + @Criterio + '%';
+
+END
