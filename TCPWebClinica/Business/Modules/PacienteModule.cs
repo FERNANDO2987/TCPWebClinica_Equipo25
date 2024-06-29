@@ -227,5 +227,41 @@ namespace Business.Modules
 
             return paciente;
         }
+
+        public List<Paciente> BuscarPacientePorCriterio(string criterio)
+        {
+            var result = new List<Paciente>();
+            try
+            {
+                _accesoDatos.setearConsulta("BuscarPaciente");
+
+                _accesoDatos.setearParametro("@Criterio", criterio);
+                _accesoDatos.ejecutarLectura();
+
+                while (_accesoDatos.Lector.Read())
+                {
+                    Paciente aux = new Paciente();
+                    aux.Id = (int)_accesoDatos.Lector["Id"];
+                    aux.HistoriaClinica = (int)_accesoDatos.Lector["HC"];
+                    aux.Apellido = (string)_accesoDatos.Lector["Apellido"];
+                    aux.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                    aux.Documento = (int)_accesoDatos.Lector["Documento"];
+
+                    result.Add(aux);
+
+                }
+
+                return result;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error de conexion a SQL: " + ex.Message);
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion();
+            }
+        }
     }
 }
