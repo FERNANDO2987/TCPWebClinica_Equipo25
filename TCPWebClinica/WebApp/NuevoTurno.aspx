@@ -11,6 +11,27 @@
             <h3>Agregar Turno</h3>
         </div>
 
+        <div id="buscarPaciente" style="padding-top: 20px;">
+            <label for="txtBuscarPaciente">Buscar Paciente</label>
+            <asp:TextBox ID="txtBuscarPaciente" runat="server" CssClass="form-control" />
+            <asp:Button ID="btnBuscarPaciente" runat="server" Text="Buscar" OnClick="btnBuscarPaciente_Click" CssClass="btn btn-primary" />
+        </div>
+
+
+
+        <div id="resultadosBusqueda" style="width: 100%; margin-top: 20px;">
+            <asp:GridView ID="gvPacientes" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" OnRowCommand="gvPacientes_RowCommand">
+                <Columns>
+                    <asp:BoundField DataField="Id" HeaderText="ID" />
+                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                    <asp:BoundField DataField="Documento" HeaderText="DNI" />
+                    <asp:ButtonField Text="Seleccionar" CommandName="Seleccionar" ButtonType="Button" />
+                </Columns>
+            </asp:GridView>
+        </div>
+
+
         <div id="form" style="display: flex; flex-direction: row; justify-content: start; width: 100%; margin-left: 2em;">
             <div class="col-1" id="columna1" style="width: 45%;">
                 <p style="color: red;">(*) Campos obligatorios</p>
@@ -22,7 +43,7 @@
 
                 <div id="medicos" style="padding-top: 20px;">
                     <label for="ddlMedicos">Medicos *</label>
-                    <asp:DropDownList ID="ddlMedicos" runat="server" class="form-select" aria-label="Default select example" required="true">
+                    <asp:DropDownList ID="ddlMedicos" runat="server" class="form-select" aria-label="Default select example" required="true" AutoPostBack="true" OnSelectedIndexChanged="ddlMedicos_SelectedIndexChanged">
                         <asp:ListItem Text="Medicos *" Enabled="false" />
                     </asp:DropDownList>
                 </div>
@@ -54,7 +75,7 @@
                     </asp:DropDownList>
                 </div>
 
-                <div id="obra_social" style="padding-top: 20px;>
+                <div id="obra_social" style="padding-top: 20px;">
                     <label for="ddlObraSocial">Obra Social *</label>
                     <asp:DropDownList ID="ddlObraSocial" runat="server" class="form-select" aria-label="Default select example" required="true">
                         <asp:ListItem Text="Obra Social *" Enabled="false" />

@@ -23,16 +23,16 @@ namespace WebApp
             if (!IsPostBack)
             {
                 // Cargar datos iniciales
-               // CargarEspecialidades();
+                //CargarEspecialidades();
 
                 //Cargar datos de Medicos
-                CargarMedicos();
+                CargarMedicos(ddlMedicos);
 
                 //Cargar Estado de Turno
                 CargarEstadoTurno();
 
                 //Cargar Obras Sociales
-                CargarObraSocial();
+                CargarObraSocial(ddlObraSocial);
 
                 if (fechaTurno.Text == hoy.ToString("yyyy-MM-dd"))
                 {
@@ -90,7 +90,7 @@ namespace WebApp
 
         }
 
-        private void CargarMedicos()
+        private void CargarMedicos(DropDownList ddlMedicos)
         {
             IAccesoDatos accesoDatos = new AccesoDatos();
             MedicoModule medicoModule = new MedicoModule(accesoDatos);
@@ -136,7 +136,7 @@ namespace WebApp
 
         }
 
-        private void CargarObraSocial()
+        private void CargarObraSocial(DropDownList ddlObraSocial)
         {
             IAccesoDatos accesoDatos = new AccesoDatos();
             ObraSocialModule obraSocialModule = new ObraSocialModule(accesoDatos);
@@ -163,9 +163,11 @@ namespace WebApp
 
         private void CargarHorariosDeMedico(int medicoId)
         {
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            HorarioTrabajoModule horarioTrabajoModule = new HorarioTrabajoModule(accesoDatos);
             try
             {
-                HorarioTrabajoModule horarioTrabajoModule = new HorarioTrabajoModule(new AccesoDatos());
+                
                 List<HorarioDeTrabajo> horarios = horarioTrabajoModule.listarHorarioTrabajoPorMedico(medicoId);
 
                 // Lógica para cargar los horarios en el dropdown ddlHorarioTrabajo
@@ -175,7 +177,7 @@ namespace WebApp
                 ddlHorarioTrabajo.DataBind();
 
                 // Agregar un elemento vacío para selección inicial
-                ddlHorarioTrabajo.Items.Insert(0, new ListItem("-- Seleccionar Hora --", "0"));
+                ddlHorarioTrabajo.Items.Insert(0, new ListItem("-- Seleccionar Horario --", "0"));
             }
             catch (Exception ex)
             {
@@ -192,9 +194,12 @@ namespace WebApp
 
         private void CargarEspecilidadXMedico(int medicoId)
         {
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            EspecialidadModule especialidadModule = new EspecialidadModule(accesoDatos);
+        
+
             try
             {
-                EspecialidadModule especialidadModule = new EspecialidadModule(new AccesoDatos());
                 List<Especialidad> especialidad = especialidadModule.listarEspecilidadPorMedico(medicoId);
 
                 // Lógica para cargar las Especialidades
@@ -235,19 +240,53 @@ namespace WebApp
         }*/
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
-            enviarEmailModule.ArmarCorreo("fernandopalacios51@gmail.com","Esto es una prueba piloto","Hola que tal...");
+            /*    EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
+                enviarEmailModule.ArmarCorreo("fernandopalacios51@gmail.com","Esto es una prueba piloto","Hola que tal...");
+
+                try
+                {
+                    enviarEmailModule.EnviarEmail();
+
+                }
+                catch (Exception ex)
+                {
+
+                    Session.Add("Error al Enviar E-mail",ex);
+                }*/
 
             try
             {
-                enviarEmailModule.EnviarEmail();
 
+
+                IAccesoDatos accesoDatos = new AccesoDatos();
+                TurnoModule turnoModule = new TurnoModule(accesoDatos);
+
+                Business.Models.Turno turno = new Business.Models.Turno();
+                turno.FechaHora = DateTime.Parse(fechaTurno.Text);
+                turno.Medico = new Medico();
+                turno.Medico.Id = int.Parse(ddlMedicos.SelectedValue);
+                turno.Paciente = new Paciente();
+                turno.Paciente.Id = int.Parse("");
+                turno.Especialidad = new Especialidad();
+                turno.Especialidad.Id = int.Parse(dllEspecialidad.SelectedValue);
+                turno.Observaciones = txtObservaciones.Text;
+                turno.Estado = new EstadoTurno();
+                turno.Estado.Id = int.Parse(ddlEstadoTurno.SelectedValue);
+                turno.ObraSocial = new ObraSocial();
+                turno.ObraSocial.Id = int.Parse(ddlObraSocial.SelectedValue);
+
+                turnoModule.agregarTurno(turno);
+
+                Response.Redirect("Turnos.aspx");
             }
             catch (Exception ex)
             {
 
-                Session.Add("Error al Enviar E-mail",ex);
+                throw ex;
             }
+
+
+
 
         }
 
@@ -263,6 +302,41 @@ namespace WebApp
            
                 IAccesoDatos accesoDatos = new AccesoDatos();
             
+        }
+
+        protected void btnBuscarPaciente_Click(object sender, EventArgs e)
+        {
+            string criterio = txtBuscarPaciente.Text;
+            BuscarYMostrarPacientes(criterio);
+        }
+
+        private void BuscarYMostrarPacientes(string criterio)
+        {
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            PacienteModule pacienteModule = new PacienteModule(accesoDatos);
+
+            try
+            {
+                List<Paciente> pacientes = pacienteModule.BuscarPacientePorCriterio(criterio);
+                gvPacientes.DataSource = pacientes;
+                gvPacientes.DataBind();
+            }
+            catch (Exception ex)
+            {
+                // Manejar la excepción adecuadamente
+                throw new Exception("Error al buscar pacientes: " + ex.Message);
+            }
+        }
+
+        protected void gvPacientes_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Seleccionar")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow selectedRow = gvPacientes.Rows[index];
+                int pacienteId = Convert.ToInt32(selectedRow.Cells[0].Text);
+                // Aquí puedes guardar el ID del paciente en una variable de sesión o en un control oculto para usarlo más adelante
+            }
         }
     }
 }
