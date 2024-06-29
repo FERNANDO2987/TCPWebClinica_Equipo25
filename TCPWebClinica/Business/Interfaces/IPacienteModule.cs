@@ -12,6 +12,7 @@ namespace Business.Interfaces
         List<Paciente> listarPacientes();
         Paciente agregarPaciente(Paciente paciente);
         bool eliminarPaciente(int id);
+        List<Paciente> BuscarPacientePorCriterio(string criterio);
 
     }
 }
