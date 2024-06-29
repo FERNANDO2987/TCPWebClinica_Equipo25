@@ -143,5 +143,40 @@ namespace Business.Modules
             }
         }
 
+
+        public bool Login(Usuario usuario)
+        {
+            Usuario aux = new Usuario();
+            try
+            {
+                _accesoDatos.setearConsulta("Log_in");
+                _accesoDatos.setearParametro("@nombre", usuario.Nombre);
+                _accesoDatos.setearParametro("@pass", usuario.Contraseña);
+                _accesoDatos.ejecutarLectura();
+
+                while (_accesoDatos.Lector.Read())
+                {
+                    
+                    usuario.Id = (int)_accesoDatos.Lector["Id"];
+                    usuario.Email = (string)_accesoDatos.Lector["Email"];
+                    usuario.Rol = new Rol();
+                    usuario.Rol.Id = (int)_accesoDatos.Lector["RolId"];
+                    return true;
+                }
+
+                return false;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error de conexion a SQL: " + ex.Message);
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion();
+            }
+        }
     }
 }

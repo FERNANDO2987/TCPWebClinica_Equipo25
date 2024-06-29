@@ -90,3 +90,19 @@ BEGIN
     -- Devuelve el resultado
     SELECT CAST(@Result AS BIT) AS 'Result';
 END;
+
+
+GO
+
+-- SP LOGIN
+
+CREATE PROCEDURE Log_in
+	@nombre nvarchar(100),
+	@pass nvarchar(50)
+AS
+BEGIN 
+	SELECT Id, Email, RolId FROM Usuario WHERE Nombre = @nombre AND Contraseña = @pass
+END
+
+
+
