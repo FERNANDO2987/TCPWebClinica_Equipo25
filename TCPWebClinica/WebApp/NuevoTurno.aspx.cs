@@ -304,6 +304,12 @@ namespace WebApp
             
         }
 
+        protected void txtBuscarPaciente_TextChanged(object sender, EventArgs e)
+        {
+            string criterio = txtBuscarPaciente.Text.Trim();
+            BuscarYMostrarPacientes(criterio);
+        }
+
         protected void btnBuscarPaciente_Click(object sender, EventArgs e)
         {
             string criterio = txtBuscarPaciente.Text;

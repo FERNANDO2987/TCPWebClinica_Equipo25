@@ -1,40 +1,65 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="NuevoTurno.aspx.cs" Inherits="WebApp.NuevoTurno" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .input-group-custom .form-control {
+            width: 100%; /* Ocupa todo el ancho disponible */
+        }
+
+        .input-group-custom .input-group-append .btn {
+            margin-left: 10px; /* Separar un poco el botón del textbox */
+        }
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
     <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin: 2em 0 0 2em;">
-        <div id="titulo" style="width: 100%; margin-bottom: 2em;">
+        <div id="titulo" style="width: 30%; margin-bottom: 2em;">
             <h3>Agregar Turno</h3>
         </div>
 
-        <div id="buscarPaciente" style="padding-top: 20px;">
-            <label for="txtBuscarPaciente">Buscar Paciente</label>
-            <asp:TextBox ID="txtBuscarPaciente" runat="server" CssClass="form-control" />
-            <asp:Button ID="btnBuscarPaciente" runat="server" Text="Buscar" OnClick="btnBuscarPaciente_Click" CssClass="btn btn-primary" />
+       <div id="form3" style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 2em 0;">
+    <div class="col-12 col-md-8" id="columna3">
+        <div class="form-floating mb-3 search-container">
+            <div class="input-group input-group-custom">
+                <asp:TextBox type="search" ID="txtBuscarPaciente" role="combobox" spellcheck="false" runat="server" CssClass="form-control" placeholder="Buscar" required="true" AutoPostBack="true" OnTextChanged="txtBuscarPaciente_TextChanged" />
+                <div class="input-group-append">
+                    <asp:Button ID="btnBuscarPaciente" runat="server" Text="Buscar" OnClick="btnBuscarPaciente_Click" CssClass="btn btn-primary" />
+                </div>
+            </div>
         </div>
 
-
-
-        <div id="resultadosBusqueda" style="width: 100%; margin-top: 20px;">
-            <asp:GridView ID="gvPacientes" runat="server" AutoGenerateColumns="False" CssClass="table table-bordered" OnRowCommand="gvPacientes_RowCommand">
-                <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="ID" />
-                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
-                    <asp:BoundField DataField="Documento" HeaderText="DNI" />
-                    <asp:ButtonField Text="Seleccionar" CommandName="Seleccionar" ButtonType="Button" />
-                </Columns>
-            </asp:GridView>
-        </div>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <div class="mt-4">
+                    <asp:GridView ID="gvPacientes" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered" OnRowCommand="gvPacientes_RowCommand">
+                        <Columns>
+                            <asp:BoundField DataField="HistoriaClinica" HeaderText="HC" />
+                            <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                            <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                            <asp:BoundField DataField="Documento" HeaderText="DNI" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CommandName="Seleccionar" CssClass="btn btn-success" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                </div>
+            </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="txtBuscarPaciente" EventName="TextChanged" />
+            </Triggers>
+        </asp:UpdatePanel>
+    </div>
+</div>
 
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: start; width: 100%; margin-left: 2em;">
             <div class="col-1" id="columna1" style="width: 45%;">
-                <p style="color: red;">(*) Campos obligatorios</p>
+
 
                 <div id="fechaTurno-ls" style="padding-top: 20px;">
                     <label for="fechaTurno">Fecha *</label>
@@ -57,7 +82,7 @@
             </div>
 
             <div class="col-2" id="columna2" style="width: 45%;">
-                <p style="color: red;">(*) Campos obligatorios</p>
+
 
 
 
