@@ -263,5 +263,39 @@ namespace Business.Modules
                 _accesoDatos.cerrarConexion();
             }
         }
+
+
+        public Paciente ObtenerPacientePorId(int id)
+        {
+            Paciente paciente = null;
+            try
+            {
+                _accesoDatos.setearConsulta("ObtenerPacientePorId");
+
+                _accesoDatos.setearParametro("@Id", id.ToString());
+                _accesoDatos.ejecutarLectura();
+
+                if (_accesoDatos.Lector.Read())
+                {
+                    paciente = new Paciente();
+                    paciente.Id = (int)_accesoDatos.Lector["Id"];
+                    paciente.HistoriaClinica = (int)_accesoDatos.Lector["HC"];
+                    paciente.Apellido = (string)_accesoDatos.Lector["Apellido"];
+                    paciente.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                    paciente.Documento = (int)_accesoDatos.Lector["Documento"];
+                }
+
+                return paciente;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error de conexión a SQL: " + ex.Message);
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion();
+            }
+        }
+
     }
 }
