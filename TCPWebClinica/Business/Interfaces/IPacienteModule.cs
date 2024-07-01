@@ -13,6 +13,7 @@ namespace Business.Interfaces
         Paciente agregarPaciente(Paciente paciente);
         bool eliminarPaciente(int id);
         List<Paciente> BuscarPacientePorCriterio(string criterio);
+        Paciente ObtenerPacientePorId(int id);
 
     }
 }
