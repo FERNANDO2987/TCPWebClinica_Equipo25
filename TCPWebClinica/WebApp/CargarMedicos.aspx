@@ -5,7 +5,7 @@
     <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-top: 2em;">
 
         <div id="titulo" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; margin-bottom: 2em; margin-left: 5em";>
-            <h3>Agregar nuevo Profecional</h3>
+            <h3>Agregar nuevo Profesional</h3>
         </div>
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: space-around; width: 100%;">

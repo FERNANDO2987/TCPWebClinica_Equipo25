@@ -61,19 +61,6 @@ CREATE TABLE [dbo].[Recepcionista](
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
 	)
---Medico
-
-Create Table[dbo].[Medico]
-(
-  [Id] [int] not null primary key identity(1,1),
-  [Nombre] nvarchar(100) NOT NULL,
-  [Apellido] nvarchar (100) NOT NULL,
-  [Email] nvarchar(100) NOT NULL,
-  [CreatedDate] [datetime] NOT NULL,
-  [Deleted] [bit] NOT NULL,
-  [DeleteDate] [datetime] NULL
-   
-)
 --Paciente
 
 CREATE TABLE [dbo].[Paciente](
@@ -91,13 +78,7 @@ CREATE TABLE [dbo].[Paciente](
 	[Deleted] [bit] NOT NULL,
 	[DeleteDate] [datetime] NULL
 )
---CREATE TABLE [dbo].[EstadoTurno](
---	[Id] [int] NOT NULL PRIMARY KEY IDENTITY(1,1),
---	[Estado] [varchar](50) NOT NULL,
---	[CreatedDate] [datetime] NOT NULL,
---	[Deleted] [bit] NOT NULL,
---	[DeleteDate] [datetime] NULL
---)
+--Medicos
 create table [dbo].[Medicos](
 	[Id] [int] NOT NULL FOREIGN KEY REFERENCES Usuario(Id) PRIMARY KEY,
 	[Nombre] [nvarchar](50) NOT NULL,
@@ -126,7 +107,7 @@ Create Table[dbo].[EstadoTurno]
 create table [dbo].[Turnos](
 	[Id] [int] not null primary key identity(1,1),
 	[IdPaciente] [int] not null foreign key references Paciente(id),
-	[IdMedico] [int] not null foreign key references Medico(id),
+	[IdMedico] [int] not null foreign key references Medicos(id),
 	[IdEspecialidad] [int] not null foreign key references Especialidad(id), 
 	[Observaciones] [varchar](500) null,
 	[FechaTurno] [datetime] not null,
@@ -137,9 +118,6 @@ create table [dbo].[Turnos](
 	[DeleteDate] [datetime] NULL
 )
 go
-
-
-
 --HorarioDeTrabajo
 
 Create Table[dbo].[HorarioDeTrabajo]

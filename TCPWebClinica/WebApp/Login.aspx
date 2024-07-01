@@ -9,7 +9,7 @@
         <div class="card p-3 mt-5" style="width: 400px;padding: 2rem;">
             <div class="card-header">Login</div>
             <div class="mb-3">
-                <label for="txtNombreUsuario" class="form-label">Correo electrónico</label>
+                <label for="txtNombreUsuario" class="form-label">Nombre de usuario</label>
                 <asp:TextBox ID="txtNombreUsuario" CssClass="form-control" runat="server"></asp:TextBox>
             </div>
             <div class="mb-3">

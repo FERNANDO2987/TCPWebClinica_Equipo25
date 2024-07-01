@@ -53,23 +53,6 @@ VALUES(@Nombre,@Descripcion,@Direccion,@Telefono,@Email,@Website,1,GETDATE(),0,N
 END
 go
 
--- AGREGAR (a la version anterior le faltaban datos ) 
---CREATE PROCEDURE [dbo].[AgregarObraSocial]
---    @Nombre NVARCHAR(100),
---    @Descripcion NVARCHAR(200),
---    @Direccion NVARCHAR(100),
---    @Telefono NVARCHAR(100),
---    @Email NVARCHAR(100),
---    @Website NVARCHAR(100),
---    @Activo BIT
---AS
---BEGIN
---    INSERT INTO [dbo].[ObraSocial] (Nombre, Descripcion, Direccion, Telefono, Email, Website, Activo, CreatedDate, Deleted)
---    VALUES (@Nombre, @Descripcion, @Direccion, @Telefono, @Email, @Website, @Activo, GETDATE(), 0)
---END
-
---GO
-
 
 -- =============================================
 -- Author:	    Palacios Fernando

@@ -46,12 +46,16 @@
   <ItemGroup>
     <Content Include="StoredProcedure\SPAdministrador.sql" />
     <Content Include="StoredProcedure\SPEspecialidades.sql" />
+    <Content Include="StoredProcedure\SPEspecialidad_X_Medico.sql" />
     <Content Include="StoredProcedure\SPEstadoTurno.sql" />
+    <Content Include="StoredProcedure\SPHorarioDeTrabajo.sql" />
     <Content Include="StoredProcedure\SPHorario_x_Medico.sql" />
+    <Content Include="StoredProcedure\SPMedico.sql" />
     <Content Include="StoredProcedure\SPObraSocial.sql" />
     <Content Include="StoredProcedure\SPPacientes.sql" />
     <Content Include="StoredProcedure\SPRecepcionista.sql" />
     <Content Include="StoredProcedure\SPRol.sql" />
+    <Content Include="StoredProcedure\SPTurnos.sql" />
     <Content Include="StoredProcedure\SPUsuario.sql" />
     <Content Include="Tablas\Tablas.sql" />
   </ItemGroup>
