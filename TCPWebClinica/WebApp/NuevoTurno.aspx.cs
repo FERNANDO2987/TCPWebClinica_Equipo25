@@ -51,9 +51,21 @@ namespace WebApp
 
                 int id = int.Parse(Request.QueryString["id"].ToString());
                 Business.Models.Turno turno = turnoModule.listarTurnos().Find(x => x.Id == id);
+
+                // Recuperar y asignar paciente si existe
+                if (turno.Paciente != null)
+                {
+                    hfPacienteId.Value = turno.Paciente.Id.ToString();
+                    // Aquí deberías mostrar el nombre del paciente en algún control, por ejemplo:
+                    // lblPacienteSeleccionado.Text = turno.Paciente.NombreCompleto; // Ajusta según tu interfaz
+                }
                 DateTime fecha = turno.FechaHora;
                 ddlMedicos.SelectedIndex = turno.Id;
-                //Falta paciente
+
+
+               
+
+
                 dllEspecialidad.SelectedIndex = turno.Id;
                 txtObservaciones.Text = turno.Observaciones;
                 ddlEstadoTurno.SelectedIndex = turno.Id;
@@ -257,16 +269,24 @@ namespace WebApp
             try
             {
 
+                int pacienteId;
 
+                // Intentar convertir el valor de hfPacienteId a entero
+                if (!int.TryParse(hfPacienteId.Value, out pacienteId) || pacienteId == 0)
+                {
+                    throw new Exception("Debe seleccionar un paciente antes de agregar el turno.");
+                }
+
+                // Crear una instancia de los módulos y acceso a datos necesarios
                 IAccesoDatos accesoDatos = new AccesoDatos();
                 TurnoModule turnoModule = new TurnoModule(accesoDatos);
 
+                // Crear un nuevo objeto de Turno y asignar valores
                 Business.Models.Turno turno = new Business.Models.Turno();
                 turno.FechaHora = DateTime.Parse(fechaTurno.Text);
                 turno.Medico = new Medico();
                 turno.Medico.Id = int.Parse(ddlMedicos.SelectedValue);
-                turno.Paciente = new Paciente();
-                turno.Paciente.Id = int.Parse("");
+                turno.Paciente = new Paciente { Id = pacienteId };
                 turno.Especialidad = new Especialidad();
                 turno.Especialidad.Id = int.Parse(dllEspecialidad.SelectedValue);
                 turno.Observaciones = txtObservaciones.Text;
@@ -275,17 +295,17 @@ namespace WebApp
                 turno.ObraSocial = new ObraSocial();
                 turno.ObraSocial.Id = int.Parse(ddlObraSocial.SelectedValue);
 
+                // Agregar el turno
                 turnoModule.agregarTurno(turno);
 
+                // Redireccionar a la página de turnos después de agregar
                 Response.Redirect("Turnos.aspx");
             }
             catch (Exception ex)
             {
-
+                // Manejar la excepción según sea necesario
                 throw ex;
             }
-
-
 
 
         }
@@ -329,7 +349,7 @@ namespace WebApp
             }
             catch (Exception ex)
             {
-                // Manejar la excepción adecuadamente
+                
                 throw new Exception("Error al buscar pacientes: " + ex.Message);
             }
         }
@@ -339,10 +359,32 @@ namespace WebApp
             if (e.CommandName == "Seleccionar")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow selectedRow = gvPacientes.Rows[index];
-                int pacienteId = Convert.ToInt32(selectedRow.Cells[0].Text);
-                // Aquí puedes guardar el ID del paciente en una variable de sesión o en un control oculto para usarlo más adelante
+
+                // Obtener el ID del paciente desde los DataKeys de la GridView
+                int pacienteId = Convert.ToInt32(gvPacientes.DataKeys[index].Value);
+
+                // Guardar el ID del paciente en el campo oculto
+                hfPacienteId.Value = pacienteId.ToString();
+
+                // Opcional: Mostrar el nombre y apellido del paciente seleccionado en un TextBox (o cualquier otro control)
+                string id = gvPacientes.Rows[index].Cells[0].Text;
+                string nombre = gvPacientes.Rows[index].Cells[1].Text; // Ajusta el índice según la posición del campo en la GridView
+                string apellido = gvPacientes.Rows[index].Cells[2].Text; // Ajusta el índice según la posición del campo en la GridView
+                txtNombreApellidoPaciente.Text = $"{nombre} {apellido}";
+
+                // Opcional: Resaltar visualmente la fila seleccionada
+                gvPacientes.SelectedIndex = index;
             }
         }
+
+
+
+
+
+
+
+
+
+
     }
 }
