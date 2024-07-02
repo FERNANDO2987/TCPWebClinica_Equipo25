@@ -63,7 +63,7 @@ namespace WebApp
                 ddlMedicos.SelectedIndex = turno.Id;
 
 
-               
+
 
 
                 dllEspecialidad.SelectedIndex = turno.Id;
@@ -87,7 +87,7 @@ namespace WebApp
         }
         private void CargarEspecialidades()
         {
-            
+
             IAccesoDatos accesoDatos = new AccesoDatos();
             EspecialidadModule especialidadModule = new EspecialidadModule(accesoDatos);
 
@@ -119,7 +119,7 @@ namespace WebApp
             // Agregar evento para cargar horarios al seleccionar un médico
             ddlMedicos.SelectedIndexChanged += new EventHandler(ddlMedicos_SelectedIndexChanged);
 
-        
+
         }
 
         private void CargarEstadoTurno()
@@ -179,7 +179,7 @@ namespace WebApp
             HorarioTrabajoModule horarioTrabajoModule = new HorarioTrabajoModule(accesoDatos);
             try
             {
-                
+
                 List<HorarioDeTrabajo> horarios = horarioTrabajoModule.listarHorarioTrabajoPorMedico(medicoId);
 
                 // Lógica para cargar los horarios en el dropdown ddlHorarioTrabajo
@@ -198,17 +198,17 @@ namespace WebApp
             }
         }
 
-     /*   protected void ddlMedicosXEspecilidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int medicoId = int.Parse(ddlMedicos.SelectedValue);
-            CargarEspecilidadXMedico(medicoId);
-        }*/
+        /*   protected void ddlMedicosXEspecilidad_SelectedIndexChanged(object sender, EventArgs e)
+           {
+               int medicoId = int.Parse(ddlMedicos.SelectedValue);
+               CargarEspecilidadXMedico(medicoId);
+           }*/
 
         private void CargarEspecilidadXMedico(int medicoId)
         {
             IAccesoDatos accesoDatos = new AccesoDatos();
             EspecialidadModule especialidadModule = new EspecialidadModule(accesoDatos);
-        
+
 
             try
             {
@@ -233,23 +233,23 @@ namespace WebApp
 
 
 
-     /*   private void CargarHorarioTrabajo()
-        {
-            IAccesoDatos accesoDatos = new AccesoDatos();
-            HorarioTrabajoModule horarioTrabajoModule  = new HorarioTrabajoModule(accesoDatos);
+        /*   private void CargarHorarioTrabajo()
+           {
+               IAccesoDatos accesoDatos = new AccesoDatos();
+               HorarioTrabajoModule horarioTrabajoModule  = new HorarioTrabajoModule(accesoDatos);
 
-            //Cargar ObraSociales en un DropDownList
-            ddlHorarioTrabajo.DataSource = horarioTrabajoModule.listarHorarioTrabajo();
-            ddlHorarioTrabajo.DataValueField = "Id";
-            ddlHorarioTrabajo.DataTextField = "FechaYHora";
-            ddlHorarioTrabajo.DataBind();
+               //Cargar ObraSociales en un DropDownList
+               ddlHorarioTrabajo.DataSource = horarioTrabajoModule.listarHorarioTrabajo();
+               ddlHorarioTrabajo.DataValueField = "Id";
+               ddlHorarioTrabajo.DataTextField = "FechaYHora";
+               ddlHorarioTrabajo.DataBind();
 
-            // Agregar un elemento vacío para selección inicial
-            ddlHorarioTrabajo.Items.Insert(0, new ListItem("-- Seleccionar Hora --", "0"));
+               // Agregar un elemento vacío para selección inicial
+               ddlHorarioTrabajo.Items.Insert(0, new ListItem("-- Seleccionar Hora --", "0"));
 
 
 
-        }*/
+           }*/
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
             /*    EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
@@ -268,38 +268,38 @@ namespace WebApp
 
             try
             {
+                // Retrieve the patient ID from the hidden field
+                if (int.TryParse(hfPacienteId.Value, out int pacienteId) && pacienteId > 0)
+                {
+                    // Crear una instancia de los módulos y acceso a datos necesarios
+                    IAccesoDatos accesoDatos = new AccesoDatos();
+                    TurnoModule turnoModule = new TurnoModule(accesoDatos);
 
-                int pacienteId;
+                    // Crear un nuevo objeto de Turno y asignar valores
+                    Business.Models.Turno turno = new Business.Models.Turno
+                    {
+                        FechaHora = DateTime.Parse(fechaTurno.Text),
+                        Medico = new Medico { Id = int.Parse(ddlMedicos.SelectedValue) },
+                        Paciente = new Paciente { Id = pacienteId },
+                        Especialidad = new Especialidad { Id = int.Parse(dllEspecialidad.SelectedValue) },
+                        Observaciones = txtObservaciones.Text,
+                        Estado = new EstadoTurno { Id = int.Parse(ddlEstadoTurno.SelectedValue) },
+                        ObraSocial = new ObraSocial { Id = int.Parse(ddlObraSocial.SelectedValue) }
+                    };
 
-                // Intentar convertir el valor de hfPacienteId a entero
-                if (!int.TryParse(hfPacienteId.Value, out pacienteId) || pacienteId == 0)
+                    // Agregar el turno
+
+                    turnoModule.agregarTurno(turno);
+
+                    // Redireccionar a la página de turnos después de agregar
+                    Response.Redirect("Turno.aspx");
+
+                   
+                }
+                else
                 {
                     throw new Exception("Debe seleccionar un paciente antes de agregar el turno.");
                 }
-
-                // Crear una instancia de los módulos y acceso a datos necesarios
-                IAccesoDatos accesoDatos = new AccesoDatos();
-                TurnoModule turnoModule = new TurnoModule(accesoDatos);
-
-                // Crear un nuevo objeto de Turno y asignar valores
-                Business.Models.Turno turno = new Business.Models.Turno();
-                turno.FechaHora = DateTime.Parse(fechaTurno.Text);
-                turno.Medico = new Medico();
-                turno.Medico.Id = int.Parse(ddlMedicos.SelectedValue);
-                turno.Paciente = new Paciente { Id = pacienteId };
-                turno.Especialidad = new Especialidad();
-                turno.Especialidad.Id = int.Parse(dllEspecialidad.SelectedValue);
-                turno.Observaciones = txtObservaciones.Text;
-                turno.Estado = new EstadoTurno();
-                turno.Estado.Id = int.Parse(ddlEstadoTurno.SelectedValue);
-                turno.ObraSocial = new ObraSocial();
-                turno.ObraSocial.Id = int.Parse(ddlObraSocial.SelectedValue);
-
-                // Agregar el turno
-                turnoModule.agregarTurno(turno);
-
-                // Redireccionar a la página de turnos después de agregar
-                Response.Redirect("Turnos.aspx");
             }
             catch (Exception ex)
             {
@@ -312,16 +312,16 @@ namespace WebApp
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
-            
+
 
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
         {
-            
-           
-                IAccesoDatos accesoDatos = new AccesoDatos();
-            
+
+
+            IAccesoDatos accesoDatos = new AccesoDatos();
+
         }
 
         protected void txtBuscarPaciente_TextChanged(object sender, EventArgs e)
@@ -349,13 +349,16 @@ namespace WebApp
             }
             catch (Exception ex)
             {
-                
+
                 throw new Exception("Error al buscar pacientes: " + ex.Message);
             }
         }
 
         protected void gvPacientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            PacienteModule pacienteModule = new PacienteModule(accesoDatos);
+
             if (e.CommandName == "Seleccionar")
             {
                 int index = Convert.ToInt32(e.CommandArgument);
@@ -367,15 +370,16 @@ namespace WebApp
                 hfPacienteId.Value = pacienteId.ToString();
 
                 // Opcional: Mostrar el nombre y apellido del paciente seleccionado en un TextBox (o cualquier otro control)
-                string id = gvPacientes.Rows[index].Cells[0].Text;
                 string nombre = gvPacientes.Rows[index].Cells[1].Text; // Ajusta el índice según la posición del campo en la GridView
                 string apellido = gvPacientes.Rows[index].Cells[2].Text; // Ajusta el índice según la posición del campo en la GridView
                 txtNombreApellidoPaciente.Text = $"{nombre} {apellido}";
 
-                // Opcional: Resaltar visualmente la fila seleccionada
+                // Resaltar visualmente la fila seleccionada
                 gvPacientes.SelectedIndex = index;
             }
         }
+
+
 
 
 

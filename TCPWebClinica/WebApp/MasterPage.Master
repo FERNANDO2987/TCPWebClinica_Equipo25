@@ -37,7 +37,7 @@
                                 <a class="nav-link" href="ObrasSociales.aspx">Obras Sociales</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="NuevoTurno.aspx">Turnos</a>
+                                <a class="nav-link" href="Turno.aspx">Turnos</a>
                             </li>
                         </ul>
 

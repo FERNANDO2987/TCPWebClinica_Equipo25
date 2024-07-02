@@ -48,6 +48,7 @@
                                 </Columns>
                             </asp:GridView>
                             <asp:TextBox ID="txtNombreApellidoPaciente" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                            <asp:HiddenField ID="hfPacienteId" runat="server" />
 
                         </div>
                     </ContentTemplate>
@@ -59,7 +60,7 @@
         </div>
 
         <!-- Campo oculto para almacenar el ID del paciente seleccionado -->
-        <asp:HiddenField ID="hfPacienteId" runat="server" />
+     
 
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: start; width: 100%; margin-left: 2em;">
@@ -80,7 +81,7 @@
 
                 <div id="especialidades" style="padding-top: 20px;">
                     <label for="dllEspecialidad">Especialidades *</label>
-                    <asp:DropDownList ID="dllEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true">
+                    <asp:DropDownList ID="dllEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true" >
                         <asp:ListItem Text="Especialidades *" Enabled="false" />
                     </asp:DropDownList>
                 </div>
