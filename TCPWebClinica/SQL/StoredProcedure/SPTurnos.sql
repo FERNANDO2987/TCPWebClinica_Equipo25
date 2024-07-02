@@ -50,3 +50,19 @@ VALUES(@IdPaciente,@IdMedico,@IdEspecialidad,@Observaciones,@FechaTurno,@IdEstad
 	
 	
 END
+
+GO
+
+-- =============================================
+-- Author:		Palacios Fernando
+-- Create date: 01/07/2024
+-- Description:	Obtiene todos los turnos
+-- =============================================
+
+CREATE PROCEDURE [dbo].[ObtenerTurnos]
+AS
+BEGIN	
+	select * from [dbo].[Turnos]  
+	where Deleted = 0
+  
+END
