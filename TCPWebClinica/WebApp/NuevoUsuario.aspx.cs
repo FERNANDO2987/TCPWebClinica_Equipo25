@@ -14,22 +14,29 @@ namespace WebApp
 {
     public partial class NuevoUsuario : System.Web.UI.Page
     {
+        RolModule rolModule = new RolModule(new AccesoDatos());
         protected void Page_Load(object sender, EventArgs e)
         {
             AccesoDatos accesoDatos = new AccesoDatos();
             UsuariosModule usuariosModule = new UsuariosModule(accesoDatos);
             if(!IsPostBack)
             {
+                CargarRoles(ddlRol);
                 if (Request.QueryString["id"] != null)
                 {
-                    Usuario usuario = new Usuario();
+                    btnAgregar.Visible = false;
                     int idUrl = int.Parse(Request.QueryString["id"]);
+                    Usuario usuario = new Usuario();
+
                     usuario =(Usuario) usuariosModule.listarUsuarios().FirstOrDefault(x => x.Id == idUrl); 
+                    Rol rol = (Rol)rolModule.listarRoles().Find(x => x.Id == usuario.Rol.Id);
+
                     txtId.Text = Request.QueryString["id"];
                     txtNombre.Text = usuario.Nombre;
                     txtContraseña.Text = usuario.Contraseña;
                     txtEmail.Text = usuario.Email;
-                    txtRolId.Text = usuario.Rol.Id.ToString();
+                    //txtRolId.Text = usuario.Rol.Id.ToString();
+                    ddlRol.SelectedValue = rol.Id.ToString();
                 }
 
 
@@ -39,6 +46,17 @@ namespace WebApp
             {
                 
             }
+
+        }
+
+        private void CargarRoles(DropDownList ddlRol)
+        {
+            List<Rol> roles = rolModule.listarRoles();
+
+            ddlRol.DataSource = roles;
+            ddlRol.DataValueField = "Id";
+            ddlRol.DataTextField = "Descripcion";
+            ddlRol.DataBind();
 
         }
 
@@ -54,7 +72,8 @@ namespace WebApp
             usuario.Email = txtEmail.Text;
 
             usuario.Rol = new Rol();
-            usuario.Rol.Id = int.Parse(txtRolId.Text);
+            usuario.Rol.Id = int.Parse(ddlRol.SelectedValue);
+            //usuario.Rol.Id = int.Parse(txtRolId.Text);
             //Rol rol = (Rol) rolModule.listarRoles().Where(x => x.Id == usuario.Rol.Id);
             //usuario.Rol.Descripcion = rol.Descripcion;
 
@@ -76,8 +95,9 @@ namespace WebApp
                 aux.Nombre = txtNombre.Text;
                 aux.Email = txtEmail.Text;
                 aux.Contraseña = txtContraseña.Text;
-                aux.Rol = new Rol();    
-                aux.Rol.Id = int.Parse(txtRolId.Text);
+                aux.Rol = new Rol();
+                aux.Rol.Id = int.Parse(ddlRol.SelectedValue);
+                //aux.Rol.Id = int.Parse(txtRolId.Text);
 
                 usuariosModule.agregarUsuario(aux);
             }

@@ -31,9 +31,17 @@
                     <asp:TextBox type="text" class="form-control" ID="txtEmail" placeholder="Email" required="true" runat="server" />
                     <label for="Email">Email *</label>
                 </div>
-                <div class="form-floating mb-3">
+
+                <%--<div class="form-floating mb-3">
                     <asp:TextBox type="tel" CssClass="form-control" ID="txtRolId" placeholder="Telefono" runat="server" />
                     <label for="RolId">RolId *</label>
+                </div>--%>
+
+                <div id="Rol" style="padding-top: 20px;">
+                    <label for="ddlRol">Rol *</label>
+                    <asp:DropDownList ID="ddlRol" runat="server" class="form-select" aria-label="Default select example" required="true">
+                        <asp:ListItem Text="Rol *" Enabled="false" />
+                    </asp:DropDownList>
                 </div>
 
             </div>
