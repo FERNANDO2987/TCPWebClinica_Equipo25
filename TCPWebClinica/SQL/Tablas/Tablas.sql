@@ -69,7 +69,7 @@ CREATE TABLE [dbo].[Paciente](
     [Apellido] [nvarchar](100) NOT NULL,
     [Nombre] [nvarchar](100) NOT NULL,
 	[FechaNacimiento] [date] NOT NULL,
-	[Docuemnto] [int],
+	[Documento] [int],
 	[Email] [nvarchar](100) NULL,
 	[Celular] [nvarchar](100) NOT NULL,
 	[Sexo] [nvarchar] NOT NULL,
@@ -89,7 +89,7 @@ create table [dbo].[Medicos](
 	[DeleteDate] [datetime] NULL
 )
 create table [dbo].[Especialidades_X_Medico](
-	[IdMedico] [int] not null foreign key references Medico(id),
+	[IdMedico] [int] not null foreign key references Medicos(id),
 	[IdEspecialidad] [int] not null foreign key references Especialidad(id),
 	primary key (IdMedico, IdEspecialidad)
 )
@@ -133,7 +133,7 @@ Create Table[dbo].[HorarioDeTrabajo]
 
 create table [dbo].[Horario_x_Medico](
 	[IdHorario] [int] not null foreign key references HorarioDeTrabajo(id),
-	[IdMedico] [int] not null foreign key references Medico(id),
+	[IdMedico] [int] not null foreign key references Medicos(id),
 	primary key(IdHorario,IdMedico)
 
 )

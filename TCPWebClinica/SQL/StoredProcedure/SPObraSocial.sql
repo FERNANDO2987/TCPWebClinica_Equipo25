@@ -11,7 +11,7 @@ GO
 -- Create date: 05/06/2024
 -- Description:	Agrega la Obra Social
 -- =============================================
-CREATE PROCEDURE [dbo].[AgregarObraSocial]
+CREATE OR ALTER PROCEDURE [dbo].[AgregarObraSocial]
 (
 	@Id INT,
 	@Nombre NVARCHAR(100),
@@ -40,9 +40,9 @@ BEGIN
 		else
 			BEGIN
 
-INSERT INTO ObraSocial(Nombre,Descripcion,Direccion,Telefono,Email,Website,Activo,CreatedDate,Deleted,DeleteDate)
+INSERT INTO ObraSocial(Nombre,Descripcion,Direccion,Telefono,Email,Website,CreatedDate,Deleted,DeleteDate)
 
-VALUES(@Nombre,@Descripcion,@Direccion,@Telefono,@Email,@Website,1,GETDATE(),0,NULL)
+VALUES(@Nombre,@Descripcion,@Direccion,@Telefono,@Email,@Website,GETDATE(),0,NULL)
 
 
 
