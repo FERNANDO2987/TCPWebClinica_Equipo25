@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IMedicoModule.cs" />
     <Compile Include="Interfaces\IObraSocialModule.cs" />
     <Compile Include="Interfaces\IPacienteModule.cs" />
+    <Compile Include="Interfaces\IRecepcionistaModule.cs" />
     <Compile Include="Interfaces\IRolModule.cs" />
     <Compile Include="Interfaces\ITurnoModule.cs" />
     <Compile Include="Interfaces\IUsuariosModule.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Modules\MedicoModule.cs" />
     <Compile Include="Modules\ObraSocialModule.cs" />
     <Compile Include="Modules\PacienteModule.cs" />
+    <Compile Include="Modules\RecepcionistaModule.cs" />
     <Compile Include="Modules\RolModule.cs" />
     <Compile Include="Modules\TurnoModule.cs" />
     <Compile Include="Modules\UsuariosModule.cs" />

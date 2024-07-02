@@ -157,7 +157,7 @@ namespace Business.Modules
             var result = new List<Paciente>();
             try
             {
-                _accesoDatos.setearConsulta("LeerPacientes");
+                _accesoDatos.setearConsulta("ObtenerPaciente");
                 _accesoDatos.ejecutarLectura();
 
                 while (_accesoDatos.Lector.Read())
