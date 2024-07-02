@@ -10,14 +10,9 @@
             <h3>Turnos</h3>
             <asp:GridView ID="dgvTurnos" OnSelectedIndexChanged="dgvTurnos_SelectedIndexChanged" DataKeyNames="Id" CssClass="table" AutoGenerateColumns="false" runat="server">
                 <Columns>
-
-                    <asp:BoundField HeaderText="Nombre" DataField="Paciente.Nombre" />
-                    <asp:BoundField HeaderText="Fecha" DataField="Fecha" />
-                    <asp:BoundField HeaderText="Hora" DataField="Hora" />
-                    <asp:BoundField HeaderText="Medico" DataField="Medico.Nombre" />
-                    <asp:BoundField HeaderText="Especialidad" DataField="Especialidad.Nombre" />
-                    <asp:BoundField HeaderText="Obra Social" DataField="ObraSocial.Nombre" />
-                    <asp:BoundField HeaderText="Estado" DataField="Estado.Nombre" />
+                     <asp:BoundField HeaderText="ID" DataField="Id"/>
+                    <asp:BoundField HeaderText="Observaciones" DataField="Observaciones" />
+  
                     <asp:CommandField ShowSelectButton="True" SelectText="Seleccionar" ControlStyle-CssClass="btn btn-Alert btn-sm" />
                 </Columns>
             </asp:GridView>

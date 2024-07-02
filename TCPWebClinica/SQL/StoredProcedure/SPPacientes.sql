@@ -152,3 +152,22 @@ BEGIN
 		Documento LIKE '%' + @Criterio + '%';
 
 END
+
+GO
+
+-- =============================================
+-- Author:	    Palacios Fernando
+-- Create date: 01/07/2024
+-- Description:	Obtiene los pacientes por Id
+-- =============================================
+CREATE PROCEDURE [dbo].[ObtenerPacientePorId]
+(
+  @Id int
+)
+AS
+BEGIN	
+	select * from [dbo].[Paciente] 
+	Where Id = @Id and Deleted = 0
+
+  
+END

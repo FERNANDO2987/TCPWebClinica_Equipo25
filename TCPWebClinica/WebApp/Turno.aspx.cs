@@ -15,8 +15,8 @@ namespace WebApp
         protected void Page_Load(object sender, EventArgs e)
         {
             IAccesoDatos accesoDatos = new AccesoDatos();
-            ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
-            dgvTurnos.DataSource = moduleObraSocial.listarObraSociales();
+            TurnoModule turnoModule = new TurnoModule(accesoDatos);
+            dgvTurnos.DataSource = turnoModule.listarTurnos();
             dgvTurnos.DataBind();
         }
 

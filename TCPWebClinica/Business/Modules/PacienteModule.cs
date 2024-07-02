@@ -280,9 +280,15 @@ namespace Business.Modules
                     paciente = new Paciente();
                     paciente.Id = (int)_accesoDatos.Lector["Id"];
                     paciente.HistoriaClinica = (int)_accesoDatos.Lector["HC"];
-                    paciente.Apellido = (string)_accesoDatos.Lector["Apellido"];
                     paciente.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                    paciente.Apellido = (string)_accesoDatos.Lector["Apellido"];              
                     paciente.Documento = (int)_accesoDatos.Lector["Documento"];
+                    paciente.FechaNacimiento = (DateTime)_accesoDatos.Lector["FechaNacimiento"];
+                    paciente.Celular = (string)_accesoDatos.Lector["Celular"];
+                    paciente.Email = (string)_accesoDatos.Lector["Email"];
+                    paciente.ObraSocial = new ObraSocial();
+                    paciente.ObraSocial.Id = (int)_accesoDatos.Lector["Id"];
+
                 }
 
                 return paciente;
