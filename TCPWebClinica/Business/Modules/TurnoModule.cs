@@ -24,13 +24,13 @@ namespace Business.Modules
                 // Set the stored procedure and parameters
                 _accesoDatos.setearConsulta("AgregarTurno");
                 _accesoDatos.setearParametro("@Id", turno.Id.ToString()); // Assuming Id is provided for updates, else should be set to a default value
-                _accesoDatos.setearParametro("@FechaHora", turno.FechaHora.ToString("yyyy-MM-dd HH:mm:ss"));
-                _accesoDatos.setearParametro("@MedicoId", turno.Medico.Id.ToString());
-                _accesoDatos.setearParametro("@PacienteId", turno.Paciente.Id.ToString());
-                _accesoDatos.setearParametro("@EspecialidadId", turno.Especialidad.Id.ToString());
-                _accesoDatos.setearParametro("@Observaciones", turno.Observaciones ?? throw new ArgumentException("Las Observaciones no puede ser null o vacío.", nameof(turno.Observaciones)));
-                _accesoDatos.setearParametro("@EstadoId", turno.Estado.Id.ToString());
-                _accesoDatos.setearParametro("@ObraSocialId", turno.ObraSocial.Id.ToString());
+                _accesoDatos.setearParametro("@FechaTurno", turno.FechaHora.ToString("yyyy-MM-dd HH:mm:ss"));
+                _accesoDatos.setearParametro("@IdMedico", turno.Medico.Id.ToString());
+                _accesoDatos.setearParametro("@IdPaciente", turno.Paciente.Id.ToString());
+                _accesoDatos.setearParametro("@IdEspecialidad", turno.Especialidad.Id.ToString());
+                _accesoDatos.setearParametro("@Observaciones", turno.Observaciones);
+                _accesoDatos.setearParametro("@IdEstadoTurno", turno.Estado.Id.ToString());
+                _accesoDatos.setearParametro("@IdObraSocial", turno.ObraSocial.Id.ToString());
 
                 //_accesoDatos.setearParametro("@Activo", obraSocial.Activo.ToString());
                 // Execute the query
