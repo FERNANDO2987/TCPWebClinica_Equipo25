@@ -198,11 +198,6 @@ namespace WebApp
             }
         }
 
-        /*   protected void ddlMedicosXEspecilidad_SelectedIndexChanged(object sender, EventArgs e)
-           {
-               int medicoId = int.Parse(ddlMedicos.SelectedValue);
-               CargarEspecilidadXMedico(medicoId);
-           }*/
 
         private void CargarEspecilidadXMedico(int medicoId)
         {
@@ -231,40 +226,11 @@ namespace WebApp
 
         }
 
-
-
-        /*   private void CargarHorarioTrabajo()
-           {
-               IAccesoDatos accesoDatos = new AccesoDatos();
-               HorarioTrabajoModule horarioTrabajoModule  = new HorarioTrabajoModule(accesoDatos);
-
-               //Cargar ObraSociales en un DropDownList
-               ddlHorarioTrabajo.DataSource = horarioTrabajoModule.listarHorarioTrabajo();
-               ddlHorarioTrabajo.DataValueField = "Id";
-               ddlHorarioTrabajo.DataTextField = "FechaYHora";
-               ddlHorarioTrabajo.DataBind();
-
-               // Agregar un elemento vacío para selección inicial
-               ddlHorarioTrabajo.Items.Insert(0, new ListItem("-- Seleccionar Hora --", "0"));
-
-
-
-           }*/
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            /*    EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
-                enviarEmailModule.ArmarCorreo("fernandopalacios51@gmail.com","Esto es una prueba piloto","Hola que tal...");
+              EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
+           
 
-                try
-                {
-                    enviarEmailModule.EnviarEmail();
-
-                }
-                catch (Exception ex)
-                {
-
-                    Session.Add("Error al Enviar E-mail",ex);
-                }*/
 
             try
             {
@@ -274,7 +240,7 @@ namespace WebApp
                     // Crear una instancia de los módulos y acceso a datos necesarios
                     IAccesoDatos accesoDatos = new AccesoDatos();
                     TurnoModule turnoModule = new TurnoModule(accesoDatos);
-
+                    PacienteModule pacienteModule = new PacienteModule(accesoDatos);
                     // Crear un nuevo objeto de Turno y asignar valores
                     Business.Models.Turno turno = new Business.Models.Turno
                     {
@@ -290,6 +256,22 @@ namespace WebApp
                     // Agregar el turno
 
                     turnoModule.agregarTurno(turno);
+
+                  var  result =  pacienteModule.ObtenerPacientePorId(turno.Id);
+
+                    try
+                    {
+                        
+                        enviarEmailModule.ArmarCorreo(result.Email, "Esto es una prueba piloto", "Hola que tal...");
+
+                        enviarEmailModule.EnviarEmail();
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        Session.Add("Error al Enviar E-mail", ex);
+                    }
 
                     // Redireccionar a la página de turnos después de agregar
                     Response.Redirect("Turno.aspx");
