@@ -95,9 +95,12 @@
     <Content Include="Pacientes.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Recepcionistas.aspx" />
-    <Content Include="Script\AgregarCarrito.js" />
+    <Content Include="Script\activarBoton.js" />
+    <Content Include="Script\activarBotonBuscar.js" />
     <Content Include="Script\Filtro.js" />
     <Content Include="Script\JavaScriptNavegacion.js" />
+    <Content Include="Script\mostrarPacientesSeleccionados.js" />
+    <Content Include="Script\mostrarTablaPaciente.js" />
     <Content Include="Turno.aspx" />
     <Content Include="Usuarios.aspx" />
     <Content Include="Web.config" />

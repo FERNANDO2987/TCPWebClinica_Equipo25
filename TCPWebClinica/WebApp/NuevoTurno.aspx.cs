@@ -39,6 +39,7 @@ namespace WebApp
                     fechaTurno.BorderColor = System.Drawing.Color.Red;
                 }
 
+                txtBuscarPaciente.Focus();
 
             }
 
@@ -308,14 +309,30 @@ namespace WebApp
 
         protected void txtBuscarPaciente_TextChanged(object sender, EventArgs e)
         {
+            // Restaurar la visibilidad de la tabla de pacientes
+            gvPacientes.Style["display"] = "block";
+            selectedPatientDetails.Style["display"] = "none";
+
             string criterio = txtBuscarPaciente.Text.Trim();
             BuscarYMostrarPacientes(criterio);
         }
 
         protected void btnBuscarPaciente_Click(object sender, EventArgs e)
         {
+            // Restaurar la visibilidad de la tabla de pacientes
+            gvPacientes.Style["display"] = "block";
+            selectedPatientDetails.Style["display"] = "none";
+
             string criterio = txtBuscarPaciente.Text;
             BuscarYMostrarPacientes(criterio);
+        }
+
+        protected void btnNuevaBusqueda_Click(object sender, EventArgs e)
+        {
+            // Restaurar la visibilidad de la tabla de pacientes y los controles de búsqueda
+            gvPacientes.Style["display"] = "block";
+            selectedPatientDetails.Style["display"] = "none";
+            txtBuscarPaciente.Text = string.Empty;
         }
 
         private void BuscarYMostrarPacientes(string criterio)
@@ -338,38 +355,33 @@ namespace WebApp
 
         protected void gvPacientes_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            IAccesoDatos accesoDatos = new AccesoDatos();
-            PacienteModule pacienteModule = new PacienteModule(accesoDatos);
-
             if (e.CommandName == "Seleccionar")
             {
+                // Obtener el índice de la fila seleccionada
                 int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = gvPacientes.Rows[index];
 
-                // Obtener el ID del paciente desde los DataKeys de la GridView
-                int pacienteId = Convert.ToInt32(gvPacientes.DataKeys[index].Value);
+                // Obtener los datos del paciente seleccionado
+                string pacienteId = gvPacientes.DataKeys[index].Value.ToString();
+                string nombreApellido = row.Cells[1].Text + " " + row.Cells[2].Text;
 
-                // Guardar el ID del paciente en el campo oculto
-                hfPacienteId.Value = pacienteId.ToString();
+                // Guardar los datos del paciente seleccionado en los controles ocultos
+                hfPacienteId.Value = pacienteId;
+                txtNombreApellidoPaciente.Text = nombreApellido;
 
-                // Opcional: Mostrar el nombre y apellido del paciente seleccionado en un TextBox (o cualquier otro control)
-                string nombre = gvPacientes.Rows[index].Cells[1].Text; // Ajusta el índice según la posición del campo en la GridView
-                string apellido = gvPacientes.Rows[index].Cells[2].Text; // Ajusta el índice según la posición del campo en la GridView
-                txtNombreApellidoPaciente.Text = $"{nombre} {apellido}";
+                // Mostrar los datos del paciente seleccionado en el div
+                selectedPatientDetails.Style["display"] = "block";
+                selectedPatientName.InnerText = nombreApellido;
 
-                // Resaltar visualmente la fila seleccionada
-                gvPacientes.SelectedIndex = index;
+                // Ocultar la tabla de pacientes
+                gvPacientes.Style["display"] = "none";
+
+                // Llama a la función JavaScript para ocultar el GridView y mostrar el paciente seleccionado
+                ScriptManager.RegisterStartupScript(this, GetType(), "mostrarPacienteSeleccionado", "mostrarPacienteSeleccionado();", true);
             }
+
+
         }
-
-
-
-
-
-
-
-
-
-
 
 
     }
