@@ -59,7 +59,7 @@ GO
 -- Description:	Elimina la Especilidad por Id
 -- =============================================
 
-CREATE PROCEDURE [dbo].[EliminarEspecilidad]
+CREATE PROCEDURE [dbo].[EliminarEspecialidad]
     @Id INT
 AS
 BEGIN

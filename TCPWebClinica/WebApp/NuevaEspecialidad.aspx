@@ -17,7 +17,9 @@
                     <asp:TextBox type="text" CssClass="form-control" ID="txtNombre" placeholder="Nombre" required="true" runat="server" />
                     <label for="nombre">Nombre *</label>
                 </div>
-                <asp:Button ID="btnAgregar" CssClass="btn btn-outline-primary m-1" runat="server" Text="Agregar" OnClick="btnAgregar_Click"/>
+                <div class="ps-5" margin-top: 2em;">
+                    <asp:Button Text="Agregar" CssClass="btn btn-outline-primary m-1" ID="btnAgregar" OnClick="btnAgregar_Click" runat="server" />
+                </div>
             </div>
         </div>
     </div>

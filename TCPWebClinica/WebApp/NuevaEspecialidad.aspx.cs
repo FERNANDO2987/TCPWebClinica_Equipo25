@@ -15,10 +15,7 @@ namespace WebApp
         EspecialidadModule especialidadModule = new EspecialidadModule(new AccesoDatos());
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack) 
-            { 
-                
-            }
+
         }
 
         protected void btnAgregar_Click(object sender, EventArgs e)
@@ -26,6 +23,7 @@ namespace WebApp
             Especialidad especialidad = new Especialidad();
             especialidad.Nombre = txtNombre.Text;
             especialidadModule.agregarEspecialidad(especialidad);
+            Response.Redirect("Especialidades.aspx", false);
         }
     }
 }
