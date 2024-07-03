@@ -23,7 +23,7 @@ CREATE PROCEDURE [dbo].[AgregarMedico]
 AS
 BEGIN
     IF (EXISTS (SELECT * FROM [dbo].[Medicos] WHERE Id = @Id))
-        UPDATE [dbo].[Medico]
+        UPDATE [dbo].[Medicos]
         SET Nombre = @Nombre,
             Apellido = @Apellido,
             Email = @Email

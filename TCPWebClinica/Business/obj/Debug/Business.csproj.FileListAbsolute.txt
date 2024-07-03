@@ -1,9 +1,3 @@
-C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\bin\Debug\Business.dll
-C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\bin\Debug\Business.pdb
-C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.csproj.AssemblyReference.cache
-C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
-C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.dll
-C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.pdb
 D:\TCPFinal\TCPWebClinica\Business\bin\Debug\Business.dll
 D:\TCPFinal\TCPWebClinica\Business\bin\Debug\Business.pdb
 D:\TCPFinal\TCPWebClinica\Business\obj\Debug\Business.csproj.AssemblyReference.cache
@@ -16,3 +10,9 @@ C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWeb
 C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
 C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.dll
 C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.pdb
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\bin\Debug\Business.dll
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\bin\Debug\Business.pdb
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.csproj.AssemblyReference.cache
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.dll
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\Business\obj\Debug\Business.pdb

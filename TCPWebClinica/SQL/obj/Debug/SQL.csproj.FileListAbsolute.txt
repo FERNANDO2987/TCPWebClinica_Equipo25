@@ -10,3 +10,9 @@ C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWeb
 C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.csproj.CoreCompileInputs.cache
 C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.dll
 C:\Users\carde\source\repos\TCPWebClinica_Equipo25\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.pdb
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\SQL\bin\Debug\SQL.dll
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\SQL\bin\Debug\SQL.pdb
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.csproj.AssemblyReference.cache
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.csproj.CoreCompileInputs.cache
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.dll
+C:\Users\Maximo\Desktop\TCPWebClinica_Equipo25\TCPWebClinica\SQL\obj\Debug\SQL.pdb
