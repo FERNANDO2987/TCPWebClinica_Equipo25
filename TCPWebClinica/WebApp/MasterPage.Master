@@ -45,6 +45,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="Especialidades.aspx">Especialidades</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="EstadoTurnos.aspx">Estado Turno</a>
+                            </li>
+
 
                         </ul>
 

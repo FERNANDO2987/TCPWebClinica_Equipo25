@@ -80,11 +80,13 @@
     <Content Include="Detalle.aspx" />
     <Content Include="Error.aspx" />
     <Content Include="Especialidades.aspx" />
+    <Content Include="EstadoTurnos.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="NuevaEspecialidad.aspx" />
     <Content Include="NuevaObraSocial.aspx" />
     <Content Include="NuevoAdministrador.aspx" />
+    <Content Include="NuevoEstadoTurno.aspx" />
     <Content Include="NuevoPaciente.aspx" />
     <Content Include="NuevoRecepcionista.aspx" />
     <Content Include="NuevoTurno.aspx" />
@@ -150,6 +152,13 @@
     <Compile Include="Especialidades.aspx.designer.cs">
       <DependentUpon>Especialidades.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EstadoTurnos.aspx.cs">
+      <DependentUpon>EstadoTurnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EstadoTurnos.aspx.designer.cs">
+      <DependentUpon>EstadoTurnos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,6 +196,13 @@
     </Compile>
     <Compile Include="NuevoAdministrador.aspx.designer.cs">
       <DependentUpon>NuevoAdministrador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoEstadoTurno.aspx.cs">
+      <DependentUpon>NuevoEstadoTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoEstadoTurno.aspx.designer.cs">
+      <DependentUpon>NuevoEstadoTurno.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoPaciente.aspx.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>
