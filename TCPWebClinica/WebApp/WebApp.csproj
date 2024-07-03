@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administradores.aspx" />
     <Content Include="CargarMedicos.aspx" />
     <Content Include="Cartilla.aspx" />
     <Content Include="Content\Imagenes\carrito3.jpg" />
@@ -83,6 +84,7 @@
     <Content Include="Login.aspx" />
     <Content Include="NuevaEspecialidad.aspx" />
     <Content Include="NuevaObraSocial.aspx" />
+    <Content Include="NuevoAdministrador.aspx" />
     <Content Include="NuevoPaciente.aspx" />
     <Content Include="NuevoRecepcionista.aspx" />
     <Content Include="NuevoTurno.aspx" />
@@ -99,6 +101,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administradores.aspx.cs">
+      <DependentUpon>Administradores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administradores.aspx.designer.cs">
+      <DependentUpon>Administradores.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CargarMedicos.aspx.cs">
       <DependentUpon>CargarMedicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -171,6 +180,13 @@
     </Compile>
     <Compile Include="NuevaObraSocial.aspx.designer.cs">
       <DependentUpon>NuevaObraSocial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoAdministrador.aspx.cs">
+      <DependentUpon>NuevoAdministrador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoAdministrador.aspx.designer.cs">
+      <DependentUpon>NuevoAdministrador.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoPaciente.aspx.cs">
       <DependentUpon>NuevoPaciente.aspx</DependentUpon>
