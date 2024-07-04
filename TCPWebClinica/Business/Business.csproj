@@ -75,6 +75,7 @@
     <Compile Include="Modules\PacienteModule.cs" />
     <Compile Include="Modules\RecepcionistaModule.cs" />
     <Compile Include="Modules\RolModule.cs" />
+    <Compile Include="Modules\SeguridadModule.cs" />
     <Compile Include="Modules\TurnoModule.cs" />
     <Compile Include="Modules\UsuariosModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
