@@ -20,42 +20,42 @@
             <h3>Agregar Turno</h3>
         </div>
 
-        <div id="form3" style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 2em 0;">
+          <div id="form3" style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 2em 0;">
             <div class="col-12 col-md-8" id="columna3">
                 <div class="form-floating mb-3 search-container">
                     <div class="input-group input-group-custom">
                         <asp:TextBox type="search" ID="txtBuscarPaciente" role="combobox" spellcheck="false" runat="server" CssClass="form-control" placeholder="Buscar" required="true" AutoPostBack="true" OnTextChanged="txtBuscarPaciente_TextChanged" />
                         <div class="input-group-append">
                             <asp:Button ID="btnBuscarPaciente" runat="server" Text="Buscar" OnClick="btnBuscarPaciente_Click" CssClass="btn btn-primary" />
+                            <asp:Button ID="btnNuevaBusqueda" runat="server" Text="Nueva Búsqueda" CssClass="btn btn-secondary ml-1" OnClientClick="activarBotonBuscar(); return false;" />
                         </div>
                     </div>
                 </div>
 
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                    <ContentTemplate>
-                        <div class="mt-4">
-                            <asp:GridView ID="gvPacientes" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered" OnRowCommand="gvPacientes_RowCommand" DataKeyNames="Id">
-                                <Columns>
-                                    <asp:BoundField DataField="HistoriaClinica" HeaderText="HC" />
-                                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-                                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
-                                    <asp:BoundField DataField="Documento" HeaderText="DNI" />
-                                    <asp:TemplateField>
-                                        <ItemTemplate>
-                                            <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CommandName="Seleccionar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
-                                        </ItemTemplate>
-                                    </asp:TemplateField>
-                                </Columns>
-                            </asp:GridView>
-                            <asp:TextBox ID="txtNombreApellidoPaciente" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
-                            <asp:HiddenField ID="hfPacienteId" runat="server" />
-
-                        </div>
-                    </ContentTemplate>
-                    <Triggers>
-                        <asp:AsyncPostBackTrigger ControlID="txtBuscarPaciente" EventName="TextChanged" />
-                    </Triggers>
-                </asp:UpdatePanel>
+    <ContentTemplate>
+        <div class="mt-4">
+            <asp:GridView ID="gvPacientes" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered" OnRowCommand="gvPacientes_RowCommand" DataKeyNames="Id">
+                <Columns>
+                    <asp:BoundField DataField="HistoriaClinica" HeaderText="HC" />
+                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                    <asp:BoundField DataField="Documento" HeaderText="DNI" />
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CommandName="Seleccionar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+            <asp:TextBox ID="txtNombreApellidoPaciente" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+            <asp:HiddenField ID="hfPacienteId" runat="server" />
+        </div>
+    </ContentTemplate>
+    <Triggers>
+        <asp:AsyncPostBackTrigger ControlID="txtBuscarPaciente" EventName="TextChanged" />
+    </Triggers>
+</asp:UpdatePanel>
             </div>
         </div>
 
@@ -127,4 +127,21 @@
         </div>
     </div>
 
+
+    
+    <div id="selectedPatientDetails" runat="server" style="display:none;">
+        <h4>Paciente Seleccionado</h4>
+        <p id="selectedPatientName" runat="server"></p>
+    </div>
+
+    <script src="Script/mostrarPacientesSeleccionados.js"></script>
+
+    <script src="Script/mostrarTablaPaciente.js"></script>
+
+    <script src="Script/activarBotonBuscar.js"></script>
+   
+    <script src="Script/activarBoton.js"></script>
+
+
 </asp:Content>
+
