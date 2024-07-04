@@ -24,9 +24,6 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav me-auto">
-                            <%--                            <li class="nav-item">
-                                <a class="nav-link" href="Productos.aspx">Home</a>
-                            </li>--%>
                             <li class="nav-item">
                                 <a class="nav-link" href="Cartilla.aspx">Cartilla</a>
                             </li>
@@ -37,9 +34,6 @@
                                 <a class="nav-link" href="ObrasSociales.aspx">Obras Sociales</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="Turno.aspx">Turnos</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="Usuarios.aspx">Usuarios</a>
                             </li>
                             <li class="nav-item">
@@ -47,6 +41,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="EstadoTurnos.aspx">Estado Turno</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Turno.aspx">Turnos</a>
                             </li>
                         </ul>
 
