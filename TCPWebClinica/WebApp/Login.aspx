@@ -10,11 +10,11 @@
             <div class="card-header">Login</div>
             <div class="mb-3">
                 <label for="txtNombreUsuario" class="form-label">Nombre de usuario</label>
-                <asp:TextBox ID="txtNombreUsuario" CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNombreUsuario" CssClass="form-control" runat="server" required="true"></asp:TextBox>
             </div>
             <div class="mb-3">
                 <label for="txtContraseña" class="form-label">Contraseña</label>
-                <asp:TextBox TextMode="Password" ID="txtContraseña" CssClass="form-control" runat="server"></asp:TextBox>
+                <asp:TextBox TextMode="Password" ID="txtContraseña" CssClass="form-control" runat="server" required="true"></asp:TextBox>
             </div>
             <asp:Button ID="btnSubmit" CssClass="btn btn-primary w-100" OnClick="btnSubmit_Click" runat="server" Text="Submit" />
         </div>

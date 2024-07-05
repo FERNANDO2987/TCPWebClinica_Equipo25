@@ -17,11 +17,14 @@ namespace WebApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!(SeguridadModule.esAdmin(Session["Usuario"])))
             {
-                Session.Add("error", "Solo los usuarios de tipo administrador pueden acceder al panel");
-                Response.Redirect("Error.aspx", false);
+                Response.Redirect("Turno.aspx", false);
+                //Session.Add("error", "Solo los usuarios de tipo administrador pueden acceder al panel");
+                //Response.Redirect("Error.aspx", false);
             }
+
         }
 
 
