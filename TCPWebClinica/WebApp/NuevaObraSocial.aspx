@@ -33,7 +33,7 @@
                     <label for="Direccion">Direccion *</label>
                 </div>
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="tel" CssClass="form-control" ID="txtTelefono" placeholder="Telefono" runat="server" />
+                    <asp:TextBox type="tel" TextMode="Number" CssClass="form-control" ID="txtTelefono" placeholder="Telefono" runat="server" />
                     <label for="telefono">Telefono *</label>
                 </div>
                 <div class="form-floating mb-3">

@@ -6,7 +6,7 @@
         <div class="col"></div>
         <div class="col-6">
 
-            <h3>Especialidades</h3>
+            <h3>Estado Turno</h3>
             <asp:GridView ID="dgvEstadoTurno" OnSelectedIndexChanged="dgvEstadoTurno_SelectedIndexChanged" DataKeyNames="Id" CssClass="table" AutoGenerateColumns="false" runat="server">
                 <Columns>
                     <asp:BoundField HeaderText="ID" DataField="Id" />
