@@ -64,6 +64,7 @@
     <Compile Include="Models\Recepcionista.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Turno.cs" />
+    <Compile Include="Models\TurnoConPaciente.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Modules\AdministradorModule.cs" />
     <Compile Include="Modules\EnviarEmailModule.cs" />
