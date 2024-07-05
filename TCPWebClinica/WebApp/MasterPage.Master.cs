@@ -12,11 +12,11 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(Page is Login))
-            {
-                if (!SeguridadModule.sesionActiva(Session["Usuario"]))
-                    Response.Redirect("Login.aspx", false);
-            }
+            //if(!(Page is Login))
+            //{
+            //    if (!SeguridadModule.sesionActiva(Session["Usuario"]))
+            //        Response.Redirect("Login.aspx", false);
+            //}
 
         }
     }
