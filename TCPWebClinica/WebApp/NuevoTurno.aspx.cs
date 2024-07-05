@@ -62,11 +62,6 @@ namespace WebApp
                 }
                 DateTime fecha = turno.FechaHora;
                 ddlMedicos.SelectedIndex = turno.Id;
-
-
-
-
-
                 dllEspecialidad.SelectedIndex = turno.Id;
                 txtObservaciones.Text = turno.Observaciones;
                 ddlEstadoTurno.SelectedIndex = turno.Id;
@@ -229,9 +224,7 @@ namespace WebApp
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-              EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
-           
-
+            EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
 
             try
             {
@@ -242,6 +235,7 @@ namespace WebApp
                     IAccesoDatos accesoDatos = new AccesoDatos();
                     TurnoModule turnoModule = new TurnoModule(accesoDatos);
                     PacienteModule pacienteModule = new PacienteModule(accesoDatos);
+
                     // Crear un nuevo objeto de Turno y asignar valores
                     Business.Models.Turno turno = new Business.Models.Turno
                     {
@@ -255,29 +249,25 @@ namespace WebApp
                     };
 
                     // Agregar el turno
-
                     turnoModule.agregarTurno(turno);
 
-                  var  result =  pacienteModule.ObtenerPacientePorId(turno.Id);
+                    // Obtener información del paciente
+                    var paciente = pacienteModule.ObtenerPacientePorId(pacienteId);
 
+                    // Enviar correo electrónico
                     try
                     {
-                        
-                        enviarEmailModule.ArmarCorreo(result.Email, "Esto es una prueba piloto", "Hola que tal...");
-
+                        enviarEmailModule.ArmarCorreo(paciente.Email, "Esto es una prueba piloto", "Hola que tal...");
                         enviarEmailModule.EnviarEmail();
-
                     }
                     catch (Exception ex)
                     {
-
                         Session.Add("Error al Enviar E-mail", ex);
+                        // Considera manejar el error de envío de correo de manera más específica
                     }
 
                     // Redireccionar a la página de turnos después de agregar
                     Response.Redirect("Turno.aspx");
-
-                   
                 }
                 else
                 {
@@ -286,11 +276,9 @@ namespace WebApp
             }
             catch (Exception ex)
             {
-                // Manejar la excepción según sea necesario
+                
                 throw ex;
             }
-
-
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
