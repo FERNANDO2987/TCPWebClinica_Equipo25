@@ -1,4 +1,5 @@
-﻿using Business.Interfaces;
+﻿using Business.AccesoSQL;
+using Business.Interfaces;
 using Business.Models;
 using System;
 using System.Collections.Generic;
@@ -146,7 +147,10 @@ namespace Business.Modules
 
         public bool Login(Usuario usuario)
         {
+            AccesoDatos accesoDatos = new AccesoDatos();
             Usuario aux = new Usuario();
+            Rol rol = new Rol();
+            RolModule rolModule = new RolModule(accesoDatos);
             try
             {
                 _accesoDatos.setearConsulta("Log_in");
@@ -161,6 +165,8 @@ namespace Business.Modules
                     usuario.Email = (string)_accesoDatos.Lector["Email"];
                     usuario.Rol = new Rol();
                     usuario.Rol.Id = (int)_accesoDatos.Lector["RolId"];
+                    rol = rolModule.listarRoles().Find(x => x.Id == usuario.Rol.Id);
+                    usuario.Rol.Descripcion = rol.Descripcion;
                     return true;
                 }
 
