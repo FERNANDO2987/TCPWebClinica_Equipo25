@@ -126,5 +126,44 @@ namespace Business.Modules
                 _accesoDatos.cerrarConexion();
             }
         }
+
+        public List<TurnoConPaciente> listarTurnosConPacientes()
+        {
+            var result = new List<TurnoConPaciente>();
+            try
+            {
+                _accesoDatos.setearConsulta("ObtenerTurnosConPacientes");
+                _accesoDatos.ejecutarLectura();
+
+                while (_accesoDatos.Lector.Read())
+                {
+                    TurnoConPaciente aux = new TurnoConPaciente();
+                    aux.Id = (int)_accesoDatos.Lector["Id"];
+                    aux.NombrePaciente = (string)_accesoDatos.Lector["NombrePaciente"];
+                    aux.ApellidoPaciente = (string)_accesoDatos.Lector["ApellidoPaciente"];
+                    aux.Observaciones = (string)_accesoDatos.Lector["Observaciones"];
+                    aux.FechaTurno = (DateTime)_accesoDatos.Lector["FechaTurno"];
+                    aux.Especialidad = (string)_accesoDatos.Lector["Especialidad"];
+                    aux.Medico = (string)_accesoDatos.Lector["Medico"];
+                    aux.Descripcion = (string)_accesoDatos.Lector["Descripcion"];
+                    aux.ObraSocial = (string)_accesoDatos.Lector["ObraSocial"];
+                    result.Add(aux);
+
+                }
+
+                return result;
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error de conexion a SQL: " + ex.Message);
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion();
+            }
+        }
     }
 }

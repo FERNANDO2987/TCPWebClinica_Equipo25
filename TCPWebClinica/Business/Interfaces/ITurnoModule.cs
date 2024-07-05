@@ -13,5 +13,7 @@ namespace Business.Interfaces
         Turno agregarTurno(Turno turno);
         bool eliminarTurno(int id);
 
+        List<TurnoConPaciente> listarTurnosConPacientes();
+
     }
 }

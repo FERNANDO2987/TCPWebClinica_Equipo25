@@ -16,8 +16,14 @@ namespace WebApp
         {
             IAccesoDatos accesoDatos = new AccesoDatos();
             TurnoModule turnoModule = new TurnoModule(accesoDatos);
-            dgvTurnos.DataSource = turnoModule.listarTurnos();
+          
+            dgvTurnos.DataSource = turnoModule.listarTurnosConPacientes();
             dgvTurnos.DataBind();
+
+
+
+
+
         }
 
         protected void dgvTurnos_SelectedIndexChanged(object sender, EventArgs e)

@@ -66,3 +66,42 @@ BEGIN
 	where Deleted = 0
   
 END
+
+GO
+
+-- =============================================
+-- Author:		Palacios Fernando
+-- Create date: 01/07/2024
+-- Description:	Obtiene todos los turnos con sus pacientes
+-- =============================================
+
+CREATE PROCEDURE [dbo].[ObtenerTurnosConPacientes]
+AS
+BEGIN
+    SELECT 
+        T.Id ,
+        P.Nombre AS NombrePaciente,
+        P.Apellido AS ApellidoPaciente,
+        T.Observaciones,
+        T.FechaTurno,
+		E.Nombre AS Especialidad,
+		M.Nombre AS Medico,
+		ET.Descripcion,
+		O.Nombre AS ObraSocial
+       
+    FROM 
+        Turnos T 
+    INNER JOIN 
+             Paciente P ON T.IdPaciente = P.Id
+	INNER JOIN 
+	        Especialidad E ON T.IdEspecialidad = E.Id
+	INNER JOIN
+	        Medicos M ON T.IdMedico = M.Id
+	INNER JOIN 
+	        EstadoTurno ET ON T.IdEstadoTurno = ET.Id 
+	INNER JOIN 
+	      ObraSocial O ON T.IdObraSocial = O.Id 
+	
+	  WHERE 
+        T.Deleted = 0
+END

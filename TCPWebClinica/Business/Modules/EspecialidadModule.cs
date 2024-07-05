@@ -24,7 +24,7 @@ namespace Business.Modules
             try
             {
                 // Set the stored procedure and parameters
-                _accesoDatos.setearConsulta("AgregarEspecialidad");
+                _accesoDatos.setearConsulta("AgregarEspecilidad");
                 _accesoDatos.setearParametro("@Id", especialidad.Id.ToString()); // Assuming Id is provided for updates, else should be set to a default value
                 _accesoDatos.setearParametro("@Nombre", especialidad.Nombre ?? throw new ArgumentException("La descripción de la categoría no puede ser nula o vacía.", nameof(especialidad.Nombre)));
 
