@@ -15,7 +15,10 @@ namespace WebApp
         EstadoTurnoModule module = new EstadoTurnoModule(new AccesoDatos());
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!(SeguridadModule.esAdmin(Session["Usuario"])))
+            {
+                Response.Redirect("Turno.aspx", false);
+            }
         }
 
         protected void btnAgregar_Click(object sender, EventArgs e)

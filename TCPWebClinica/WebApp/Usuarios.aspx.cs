@@ -15,6 +15,10 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!(SeguridadModule.esAdmin(Session["Usuario"])))
+            {
+                Response.Redirect("Turno.aspx", false);
+            }
             IAccesoDatos accesoDatos = new AccesoDatos();
             UsuariosModule moduloUsuarios = new UsuariosModule(accesoDatos);
             if (!IsPostBack)

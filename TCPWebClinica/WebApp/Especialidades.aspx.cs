@@ -15,7 +15,12 @@ namespace WebApp
         EspecialidadModule especialidadModule= new EspecialidadModule(new AccesoDatos());
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if (!(SeguridadModule.esAdmin(Session["Usuario"])))
+            {
+                Response.Redirect("Turno.aspx", false);
+            }
+
+            if (!IsPostBack)
             {
                 dgvEspecialidades.DataSource = especialidadModule.listarEspecialidad();
                 dgvEspecialidades.DataBind();

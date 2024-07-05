@@ -17,6 +17,12 @@ namespace WebApp
         RolModule rolModule = new RolModule(new AccesoDatos());
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!(SeguridadModule.esAdmin(Session["Usuario"])))
+            {
+                Response.Redirect("Turno.aspx", false);
+            }
+
+
             AccesoDatos accesoDatos = new AccesoDatos();
             UsuariosModule usuariosModule = new UsuariosModule(accesoDatos);
             if(!IsPostBack)

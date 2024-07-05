@@ -18,6 +18,11 @@ namespace WebApp
         ObraSocialModule obrasocialmodule = new ObraSocialModule(new AccesoDatos());
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!(SeguridadModule.esAdmin(Session["Usuario"])))
+            {
+                Response.Redirect("Turno.aspx", false);
+            }
+
             DateTime hoy = DateTime.Today;
 
             if (!Page.IsPostBack)

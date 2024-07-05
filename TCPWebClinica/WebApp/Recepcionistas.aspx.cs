@@ -14,6 +14,11 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!(SeguridadModule.esAdmin(Session["Usuario"])))
+            {
+                Response.Redirect("Turno.aspx", false);
+            }
+
             IAccesoDatos accesoDatos = new AccesoDatos();
             RecepcionistaModule moduleRecepcionista = new RecepcionistaModule(accesoDatos);
             dgvRecepcionista.DataSource = moduleRecepcionista.listarRecepcionistas();
