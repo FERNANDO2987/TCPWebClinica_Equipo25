@@ -25,8 +25,9 @@ namespace Business.Modules
             if (sesionActiva(user))
             {
                 usuario = (Usuario)user;
-                if (usuario.Rol.Descripcion.ToLower().Trim() == "administrador") 
-                    return true;
+                //if (usuario.Rol.Id== 1)
+                if (usuario.Rol.Descripcion.ToLower().Trim() == "admin") 
+                        return true;
                     else return false;
             }
             return false;
@@ -37,6 +38,7 @@ namespace Business.Modules
             if (sesionActiva(user))
             {
                 usuario = (Usuario)user;
+                //if (usuario.Rol.Id == 2)
                 if (usuario.Rol.Descripcion.ToLower().Trim() == "recepcionista")
                     return true;
                 else return false;
@@ -49,6 +51,7 @@ namespace Business.Modules
             if (sesionActiva(user))
             {
                 usuario = (Usuario)user;
+                //if (usuario.Rol.Id == 3)
                 if (usuario.Rol.Descripcion.ToLower().Trim() == "medico")
                     return true;
                 else return false;
