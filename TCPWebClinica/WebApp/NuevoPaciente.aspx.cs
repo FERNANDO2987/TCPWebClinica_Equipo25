@@ -18,10 +18,10 @@ namespace WebApp
         ObraSocialModule obrasocialmodule = new ObraSocialModule(new AccesoDatos());
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(SeguridadModule.esAdmin(Session["Usuario"])))
+            /*if (!(SeguridadModule.esAdmin(Session["Usuario"])))
             {
                 Response.Redirect("Turno.aspx", false);
-            }
+            }*/
 
             DateTime hoy = DateTime.Today;
 
@@ -44,11 +44,13 @@ namespace WebApp
 
                 int id = int.Parse(Request.QueryString["id"].ToString());
                 Paciente paciente = pacienteModule.listarPacientes().Find(x => x.Id == id);
+
+                //txtId.Text = paciente.Id.ToString();
                 DateTime fechan = paciente.FechaNacimiento;
                 txtApellido.Text = paciente.Apellido;
                 txtNombre.Text = paciente.Nombre;
                 txtDni.Text = paciente.Documento.ToString();
-                txtTelefono.Text = paciente.Celular;
+                txtCelular.Text = paciente.Celular;
                 txtEmail.Text = paciente.Email;
                 ddlObraSocial.SelectedValue = paciente.Id.ToString();
                 fecha.Text = fechan.ToString("yyyy-MM-dd");
@@ -95,14 +97,15 @@ namespace WebApp
                 PacienteModule module = new PacienteModule(new AccesoDatos());
 
                 Paciente paciente = new Paciente();
-
-                paciente.Apellido = txtApellido.Text;
+                paciente.HistoriaClinica = 123456;
                 paciente.Nombre = txtNombre.Text;
-                paciente.FechaNacimiento = DateTime.Parse(fecha.Text);
+                paciente.Apellido = txtApellido.Text;
                 paciente.Documento = int.Parse(txtDni.Text);
+                paciente.FechaNacimiento = DateTime.Parse(fecha.Text);
+                paciente.Celular = txtCelular.Text;
                 paciente.Email = txtEmail.Text;
-                paciente.Celular = txtTelefono.Text;
                 paciente.Sexo = ObtenerSexo();
+
                 paciente.ObraSocial = new ObraSocial();
                 paciente.ObraSocial.Id = int.Parse(ddlObraSocial.SelectedValue);
 
@@ -168,12 +171,12 @@ namespace WebApp
                 paciente.FechaNacimiento = DateTime.Parse(fecha.Text);
                 paciente.Documento = int.Parse(txtDni.Text);
                 paciente.Email = txtEmail.Text;
-                paciente.Celular = txtTelefono.Text;
+                paciente.Celular = txtCelular.Text;
                 paciente.Sexo = ObtenerSexo();
                 paciente.ObraSocial = new ObraSocial();
                 paciente.ObraSocial.Id = int.Parse(ddlObraSocial.SelectedValue);
 
-                pacienteModule.modificarPaciente(paciente);
+                //pacienteModule.modificarPaciente(paciente);
 
             }
             catch (Exception ex)
