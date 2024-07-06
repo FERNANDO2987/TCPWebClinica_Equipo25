@@ -7,7 +7,7 @@
         <div class="col"></div>
         <div class="col-6">
 
-            <h3>Lista de Profecionales</h3>
+            <h3>Lista de Médicos</h3>
             <asp:GridView ID="dgvMedicos" DataKeyNames="Id" CssClass="table" AutoGenerateColumns="false" runat="server">
                 <Columns>
                     <asp:BoundField HeaderText="Apellido" DataField="Apellido" />
