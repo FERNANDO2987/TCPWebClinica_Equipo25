@@ -147,6 +147,7 @@ namespace Business.Modules
                     aux.Medico = (string)_accesoDatos.Lector["Medico"];
                     aux.Descripcion = (string)_accesoDatos.Lector["Descripcion"];
                     aux.ObraSocial = (string)_accesoDatos.Lector["ObraSocial"];
+                    aux.IdMedico = (int)_accesoDatos.Lector["IdMedico"];
                     result.Add(aux);
 
                 }

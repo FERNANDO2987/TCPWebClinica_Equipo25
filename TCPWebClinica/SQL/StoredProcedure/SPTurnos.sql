@@ -87,7 +87,8 @@ BEGIN
 		E.Nombre AS Especialidad,
 		M.Nombre AS Medico,
 		ET.Descripcion,
-		O.Nombre AS ObraSocial
+		O.Nombre AS ObraSocial,
+		M.Id AS IdMedico
        
     FROM 
         Turnos T 
