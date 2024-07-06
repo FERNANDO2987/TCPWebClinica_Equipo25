@@ -78,7 +78,29 @@ namespace Business.Modules
 
         public bool eliminarTurno(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _accesoDatos.setearConsulta("EliminarTurno");
+                _accesoDatos.setearParametro("@Id", id.ToString()); // Convertir el ID a string
+                _accesoDatos.ejecutarLectura(); // Ejecutar la acción de eliminación
+
+                if (_accesoDatos.Lector.Read())
+                {
+                    bool resultado = _accesoDatos.Lector.GetBoolean(0);
+                    return resultado;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion(); // Asegurarnos de cerrar la conexión
+            }
         }
 
         public List<Turno> listarTurnos()

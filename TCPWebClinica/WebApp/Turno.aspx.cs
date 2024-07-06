@@ -29,7 +29,7 @@ namespace WebApp
         protected void dgvTurnos_SelectedIndexChanged(object sender, EventArgs e)
         {
             var id = int.Parse(dgvTurnos.SelectedDataKey.Value.ToString());
-            Response.Redirect("NuevoTurno.aspx?id=" + id);
+            Response.Redirect("ModificarTurno.aspx?id=" + id);
         }
     }
 }

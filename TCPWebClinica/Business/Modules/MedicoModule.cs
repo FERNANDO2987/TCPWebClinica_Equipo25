@@ -26,9 +26,9 @@ namespace Business.Modules
                 _accesoDatos.setearParametro("@Nombre", medico.Nombre);
                 _accesoDatos.setearParametro("@Apellido", medico.Apellido);
                 _accesoDatos.setearParametro("@Email", medico.Email);
-    
+
                 // Execute the query
-                _accesoDatos.ejecutarAccion();
+                _accesoDatos.ejecutarLectura();
 
                 // Verifica si la lectura tiene filas y obtiene el ID generado
                 if (_accesoDatos.Lector.HasRows)

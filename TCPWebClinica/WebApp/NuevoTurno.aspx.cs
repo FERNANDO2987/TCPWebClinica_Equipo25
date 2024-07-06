@@ -69,11 +69,7 @@ namespace WebApp
                 fechaTurno.Text = fecha.ToString("yyyy-MM-dd");
 
             }
-            else
-            {
-                btnEliminar.Visible = false;
-                btnModificar.Visible = false;
-            }
+           
 
         }
 
@@ -284,14 +280,83 @@ namespace WebApp
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                IAccesoDatos accesoDatos = new AccesoDatos();
+                TurnoModule turnoModule = new TurnoModule(accesoDatos);
+        
+                int id = int.Parse(Request.QueryString["id"].ToString());
+                turnoModule.eliminarTurno(id);
+                Response.Redirect("ObrasSociales.aspx");
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
 
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
         {
+            EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
 
+            try
+            {
+                // Retrieve the patient ID from the hidden field
+                if (int.TryParse(hfPacienteId.Value, out int pacienteId) && pacienteId > 0)
+                {
+                    // Crear una instancia de los módulos y acceso a datos necesarios
+                    IAccesoDatos accesoDatos = new AccesoDatos();
+                    TurnoModule turnoModule = new TurnoModule(accesoDatos);
+                    PacienteModule pacienteModule = new PacienteModule(accesoDatos);
 
-            IAccesoDatos accesoDatos = new AccesoDatos();
+                    // Crear un nuevo objeto de Turno y asignar valores
+                    Business.Models.Turno turno = new Business.Models.Turno
+                    {
+                        FechaHora = DateTime.Parse(fechaTurno.Text),
+                        Medico = new Medico { Id = int.Parse(ddlMedicos.SelectedValue) },
+                        Paciente = new Paciente { Id = pacienteId },
+                        Especialidad = new Especialidad { Id = int.Parse(dllEspecialidad.SelectedValue) },
+                        Observaciones = txtObservaciones.Text,
+                        Estado = new EstadoTurno { Id = int.Parse(ddlEstadoTurno.SelectedValue) },
+                        ObraSocial = new ObraSocial { Id = int.Parse(ddlObraSocial.SelectedValue) }
+                    };
+
+                    // Agregar el turno
+                    turnoModule.agregarTurno(turno);
+
+                    // Obtener información del paciente
+                    var paciente = pacienteModule.ObtenerPacientePorId(pacienteId);
+
+                    // Enviar correo electrónico
+                    try
+                    {
+                        enviarEmailModule.ArmarCorreo(paciente.Email, "Esto es una prueba piloto", "Hola que tal...");
+                        enviarEmailModule.EnviarEmail();
+                    }
+                    catch (Exception ex)
+                    {
+                        Session.Add("Error al Enviar E-mail", ex);
+                        // Considera manejar el error de envío de correo de manera más específica
+                    }
+
+                    // Redireccionar a la página de turnos después de agregar
+                    Response.Redirect("Turno.aspx");
+                }
+                else
+                {
+                    throw new Exception("Debe seleccionar un paciente antes de agregar el turno.");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
 
         }
 

@@ -72,7 +72,7 @@ namespace Business.Modules
             try
             {
                 // Generar y asignar una HC única al paciente
-                paciente.HistoriaClinica = GenerarHistoriaClinicaUnica();
+                //paciente.HistoriaClinica = GenerarHistoriaClinicaUnica();
 
                 _accesoDatos.setearConsulta("AgregarPaciente");
 
@@ -80,13 +80,16 @@ namespace Business.Modules
                 _accesoDatos.setearParametro("@Id", paciente.Id.ToString());
                 _accesoDatos.setearParametro("@HC", paciente.HistoriaClinica.ToString());
                 _accesoDatos.setearParametro("@Nombre", paciente.Nombre);
+                _accesoDatos.setearParametro("@Apellido", paciente.Apellido);
+                _accesoDatos.setearParametro("@Documento", paciente.Documento.ToString());
                 _accesoDatos.setearParametro("@FechaNacimiento", paciente.FechaNacimiento.ToString());
-                _accesoDatos.setearParametro("@DNI", paciente.Documento.ToString());
+                _accesoDatos.setearParametro("@Celular", paciente.Celular);
                 _accesoDatos.setearParametro("@Email", paciente.Email);
                 _accesoDatos.setearParametro("@Sexo", paciente.Sexo);
                 _accesoDatos.setearParametro("@IdObraSocial", paciente.ObraSocial.Id.ToString());
-                    
-                _accesoDatos.ejecutarAccion();
+
+                _accesoDatos.ejecutarLectura();
+
 
                 // Verifica si la lectura tiene filas y obtiene el ID generado
                 if (_accesoDatos.Lector.HasRows)
@@ -164,22 +167,17 @@ namespace Business.Modules
                 {
                     Paciente aux = new Paciente();
                     aux.Id = (int)_accesoDatos.Lector["Id"];
-                    //aux.HistoriaClinica = (int)_accesoDatos.Lector["HC"];
-                    aux.Apellido = (string)_accesoDatos.Lector["Apellido"];
+                    aux.HistoriaClinica = (int)_accesoDatos.Lector["HC"];
                     aux.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                    aux.Apellido = (string)_accesoDatos.Lector["Apellido"];
+                    aux.Documento = (int)_accesoDatos.Lector["Documento"];
                     aux.FechaNacimiento = (DateTime)_accesoDatos.Lector["FechaNacimiento"];
-
-                    if (_accesoDatos.Lector["DNI"] != System.DBNull.Value)
-                    {
-                        aux.Documento = (int)_accesoDatos.Lector["DNI"];
-                    }
-
+                    aux.Celular = (string)_accesoDatos.Lector["Celular"];
                     aux.Email = (string)_accesoDatos.Lector["Email"];
-                    aux.Celular = (string)_accesoDatos.Lector["Telefono"];
                     aux.Sexo = (string)_accesoDatos.Lector["Sexo"];
                     aux.ObraSocial = new ObraSocial();
                     aux.ObraSocial.Id = (int)_accesoDatos.Lector["Id"];
-                    aux.ObraSocial.Nombre = (string)_accesoDatos.Lector["Nombre"];
+                
 
                     result.Add(aux);
 
@@ -198,35 +196,7 @@ namespace Business.Modules
             }
         }
 
-        public Paciente modificarPaciente(Paciente paciente)
-        {
-            try
-            {
-                _accesoDatos.setearConsulta("ModificarPaciente");
-
-                _accesoDatos.setearParametro("@Apellido", paciente.Apellido);
-                _accesoDatos.setearParametro("@Nombre", paciente.Nombre);
-                _accesoDatos.setearParametro("@FechaNacimiento", paciente.FechaNacimiento.ToString());
-                _accesoDatos.setearParametro("@DNI", paciente.Documento.ToString());
-                _accesoDatos.setearParametro("@Email", paciente.Email);
-                _accesoDatos.setearParametro("@Telefono", paciente.Celular);
-                _accesoDatos.setearParametro("@Sexo", paciente.Sexo);
-                _accesoDatos.setearParametro("@IdObraSocial", paciente.ObraSocial.Id.ToString());
-                
-                _accesoDatos.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                                throw new Exception("Error de conexión de SQL: " + ex.Message, ex);
-            }
-            finally
-            {
-               
-                _accesoDatos.cerrarConexion();
-            }
-
-            return paciente;
-        }
+       
 
         public List<Paciente> BuscarPacientePorCriterio(string criterio)
         {

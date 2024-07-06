@@ -12,6 +12,8 @@
 
             <div class="col-1" id="columna1" style="width: 45%;">
 
+   
+
                 <div class="form-floating mb-3">
                     <asp:TextBox type="text" CssClass="form-control" ID="txtNombre" placeholder="Nombre" required="true" runat="server" />
                     <label for="nombre">Nombre *</label>
@@ -43,8 +45,8 @@
                 </div>
 
                 <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="txtTelefono" placeholder="Telefono" runat="server" />
-                    <label for="telefono">Telefono</label>
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtCelular" placeholder="Celular" runat="server" />
+                    <label for="celular">Celular</label>
                 </div>
 
                 <div id="obra_social" style="padding-top: 20px;">

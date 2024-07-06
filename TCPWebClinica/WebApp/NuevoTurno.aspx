@@ -122,8 +122,7 @@
 
         <div id="agregar" class="col-3" style="display: flex; justify-content: end; width: 100%; margin: 2em 15em 0 0;">
             <asp:Button Text="Agregar" CssClass="btn btn-outline-success" ID="btnAgregar" OnClick="btnAgregar_Click" runat="server" />
-            <asp:Button Text="Modificar" CssClass="btn btn-outline-success m-1" ID="btnModificar" OnClick="btnModificar_Click" runat="server" />
-            <asp:Button Text="Eliminar" CssClass="btn btn-outline-danger m-1" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" />
+      
         </div>
     </div>
 

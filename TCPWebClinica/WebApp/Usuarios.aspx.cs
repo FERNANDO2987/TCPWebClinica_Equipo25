@@ -15,7 +15,7 @@ namespace WebApp
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!(SeguridadModule.esAdmin(Session["Usuario"])))
+         /*   if (!(SeguridadModule.esAdmin(Session["Usuario"])))
             {
                 Response.Redirect("Turno.aspx", false);
             }
@@ -26,13 +26,13 @@ namespace WebApp
                 dgvUsuarios.DataSource = moduloUsuarios.listarUsuarios(); 
                 dgvUsuarios.DataBind();
 
-            }
+            }*/
         }
 
         protected void dgvUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var id = int.Parse(dgvUsuarios.SelectedDataKey.Value.ToString());
-            Response.Redirect("NuevoUsuario.aspx?id=" + id);
+          /*  var id = int.Parse(dgvUsuarios.SelectedDataKey.Value.ToString());
+            Response.Redirect("NuevoUsuario.aspx?id=" + id);*/
         }
     }
 }
