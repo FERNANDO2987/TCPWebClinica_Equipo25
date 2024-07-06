@@ -105,3 +105,42 @@ BEGIN
 	  WHERE 
         T.Deleted = 0
 END
+
+GO
+
+-- =============================================
+-- Author:		Palacios Fernando
+-- Create date: 01/07/2024
+-- Description:	Elimina el Turno por Id
+-- =============================================
+
+CREATE PROCEDURE [dbo].[EliminarEstadoTurno]
+    @Id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Declarar variable para el resultado
+    DECLARE @Result BIT;
+
+    -- Verificar si el registro existe
+    IF EXISTS (SELECT 1 FROM [dbo].[EstadoTurno] WHERE [Id] = @Id)
+    BEGIN
+        -- Actualizar solo el registro con el Id proporcionado
+        UPDATE [dbo].[EstadoTurno]
+        SET [Deleted] = 1,
+            [DeleteDate] = GETDATE()
+        WHERE [Id] = @Id;
+
+        -- Establece el resultado en verdadero indicando éxito
+        SET @Result = 1;
+    END
+    ELSE
+    BEGIN
+       -- Establecer el resultado en falso indicando falla
+        SET @Result = 0;
+    END
+
+    -- Devuelve el resultado
+    SELECT CAST(@Result AS BIT) AS 'Result';
+END;
