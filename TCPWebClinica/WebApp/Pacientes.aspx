@@ -9,6 +9,8 @@
             <h3>Pacientes</h3>
             <asp:GridView ID="dgvPacientes" OnSelectedIndexChanged="dgvPcaientes_SelectedIndexChanged" DataKeyNames="Id" cssclass="table" autogeneratecolumns="false" runat="server">
                 <Columns>
+                     <asp:BoundField HeaderText="ID" DataField="Id"/>
+                     <asp:BoundField HeaderText="HC" DataField="HistoriaClinica"/>
                     <asp:BoundField HeaderText="Apellido" DataField="Apellido"/>
                     <asp:BoundField HeaderText="Nombre" DataField="Nombre"/>
                     <asp:BoundField HeaderText="DNI" DataField="Documento"/>

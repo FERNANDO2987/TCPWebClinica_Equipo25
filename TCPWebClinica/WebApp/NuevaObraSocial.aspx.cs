@@ -75,48 +75,6 @@ namespace WebApp
 
         }
 
-        protected void btnEliminar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                IAccesoDatos accesoDatos = new AccesoDatos();
-                ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
-                int id = int.Parse(Request.QueryString["id"].ToString());
-                moduleObraSocial.eliminarObraSocial(id);
-                Response.Redirect("ObrasSociales.aspx");
-
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            
-        }
-
-        protected void btnModificar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                IAccesoDatos accesoDatos = new AccesoDatos();
-                ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
-
-                ObraSocial os = new ObraSocial();
-                os.Nombre = txtNombre.Text;
-                os.Descripcion = txtDescripcion.Text;
-                os.Direccion = txtDireccion.Text;
-                os.Email = txtEmail.Text;
-                os.Telefono = txtTelefono.Text;
-                os.Website = txtWebsite.Text;
-
-                moduleObraSocial.agregarObraSocial(os);
-
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
+      
     }
 }
