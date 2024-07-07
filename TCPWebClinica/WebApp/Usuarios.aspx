@@ -14,7 +14,12 @@
                 <Columns>
                     <asp:BoundField HeaderText="ID" DataField="Id" />
                     <asp:BoundField HeaderText="Nombre Usuario" DataField="Nombre" />
-                    <asp:CommandField ShowSelectButton="True" SelectText="Seleccionar" />
+                    <asp:TemplateField HeaderText="Email">
+                        <ItemTemplate>
+                            <a href='mailto:<%# Eval("Email") %>' class="mailto"><%# Eval("Email") %></a>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:CommandField ShowSelectButton="True" ControlStyle-CssClass="btn btn-success btn-sm" SelectText="Seleccionar" />
                 </Columns>
             </asp:GridView>
             <a class="btn btn-primary" href="NuevoUsuario.aspx">Agregar</a>
