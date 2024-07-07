@@ -23,6 +23,10 @@ namespace WebApp
         }
         protected void dgvMedicos_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        protected void dgvMedicos_SelectedIndexChanged1(object sender, EventArgs e)
+        {
             var id = int.Parse(dgvMedicos.SelectedDataKey.Value.ToString());
             Response.Redirect("NuevoMedico.aspx?id=" + id);
         }

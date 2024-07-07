@@ -5,7 +5,7 @@
     <div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center; margin-top: 2em;">
 
         <div id="titulo" style="display: flex; flex-direction: column; justify-content: space-between; width: 100%; margin-bottom: 2em; margin-left: 5em";>
-            <h3>Agregar nuevo Medico</h3>
+            <asp:Label ID="lblTitulo" cssclass="h3" runat="server" Text="Agregar nuevo Medico"></asp:Label>
         </div>
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: space-around; width: 100%;">
@@ -24,20 +24,30 @@
                     <asp:TextBox type="text" CssClass="form-control" ID="txtApellido" placeholder="Apellido" required="true" runat="server" />
                     <label for="Apellido">Apellido *</label>
                 </div>
-                <hr />
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="text" CssClass="form-control" ID="txtNombreUsuario" placeholder="Nombre" required="true" runat="server" />
-                    <label for="nombre">Nombre de Usuario *</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <asp:TextBox type="password" CssClass="form-control" ID="txtContraseña" placeholder="Contraseña" required="true" runat="server" />
-                    <label for="Contraseña">Contraseña *</label>
-                </div>
-
                 <div class="form-floating mb-3">
                     <asp:TextBox type="text" class="form-control" ID="txtEmail" placeholder="Email" required="true" runat="server" />
                     <label for="Email">Email *</label>
+                </div>
+                <hr />
+                <div class="form-floating mb-3">
+                    <asp:Label ID="lblNombreUsuario" for="nombre" runat="server" Text="Nombre de Usuario *"></asp:Label>
+                    <asp:TextBox type="text" CssClass="form-control" ID="txtNombreUsuario" placeholder="Nombre" required="true" runat="server" />
+                    <%--<label for="nombre">Nombre de Usuario *</label>--%>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <asp:Label ID="lblContraseña" for="Contraseña" runat="server" Text="Contraseña *"></asp:Label>
+                    <asp:TextBox type="password" CssClass="form-control" ID="txtContraseña" placeholder="Contraseña" required="true" runat="server" />
+                    <%--<label for="Contraseña">Contraseña *</label>--%>
+                </div>
+                <div class="form-floating mb-3">
+                    <asp:Button ID="btnHorarios" cssclass="btn btn-link" Visible="false" Text="Ver Horarios" runat="server" />
+                    <asp:Button ID="btnEspecialidades" cssclass="btn btn-link" Visible="false" Text="Ver Especialidades" runat="server" />
+                </div>
+                <hr />
+                <div class="form-floating mb-3">
+                    <asp:Button ID="btnModificar" CssClass="btn btn-success" Visible="false" Text="Modificar" runat="server" />
+                    <asp:Button ID="btnEliminar" CssClass="btn btn-danger" Visible="false" Text="Eliminar" runat="server" />
                 </div>
             </div>
             <di v class="col-2" id="columna2" style="display: flex; flex-direction: column; justify-content: space-around; width: 45%;">
@@ -45,13 +55,14 @@
                 <div id="horarios">
 
                     <div id="hora-he" style="padding-top: 20px;">
-                        <label for="ddlHorarioEntrada">Horario Entrada *</label>
+                        <asp:Label ID="lblHorarioEntrada" for="ddlHorarioEntrada" runat="server" Text="Horario Entrada *"></asp:Label>
                         <asp:DropDownList ID="ddlHorarioEntrada" runat="server" class="form-select" aria-label="Default select example" required="true">
                             <asp:ListItem Text="Horario de entrada*" Enabled="false" />
                         </asp:DropDownList>
                     </div>
                     <div id="hora-hs" style="padding-top: 20px;">
-                        <label for="ddlHorarioSalida">Horario Salida *</label>
+                        <asp:Label ID="lblHorarioSalida" for="ddlHorarioSalida" runat="server" Text="Horario Salida *"></asp:Label>
+
                         <asp:DropDownList ID="ddlHorarioSalida" runat="server" class="form-select" aria-label="Default select example" required="true">
                             <asp:ListItem Text="Horario de salida *" Enabled="false" />
                         </asp:DropDownList>

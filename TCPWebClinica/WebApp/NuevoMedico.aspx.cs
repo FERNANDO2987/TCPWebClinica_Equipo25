@@ -18,12 +18,45 @@ namespace WebApp
         {
             if (!Page.IsPostBack)
             {
+                if (Request.QueryString["id"] != null)
+                {
+                    SetupModificar();
+                    
+                }
                 CargarHorarioEntrada(ddlHorarioEntrada);
                 CargarHorarioSalida(ddlHorarioSalida);
                 CargarEspecialidades(ddlEspecialidad);
             }
         }
+        private void SetupModificar()
+        {
+            MedicoModule module = new MedicoModule(new AccesoDatos());
+            int idUrl = int.Parse(Request.QueryString["id"]);
+            Medico medico = new Medico();
+            medico = module.listarMedicos().Find(x => x.Id == idUrl);
 
+            lblTitulo.Text = "Modificar medico";
+            txtContraseña.Visible = false;
+            lblContraseña.Visible = false;
+            txtNombreUsuario.Visible = false;
+            lblNombreUsuario.Visible = false;
+            ddlHorarioEntrada.Visible = false;
+            lblHorarioEntrada.Visible = false;
+            ddlHorarioSalida.Visible = false;
+            lblHorarioSalida.Visible = false;
+            ddlEspecialidad.Visible = false;
+            Agregar.Visible = false;
+            btnEspecialidades.Visible = true;
+            btnHorarios.Visible = true;
+            btnEliminar.Visible = true;
+            btnModificar.Visible = true;
+            txtEmail.ReadOnly = true;
+
+            txtId.Text = idUrl.ToString();
+            txtNombre.Text = medico.Nombre;
+            txtApellido.Text = medico.Apellido;
+            txtEmail.Text = medico.Email;
+        }
         private void CargarEspecialidades(DropDownList ddlEspecialidad)
         {
             List<Especialidad> especialidades = especialidadModule.listarEspecialidad();
