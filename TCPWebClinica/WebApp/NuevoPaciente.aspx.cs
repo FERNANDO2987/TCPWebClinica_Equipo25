@@ -52,7 +52,19 @@ namespace WebApp
                 txtDni.Text = paciente.Documento.ToString();
                 txtCelular.Text = paciente.Celular;
                 txtEmail.Text = paciente.Email;
-                ddlObraSocial.SelectedValue = paciente.Id.ToString();
+                //ddlObraSocial.SelectedValue = paciente.Id.ToString();
+                // Asigna el valor correcto a ddlObraSocial
+                if (ddlObraSocial.Items.FindByValue(paciente.ObraSocial.Id.ToString()) != null)
+                {
+                    ddlObraSocial.SelectedValue = paciente.ObraSocial.Id.ToString();
+                }
+                else
+                {
+                    // Maneja el caso en el que el valor no existe en la lista
+                    ddlObraSocial.SelectedIndex = 0; // O selecciona un valor predeterminado
+                }
+
+
                 fecha.Text = fechan.ToString("yyyy-MM-dd");
                 if (paciente.Sexo == "f" || paciente.Sexo == "F")
                 {
@@ -146,7 +158,8 @@ namespace WebApp
                 PacienteModule pacienteModule = new PacienteModule(accesoDatos);
                 int id = int.Parse(Request.QueryString["id"].ToString());
                 pacienteModule.eliminarPaciente(id);
-                Response.Redirect("Pacientes.aspx");
+                Response.Redirect("Pacientes.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
 
             }
             catch (Exception ex)
@@ -176,7 +189,7 @@ namespace WebApp
                 paciente.ObraSocial = new ObraSocial();
                 paciente.ObraSocial.Id = int.Parse(ddlObraSocial.SelectedValue);
 
-                //pacienteModule.modificarPaciente(paciente);
+               pacienteModule.agregarPaciente(paciente);
 
             }
             catch (Exception ex)
