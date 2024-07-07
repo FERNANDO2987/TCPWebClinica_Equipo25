@@ -14,7 +14,7 @@
 
         <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-                <a class="btn btn-outline-success fs-2" style="width: 100%; height: 200px; line-height: 200px;" href="Cartilla.aspx">Cartilla</a>
+                <a class="btn btn-outline-success fs-2" style="width: 100%; height: 200px; line-height: 200px;" href="Medicos.aspx">Medicos</a>
             </div>
             <div class="col">
                 <a class="btn btn-outline-success fs-2" style="width: 100%; height: 200px; line-height: 200px;" href="Administradores.aspx">Administradores</a>

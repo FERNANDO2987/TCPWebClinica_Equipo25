@@ -68,8 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administradores.aspx" />
-    <Content Include="CargarMedicos.aspx" />
-    <Content Include="Cartilla.aspx" />
+    <Content Include="NuevoMedico.aspx" />
+    <Content Include="Medicos.aspx" />
     <Content Include="Content\Imagenes\carrito3.jpg" />
     <Content Include="Content\Style\Style.css" />
     <Content Include="Content\Style\StyleCarrito.css" />
@@ -112,19 +112,19 @@
     <Compile Include="Administradores.aspx.designer.cs">
       <DependentUpon>Administradores.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CargarMedicos.aspx.cs">
-      <DependentUpon>CargarMedicos.aspx</DependentUpon>
+    <Compile Include="NuevoMedico.aspx.cs">
+      <DependentUpon>NuevoMedico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CargarMedicos.aspx.designer.cs">
-      <DependentUpon>CargarMedicos.aspx</DependentUpon>
+    <Compile Include="NuevoMedico.aspx.designer.cs">
+      <DependentUpon>NuevoMedico.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Cartilla.aspx.cs">
-      <DependentUpon>Cartilla.aspx</DependentUpon>
+    <Compile Include="Medicos.aspx.cs">
+      <DependentUpon>Medicos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Cartilla.aspx.designer.cs">
-      <DependentUpon>Cartilla.aspx</DependentUpon>
+    <Compile Include="Medicos.aspx.designer.cs">
+      <DependentUpon>Medicos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

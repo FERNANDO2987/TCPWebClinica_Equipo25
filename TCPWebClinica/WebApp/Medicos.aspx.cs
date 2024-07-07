@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApp
 {
-    public partial class Cartilla : System.Web.UI.Page
+    public partial class Medicos : System.Web.UI.Page
     {
         public List<Medico> medicos {  get; set; }
         protected void Page_Load(object sender, EventArgs e)
@@ -24,7 +24,7 @@ namespace WebApp
         protected void dgvMedicos_SelectedIndexChanged(object sender, EventArgs e)
         {
             var id = int.Parse(dgvMedicos.SelectedDataKey.Value.ToString());
-            Response.Redirect("CargarMedicos.aspx?id=" + id);
+            Response.Redirect("NuevoMedico.aspx?id=" + id);
         }
     }
 }

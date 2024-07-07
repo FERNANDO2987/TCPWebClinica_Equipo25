@@ -93,3 +93,25 @@ BEGIN
 
   
 END
+go
+
+CREATE PROCEDURE CrearUsuarioYMedico
+    @username NVARCHAR(100),
+    @contraseña NVARCHAR(50),
+    @rolid INT,
+    @email NVARCHAR(100),
+    @nombre NVARCHAR(100),
+    @apellido NVARCHAR(100)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @idusuario INT;
+
+    INSERT INTO Usuario (Nombre, Contraseña,Email, RolId, CreatedDate, Deleted, DeleteDate)
+    VALUES (@username,@contraseña,@email,@rolid,GETDATE(),0,NULL);
+
+    SET @idusuario = SCOPE_IDENTITY();
+
+    INSERT INTO Medicos (Id, Nombre, Apellido, Email, CreatedDate, Deleted, DeleteDate)
+    VALUES (@idusuario,@nombre,@apellido,@email,GETDATE(),0,NULL);
+END;

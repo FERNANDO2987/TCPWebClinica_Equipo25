@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApp
 {
-    public partial class CargarMedicos : System.Web.UI.Page
+    public partial class NuevoMedico : System.Web.UI.Page
     {
         EspecialidadModule especialidadModule = new EspecialidadModule(new AccesoDatos());
         protected void Page_Load(object sender, EventArgs e)
@@ -39,8 +39,18 @@ namespace WebApp
             try
             {
                 MedicoModule module = new MedicoModule(new AccesoDatos());
+                UsuariosModule usuariosModule = new UsuariosModule(new AccesoDatos());
                 int horarioEntrada = int.Parse(ddlHorarioEntrada.SelectedValue.Replace(":00hs", ""));
                 int horarioSalida = int.Parse(ddlHorarioSalida.SelectedValue.Replace(":00hs", ""));
+
+                Usuario usuario = new Usuario()
+                {
+                    Nombre = txtNombreUsuario.Text,
+                    Contraseña = txtContraseña.Text,
+                    Email = txtEmail.Text,
+                    Rol = new Rol() { Id = 3, Descripcion = "Medico" }
+                };
+                //usuariosModule.agregarUsuario(usuario);
 
                 Especialidad especialidad = new Especialidad()
                 {
@@ -55,7 +65,7 @@ namespace WebApp
 
                 Medico medico = new Medico()
                 {
-                    Id = 4,
+                    //Id = 4,
                     Apellido = string.IsNullOrWhiteSpace(txtApellido.Text) ? string.Empty : txtApellido.Text,
                     Nombre = string.IsNullOrWhiteSpace(txtNombre.Text) ? string.Empty : txtNombre.Text,
                     Email = string.IsNullOrWhiteSpace(txtEmail.Text) ? string.Empty : txtEmail.Text,
@@ -63,9 +73,10 @@ namespace WebApp
                     HorarioDeTrabajo = new List<HorarioDeTrabajo>() { horarioDeTrabajo },
                 };
 
-                module.agregarMedico(medico);
+                //module.agregarMedico(medico);
+                module.agregarUsuarioyMedico(usuario, medico);
 
-                Response.Redirect("Cartilla.aspx");
+                Response.Redirect("Medicos.aspx");
             }
             catch (Exception ex)
             {

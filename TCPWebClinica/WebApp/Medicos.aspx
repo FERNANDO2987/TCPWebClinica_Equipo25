@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Cartilla.aspx.cs" Inherits="WebApp.Cartilla" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Medicos.aspx.cs" Inherits="WebApp.Medicos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -20,7 +20,7 @@
                     <asp:CommandField ShowSelectButton="True" SelectText="Seleccionar" ControlStyle-CssClass="btn btn-Alert btn-sm" />
                 </Columns>
             </asp:GridView>
-            <a href="CargarMedicos.aspx" class="btn btn-primary">+</a>
+            <a href="NuevoMedico.aspx" class="btn btn-primary">+</a>
         </div>
         <div class="col"></div>
     </div>

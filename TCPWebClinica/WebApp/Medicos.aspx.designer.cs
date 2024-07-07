@@ -11,7 +11,7 @@ namespace WebApp
 {
 
 
-    public partial class Cartilla
+    public partial class Medicos
     {
 
         /// <summary>

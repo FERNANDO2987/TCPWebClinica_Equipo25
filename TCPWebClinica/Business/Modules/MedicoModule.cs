@@ -15,6 +15,31 @@ namespace Business.Modules
         {
           _accesoDatos = accesoDatos;
         }   
+        public void agregarUsuarioyMedico(Usuario usu, Medico medico)
+        {
+
+            try
+            {
+                _accesoDatos.setearConsulta("CrearUsuarioYMedico");
+
+                _accesoDatos.setearParametro("@username", usu.Nombre);
+                _accesoDatos.setearParametro("@contraseña", usu.Contraseña);
+                _accesoDatos.setearParametro("@rolid", usu.Rol.Id.ToString());
+                _accesoDatos.setearParametro("@nombre", medico.Nombre);
+                _accesoDatos.setearParametro("@apellido", medico.Apellido);
+                _accesoDatos.setearParametro("@email", usu.Email);
+
+                _accesoDatos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error de conexión de SQL: " + ex.Message, ex);
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion();
+            }
+        }
         public Medico agregarMedico(Medico medico)
         {
             try
