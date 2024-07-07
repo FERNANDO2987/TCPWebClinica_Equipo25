@@ -92,3 +92,10 @@ BEGIN
 END
 --================================FIN===================================
 GO
+
+CREATE PROCEDURE ListarHorarios_x_Medico
+	@id int
+AS
+BEGIN
+	SELECT * FROM HorarioDeTrabajo WHERE IdMedico = @id and Deleted = 0
+END

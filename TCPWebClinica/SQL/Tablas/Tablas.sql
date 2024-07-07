@@ -123,6 +123,7 @@ go
 Create Table[dbo].[HorarioDeTrabajo]
 (
   [Id] [int] not null primary key identity(1,1),
+  [IdMedico] [int] not null foreign key references Medicos(id),
   [HorarioEntrada] DateTime NOT NULL,
   [HorarioSalida] DateTime NOT NULL,
   [CreatedDate] [datetime] NOT NULL,
