@@ -46,8 +46,8 @@
                 </div>
                 <hr />
                 <div class="form-floating mb-3">
-                    <asp:Button ID="btnModificar" CssClass="btn btn-success" Visible="false" Text="Modificar" runat="server" />
-                    <asp:Button ID="btnEliminar" CssClass="btn btn-danger" Visible="false" Text="Eliminar" runat="server" />
+                    <asp:Button ID="btnModificar" CssClass="btn btn-success" Visible="false" Text="Modificar" runat="server" OnClick="btnModificar_Click" />
+                    <asp:Button ID="btnEliminar" CssClass="btn btn-danger" Visible="false" Text="Eliminar" runat="server" onclick="btnEliminar_Click"/>
                 </div>
             </div>
             <di v class="col-2" id="columna2" style="display: flex; flex-direction: column; justify-content: space-around; width: 45%;">

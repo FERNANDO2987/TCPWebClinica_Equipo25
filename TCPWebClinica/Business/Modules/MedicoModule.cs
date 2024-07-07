@@ -47,11 +47,12 @@ namespace Business.Modules
                 _accesoDatos.setearConsulta("AgregarMedico");
 
                 // Asegurarse de que el ID siempre se proporciona. Si no hay ID, asumimos que es una nueva inserción.
-              
+                
+                _accesoDatos.setearParametro("@Id", medico.Id.ToString());
                 _accesoDatos.setearParametro("@Nombre", medico.Nombre);
                 _accesoDatos.setearParametro("@Apellido", medico.Apellido);
                 _accesoDatos.setearParametro("@Email", medico.Email);
-                _accesoDatos.setearParametro("@UsuarioId", medico.Id.ToString());
+                //_accesoDatos.setearParametro("@UsuarioId", medico.Id.ToString());
                 // Execute the query
                 _accesoDatos.ejecutarLectura();
 
@@ -92,6 +93,36 @@ namespace Business.Modules
             }
 
             return medico;
+        }
+
+        public bool eliminar_Medico(int id)
+        {
+
+            try
+            {
+
+                _accesoDatos.setearConsulta("ELIMINAR_MEDICO");
+                _accesoDatos.setearParametro("@Id", id.ToString()); // Convertir el ID a string
+
+                _accesoDatos.ejecutarLectura(); // Ejecutar la acción de eliminación
+
+                if (_accesoDatos.Lector.Read())
+                {
+                    bool resultado = _accesoDatos.Lector.GetBoolean(0);
+                    return resultado;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion(); // Asegurarnos de cerrar la conexión
+            }
         }
 
         public bool eliminarMedico(int id)

@@ -105,3 +105,17 @@ BEGIN
     INSERT INTO Medicos (Id, Nombre, Apellido, Email, CreatedDate, Deleted, DeleteDate)
     VALUES (@idusuario,@nombre,@apellido,@email,GETDATE(),0,NULL);
 END;
+
+GO 
+--USA LA TABLA HORARIO_X_MEDICO MODIFICADA CON IDMEDICO
+CREATE PROCEDURE ELIMINAR_MEDICO
+	@Id int
+AS
+BEGIN
+	DELETE Especialidades_X_Medico WHERE IdMedico = @Id
+	DELETE Horario_x_Medico WHERE IdMedico = @Id
+	UPDATE Turnos SET IdEstadoTurno = 1 WHERE IdMedico = @Id AND IdEstadoTurno = 2
+	UPDATE Medicos SET Deleted = 1, DeleteDate = GETDATE() WHERE Id = @Id 
+	UPDATE Usuario SET Deleted = 1, DeleteDate = GETDATE() WHERE Id = @Id 
+
+END

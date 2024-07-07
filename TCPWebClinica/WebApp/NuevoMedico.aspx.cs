@@ -23,9 +23,12 @@ namespace WebApp
                     SetupModificar();
                     
                 }
-                CargarHorarioEntrada(ddlHorarioEntrada);
-                CargarHorarioSalida(ddlHorarioSalida);
-                CargarEspecialidades(ddlEspecialidad);
+                else
+                {
+                    CargarHorarioEntrada(ddlHorarioEntrada);
+                    CargarHorarioSalida(ddlHorarioSalida);
+                    CargarEspecialidades(ddlEspecialidad);
+                }
             }
         }
         private void SetupModificar()
@@ -134,6 +137,43 @@ namespace WebApp
                 var descripcion = $"{i.ToString()}:00hs";
                 ListItem horariosParaCargar = new ListItem(descripcion, descripcion);
                 horario.Items.Add(horariosParaCargar);
+            }
+        }
+
+        protected void btnModificar_Click(object sender, EventArgs e)
+        {
+            MedicoModule module = new MedicoModule(new AccesoDatos());
+            Medico medico = new Medico()
+            {
+                Id = int.Parse(txtId.Text),
+                Nombre = txtNombre.Text,
+                Apellido = txtApellido.Text,
+                Email = txtEmail.Text,
+            };
+            try
+            {
+                module.agregarMedico(medico);
+                Response.Redirect("Medicos.aspx", false);
+            }
+            catch (Exception ex)
+            {
+
+                //throw ex;
+            }
+        }
+
+        protected void btnEliminar_Click(object sender, EventArgs e)
+        {
+            MedicoModule medicoModule = new MedicoModule(new AccesoDatos());
+            int idUrl = int.Parse(Request.QueryString["id"]);
+            try
+            {
+                medicoModule.eliminar_Medico(idUrl);
+            }
+            catch (Exception ex)
+            {
+
+                //throw ex;
             }
         }
     }
