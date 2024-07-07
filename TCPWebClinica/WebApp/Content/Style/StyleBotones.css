@@ -1,0 +1,6 @@
+﻿.input-group-custom .form-control {
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.input-group-custom .input-group-append .btn {
+    margin-left: 10px; /* Separar un poco el botón
