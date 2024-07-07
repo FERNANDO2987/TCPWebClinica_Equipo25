@@ -51,10 +51,11 @@ namespace WebApp
             try
             {
                 IAccesoDatos accesoDatos = new AccesoDatos();
-                ObraSocialModule moduleObraSocial = new ObraSocialModule(accesoDatos);
+                TurnoModule moduleObraSocial = new TurnoModule(accesoDatos);
                 int id = int.Parse(Request.QueryString["id"].ToString());
-                moduleObraSocial.eliminarObraSocial(id);
-                Response.Redirect("Turno.aspx");
+                moduleObraSocial.eliminarTurno(id);
+                Response.Redirect("Turno.aspx",false);
+                Context.ApplicationInstance.CompleteRequest();
 
             }
             catch (Exception ex)

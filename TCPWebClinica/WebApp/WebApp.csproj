@@ -72,7 +72,6 @@
     <Content Include="Cartilla.aspx" />
     <Content Include="Content\Imagenes\carrito3.jpg" />
     <Content Include="Content\Style\Style.css" />
-    <Content Include="Content\Style\StyleBotones.css" />
     <Content Include="Content\Style\StyleCarrito.css" />
     <Content Include="Content\Style\StyleDetalle.css" />
     <Content Include="Content\Style\StyleMasterPage.css" />
