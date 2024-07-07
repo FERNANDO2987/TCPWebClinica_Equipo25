@@ -306,7 +306,7 @@ namespace WebApp
             }
             else
             {
-                // Manejar el caso cuando no se encuentra el turno
+                throw new Exception("No se encuentra el Turno");
                 
             }
         }
