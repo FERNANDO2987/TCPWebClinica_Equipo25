@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="row mt-5">
+        <div class="row mt-1">
         <div class="col"></div>
-        <div class="col-6">
+        <div class="col-10">
 
             <h3>Pacientes</h3>
             <asp:GridView ID="dgvPacientes" OnSelectedIndexChanged="dgvPcaientes_SelectedIndexChanged" DataKeyNames="Id" cssclass="table" autogeneratecolumns="false" runat="server">

@@ -74,58 +74,41 @@ END
 
 GO
 
-CREATE PROCEDURE [dbo].[EliminarPacienteYObraSocial]
-    @pacienteId INT
+
+-- =============================================
+-- Author:	    Palacios Fernando
+-- Create date: 28/06/2024
+-- Description:	Elimina paciente
+-- =============================================
+CREATE PROCEDURE [dbo].[EliminarPaciente]
+    @Id INT
 AS
 BEGIN
-    BEGIN TRANSACTION;
-	  
-    BEGIN TRY
-        -- Obtener la Obra Social
-        DECLARE @obraSocialId INT;
-        SELECT @obraSocialId = IdObraSocial FROM [dbo].[Paciente] WHERE Id = @pacienteId;
+    SET NOCOUNT ON;
 
-        -- Actualizar registro en Paciente
+    -- Declarar variable para el resultado
+    DECLARE @Result BIT;
+
+    -- Verificar si el registro existe
+    IF EXISTS (SELECT 1 FROM [dbo].[Paciente] WHERE [Id] = @Id)
+    BEGIN
+        -- Actualizar solo el registro con el Id proporcionado
         UPDATE [dbo].[Paciente]
-        SET
-            Deleted = 1,
-            DeleteDate = GETDATE()
-        WHERE
-            Id = @pacienteId;
+        SET [Deleted] = 1,
+            [DeleteDate] = GETDATE()
+        WHERE [Id] = @Id;
 
-        -- Actualizar registro en ObraSocial
-        UPDATE [dbo].[ObraSocial]
-        SET
-            Deleted = 1,
-            DeleteDate = GETDATE()
-        WHERE
-            Id = @obraSocialId;
-    END TRY
+        -- Establece el resultado en verdadero indicando éxito
+        SET @Result = 1;
+    END
+    ELSE
+    BEGIN
+       -- Establecer el resultado en falso indicando falla
+        SET @Result = 0;
+    END
 
-    BEGIN CATCH
-        SELECT
-            ERROR_NUMBER() AS ErrorNumber,
-            ERROR_SEVERITY() AS ErrorSeverity,
-            ERROR_STATE() AS ErrorState,
-            ERROR_PROCEDURE() AS ErrorProcedure,
-            ERROR_LINE() AS ErrorLine,
-            ERROR_MESSAGE() AS ErrorMessage;
-
-        IF @@TRANCOUNT > 0
-            ROLLBACK TRANSACTION;
-    END CATCH;
-
-    IF @@TRANCOUNT > 0
-        COMMIT TRANSACTION;
-
-    -- Seleccionar los registros actualizados
-    SELECT *
-    FROM [dbo].[Paciente]
-    WHERE Id = @pacienteId;
-
-    SELECT *
-    FROM [dbo].[ObraSocial]
-    WHERE Id = @obraSocialId;
+    -- Devuelve el resultado
+    SELECT CAST(@Result AS BIT) AS 'Result';
 END;
 GO
 
