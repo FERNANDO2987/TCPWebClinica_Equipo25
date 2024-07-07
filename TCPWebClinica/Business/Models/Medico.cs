@@ -12,6 +12,7 @@ namespace Business.Models
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Email { get; set; }
+        public int UsuarioId { get; set; }
         public List<Especialidad> Especialidades { get; set; }
         public List<Turno> Turnos { get; set; }
         public List<HorarioDeTrabajo> HorarioDeTrabajo { get; set; }
