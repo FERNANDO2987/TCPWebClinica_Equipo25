@@ -72,6 +72,7 @@
     <Content Include="Cartilla.aspx" />
     <Content Include="Content\Imagenes\carrito3.jpg" />
     <Content Include="Content\Style\Style.css" />
+    <Content Include="Content\Style\StyleBotones.css" />
     <Content Include="Content\Style\StyleCarrito.css" />
     <Content Include="Content\Style\StyleDetalle.css" />
     <Content Include="Content\Style\StyleMasterPage.css" />
@@ -83,6 +84,7 @@
     <Content Include="EstadoTurnos.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="ModificarTurno.aspx" />
     <Content Include="NuevaEspecialidad.aspx" />
     <Content Include="NuevaObraSocial.aspx" />
     <Content Include="NuevoAdministrador.aspx" />
@@ -178,6 +180,13 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarTurno.aspx.cs">
+      <DependentUpon>ModificarTurno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModificarTurno.aspx.designer.cs">
+      <DependentUpon>ModificarTurno.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevaEspecialidad.aspx.cs">
       <DependentUpon>NuevaEspecialidad.aspx</DependentUpon>

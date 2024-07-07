@@ -4,6 +4,7 @@ using Business.Models;
 using Business.Modules;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +12,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApp
 {
-    public partial class Formulario_web1 : System.Web.UI.Page
+    public partial class ModificarTurno : System.Web.UI.Page
     {
         private IAccesoDatos accesoDatos;
         protected void Page_Load(object sender, EventArgs e)
@@ -27,6 +28,7 @@ namespace WebApp
                 CargarMedicos(ddlMedicos);
                 CargarEstadoTurno();
                 CargarObraSocial(ddlObraSocial);
+                CargarHorarioTrabajo();
 
                 if (fechaTurno.Text == hoy.ToString("yyyy-MM-dd"))
                 {
@@ -67,21 +69,41 @@ namespace WebApp
         {
             try
             {
+                // Crear instancia de acceso a datos y módulo de turno
                 IAccesoDatos accesoDatos = new AccesoDatos();
                 TurnoModule turnoModule = new TurnoModule(accesoDatos);
 
+                // Obtener el ID del turno a modificar desde la consulta de la URL
+                int idTurno = int.Parse(Request.QueryString["id"].ToString());
 
-                TurnoConPaciente t = new TurnoConPaciente();
-                //t.NombrePaciente = txt.Text;
+                // Obtener el turno existente que se desea modificar
+           
+            Business.Models.Turno turnoExistente = turnoModule.listarTurnos().FirstOrDefault(t => t.Id == idTurno);
+                if (turnoExistente == null)
+                {
+                    throw new Exception("No se encontró el turno especificado para modificar.");
+                }
 
+                // Actualizar los datos del turno con los valores de los controles de la página
+                turnoExistente.Medico = new Medico { Id = int.Parse(ddlMedicos.SelectedValue) };
+                turnoExistente.Especialidad = new Especialidad { Id = int.Parse(dllEspecialidad.SelectedValue) };
+                turnoExistente.Observaciones = txtObservaciones.Text;
+                turnoExistente.Estado = new EstadoTurno { Id = int.Parse(ddlEstadoTurno.SelectedValue) };
+                turnoExistente.ObraSocial = new ObraSocial { Id = int.Parse(ddlObraSocial.SelectedValue) };
+                turnoExistente.FechaHora = DateTime.ParseExact(fechaTurno.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture);
 
+                // Guardar los cambios en el módulo de turno
+                turnoModule.agregarTurno(turnoExistente);
 
+                // Redireccionar a la página de visualización de turnos después de la modificación
+                Response.Redirect("Turno.aspx");
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw new Exception("Error al modificar el turno: " + ex.Message);
             }
         }
+
 
         protected void fechaTurno_TextChanged(object sender, EventArgs e)
         {
@@ -228,6 +250,44 @@ namespace WebApp
             }
 
         }
+
+        private void CargarHorarioTrabajo()
+        {
+            IAccesoDatos accesoDatos = new AccesoDatos();
+            HorarioTrabajoModule horarioTrabajoModule = new HorarioTrabajoModule(accesoDatos);
+
+            // Obtener el ID del turno seleccionado
+            int idTurnoSeleccionado = int.Parse(Request.QueryString["id"].ToString());
+            TurnoModule turnoModule = new TurnoModule(accesoDatos);
+            Business.Models.Turno turno = turnoModule.listarTurnos().Find(x => x.Id == idTurnoSeleccionado);
+
+            // Cargar los horarios de trabajo en el DropDownList
+            ddlHorarioTrabajo.DataSource = horarioTrabajoModule.listarHorarioTrabajo();
+            ddlHorarioTrabajo.DataValueField = "Id";
+            ddlHorarioTrabajo.DataTextField = "FechaYHora";
+            ddlHorarioTrabajo.DataBind();
+
+            // Agregar un elemento vacío para selección inicial
+            ddlHorarioTrabajo.Items.Insert(0, new ListItem("-- Seleccionar Hora --", "0"));
+
+            // Seleccionar el horario del turno seleccionado si existe
+            if (turno != null)
+            {
+                // Formatear la hora del turno para comparación con los horarios disponibles
+                string horaTurno = turno.FechaHora.ToString(@"hh\:mm");
+
+                // Buscar el ListItem que coincide con la hora del turno y seleccionarlo
+                ListItem item = ddlHorarioTrabajo.Items.FindByText(horaTurno);
+                if (item != null)
+                {
+                    item.Selected = true;
+                }
+            }
+        }
+
+
+
+
 
         private void CargarTurno(int id)
         {
