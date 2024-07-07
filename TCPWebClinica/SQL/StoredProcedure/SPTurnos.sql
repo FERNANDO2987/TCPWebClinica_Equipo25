@@ -87,7 +87,8 @@ BEGIN
 		E.Nombre AS Especialidad,
 		M.Nombre AS Medico,
 		ET.Descripcion,
-		O.Nombre AS ObraSocial
+		O.Nombre AS ObraSocial,
+		M.Id AS IdMedico
        
     FROM 
         Turnos T 
@@ -128,6 +129,44 @@ BEGIN
     BEGIN
         -- Actualizar solo el registro con el Id proporcionado
         UPDATE [dbo].[EstadoTurno]
+        SET [Deleted] = 1,
+            [DeleteDate] = GETDATE()
+        WHERE [Id] = @Id;
+
+        -- Establece el resultado en verdadero indicando éxito
+        SET @Result = 1;
+    END
+    ELSE
+    BEGIN
+       -- Establecer el resultado en falso indicando falla
+        SET @Result = 0;
+    END
+
+    -- Devuelve el resultado
+    SELECT CAST(@Result AS BIT) AS 'Result';
+END;
+GO
+
+-- =============================================
+-- Author:		Palacios Fernando
+-- Create date: 01/07/2024
+-- Description:	Elimina el Turno por Id
+-- =============================================
+
+CREATE PROCEDURE [dbo].[EliminarTurno]
+    @Id INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Declarar variable para el resultado
+    DECLARE @Result BIT;
+
+    -- Verificar si el registro existe
+    IF EXISTS (SELECT 1 FROM [dbo].[Turnos] WHERE [Id] = @Id)
+    BEGIN
+        -- Actualizar solo el registro con el Id proporcionado
+        UPDATE [dbo].[Turnos]
         SET [Deleted] = 1,
             [DeleteDate] = GETDATE()
         WHERE [Id] = @Id;
