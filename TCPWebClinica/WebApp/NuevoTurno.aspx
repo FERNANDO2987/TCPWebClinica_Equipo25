@@ -1,15 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="NuevoTurno.aspx.cs" Inherits="WebApp.NuevoTurno" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-        .input-group-custom .form-control {
-            width: 100%; /* Ocupa todo el ancho disponible */
-        }
-
-        .input-group-custom .input-group-append .btn {
-            margin-left: 10px; /* Separar un poco el botón del textbox */
-        }
-    </style>
+    <link href="Content/Style/Style.css" rel="stylesheet" />
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

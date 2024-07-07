@@ -13,29 +13,19 @@ GO
 -- =============================================
 
 CREATE PROCEDURE [dbo].[AgregarMedico]
-(
-    @Id INT,
-    @Nombre nvarchar(100),
-    @Apellido nvarchar(100),
-    @Email nvarchar(100)
-
-)
+    @Nombre NVARCHAR(100),
+    @Apellido NVARCHAR(100),
+    @Email NVARCHAR(100) = NULL,
+    @UsuarioId INT
 AS
 BEGIN
-    IF (EXISTS (SELECT * FROM [dbo].[Medicos] WHERE Id = @Id))
-        UPDATE [dbo].[Medicos]
-        SET Nombre = @Nombre,
-            Apellido = @Apellido,
-            Email = @Email
-       
-        WHERE Id = @Id;
-    ELSE
-        BEGIN
-            INSERT INTO Medicos(Nombre, Apellido, Email, CreatedDate, Deleted, DeleteDate)
-            VALUES(@Nombre, @Apellido, @Email, GETDATE(), 0, NULL);
-            
-            SELECT SCOPE_IDENTITY();
-        END
+    SET NOCOUNT ON;
+
+    INSERT INTO [dbo].[Medicos] (Id, Nombre, Apellido, Email, CreatedDate, Deleted, DeleteDate)
+    VALUES (@UsuarioId, @Nombre, @Apellido, @Email, GETDATE(), 0, NULL);
+
+    -- Return the ID of the inserted record
+    SELECT SCOPE_IDENTITY() AS Id;
 END
 
 

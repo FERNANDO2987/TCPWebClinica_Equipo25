@@ -47,11 +47,11 @@ namespace Business.Modules
                 _accesoDatos.setearConsulta("AgregarMedico");
 
                 // Asegurarse de que el ID siempre se proporciona. Si no hay ID, asumimos que es una nueva inserción.
-                _accesoDatos.setearParametro("@Id", medico.Id.ToString());
+              
                 _accesoDatos.setearParametro("@Nombre", medico.Nombre);
                 _accesoDatos.setearParametro("@Apellido", medico.Apellido);
                 _accesoDatos.setearParametro("@Email", medico.Email);
-
+                _accesoDatos.setearParametro("@UsuarioId", medico.Id.ToString());
                 // Execute the query
                 _accesoDatos.ejecutarLectura();
 
