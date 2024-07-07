@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container">
         <div class="row mt-5">
-            <div class="col-2"></div>
-            <div class="col-8">
+            <div class="col-1"></div>
+            <div class="col-10">
                 <h3>Turnos</h3>
                 <asp:GridView ID="dgvTurnos" OnSelectedIndexChanged="dgvTurnos_SelectedIndexChanged" DataKeyNames="Id" CssClass="table" AutoGenerateColumns="false" runat="server">
                     <Columns>
