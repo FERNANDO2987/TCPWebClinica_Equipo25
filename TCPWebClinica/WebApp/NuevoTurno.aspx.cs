@@ -27,10 +27,11 @@ namespace WebApp
 
                 //Cargar datos de Medicos
                 CargarMedicos(ddlMedicos);
+               
 
                 //Cargar Estado de Turno
                 CargarEstadoTurno();
-
+            
                 //Cargar Obras Sociales
                 CargarObraSocial(ddlObraSocial);
 
@@ -41,37 +42,44 @@ namespace WebApp
 
                 txtBuscarPaciente.Focus();
 
-          
 
-            IAccesoDatos accesoDatos = new AccesoDatos();
-            TurnoModule turnoModule = new TurnoModule(accesoDatos);
 
-            if (Request.QueryString["id"] != null)
-            {
-                btnAgregar.Visible = false;
+                IAccesoDatos accesoDatos = new AccesoDatos();
+                TurnoModule turnoModule = new TurnoModule(accesoDatos);
 
-                int id = int.Parse(Request.QueryString["id"].ToString());
-                Business.Models.Turno turno = turnoModule.listarTurnos().Find(x => x.Id == id);
-
-                // Recuperar y asignar paciente si existe
-                if (turno.Paciente != null)
+                if (Request.QueryString["id"] != null)
                 {
-                    hfPacienteId.Value = turno.Paciente.Id.ToString();
-                    // Aquí deberías mostrar el nombre del paciente en algún control, por ejemplo:
-                    // lblPacienteSeleccionado.Text = turno.Paciente.NombreCompleto; // Ajusta según tu interfaz
+                    btnAgregar.Visible = false;
+
+                    int id = int.Parse(Request.QueryString["id"].ToString());
+                    Business.Models.Turno turno = turnoModule.listarTurnos().Find(x => x.Id == id);
+
+                    // Recuperar y asignar paciente si existe
+                    if (turno.Paciente != null)
+                    {
+                        hfPacienteId.Value = turno.Paciente.Id.ToString();
+                   
+
+
+                    }
+                    DateTime fecha = turno.FechaHora;
+                    ddlMedicos.SelectedIndex = turno.Id;
+                    dllEspecialidad.SelectedIndex = turno.Id;
+                    txtObservaciones.Text = turno.Observaciones;
+                    ddlEstadoTurno.SelectedIndex = turno.Id;
+                    ddlObraSocial.SelectedIndex = turno.Id;
+                    fechaTurno.Text = fecha.ToString("yyyy-MM-dd");
+
                 }
-                DateTime fecha = turno.FechaHora;
-                ddlMedicos.SelectedIndex = turno.Id;
-                dllEspecialidad.SelectedIndex = turno.Id;
-                txtObservaciones.Text = turno.Observaciones;
-                ddlEstadoTurno.SelectedIndex = turno.Id;
-                ddlObraSocial.SelectedIndex = turno.Id;
-                fechaTurno.Text = fecha.ToString("yyyy-MM-dd");
 
-            }
+                
 
+              
             }
         }
+
+    
+
 
         protected void fechaTurno_TextChanged(object sender, EventArgs e)
         {
@@ -220,6 +228,15 @@ namespace WebApp
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
+
+            // Validar que se haya seleccionado un paciente
+            if (string.IsNullOrEmpty(hfPacienteId.Value))
+            {
+                // Mostrar un mensaje o lanzar una excepción indicando que se debe seleccionar un paciente primero
+                // Puedes usar una etiqueta de error o un MessageBox en JavaScript
+                return;
+            }
+
             EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
 
             try
@@ -342,6 +359,7 @@ namespace WebApp
 
                 // Guardar los datos del paciente seleccionado en los controles ocultos
                 hfPacienteId.Value = pacienteId;
+              
                 lblNombreApellido.Text ="Paciente - " + nombreApellido;
 
                 // Mostrar los datos del paciente seleccionado en el div
@@ -351,13 +369,21 @@ namespace WebApp
                 // Ocultar la tabla de pacientes
                 gvPacientes.Style["display"] = "none";
 
+
+
+
                 // Llama a la función JavaScript para ocultar el GridView y mostrar el paciente seleccionado
                 ScriptManager.RegisterStartupScript(this, GetType(), "mostrarPacienteSeleccionado", "mostrarPacienteSeleccionado();", true);
+
+                
+
             }
+
 
 
         }
 
+   
 
     }
 }
