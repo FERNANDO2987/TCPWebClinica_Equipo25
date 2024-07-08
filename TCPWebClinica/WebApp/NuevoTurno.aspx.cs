@@ -41,7 +41,7 @@ namespace WebApp
 
                 txtBuscarPaciente.Focus();
 
-            }
+          
 
             IAccesoDatos accesoDatos = new AccesoDatos();
             TurnoModule turnoModule = new TurnoModule(accesoDatos);
@@ -69,8 +69,8 @@ namespace WebApp
                 fechaTurno.Text = fecha.ToString("yyyy-MM-dd");
 
             }
-           
 
+            }
         }
 
         protected void fechaTurno_TextChanged(object sender, EventArgs e)
@@ -263,7 +263,8 @@ namespace WebApp
                     }
 
                     // Redireccionar a la página de turnos después de agregar
-                    Response.Redirect("Turno.aspx");
+                    Response.Redirect("Turno.aspx", false);
+                    HttpContext.Current.ApplicationInstance.CompleteRequest();
                 }
                 else
                 {

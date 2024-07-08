@@ -9,7 +9,8 @@ namespace Business.Models
     public class HorarioDeTrabajo
     {
         public int Id { get; set; }
-        public string Title { get; set; }
+
+        public int IdMedico { get; set; }
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSalida { get; set; }
 
