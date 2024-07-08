@@ -179,6 +179,8 @@ namespace WebApp
 
         protected void btnEspecialidades_Click(object sender, EventArgs e)
         {
+            int id = int.Parse(Request.QueryString["id"]);
+            Response.Redirect("EspecialidadesXM.aspx?id=" + id);
         }
 
         protected void btnHorarios_Click(object sender, EventArgs e)
