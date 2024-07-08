@@ -11,7 +11,7 @@
 
              
         <div id="form" style="display: flex; flex-direction: row; justify-content: start; width: 100%; margin-left: 2em;">
-            <div class="col-1" id="columna1" style="width: 45%;">
+            <div class="col-1 me-5" id="columna1" style="width: 45%;">
 
 
                 <div id="fechaTurno-ls" style="padding-top: 20px;">
