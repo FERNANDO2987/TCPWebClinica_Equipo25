@@ -13,8 +13,7 @@
                 <asp:CommandField ShowSelectButton="True" SelectText="Eliminar" ControlStyle-CssClass="btn btn-danger btn-sm" />
             </Columns>
         </asp:GridView>
-        <a class="btn btn-primary" href="NuevaEspecialidad.aspx">Agregar</a>
-
+        <asp:Button ID="btnAgregar" cssclass="btn btn-primary" runat="server" OnClick="btnAgregar_Click"  Text="Agregar" />
     </div>
     <div class="col"></div>
 </div>

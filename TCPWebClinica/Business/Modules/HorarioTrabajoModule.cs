@@ -21,9 +21,8 @@ namespace Business.Modules
             try
             {
                 // Set the stored procedure and parameters
-                _accesoDatos.setearConsulta("AgregarHorarioDeTrabajo");
-                _accesoDatos.setearParametro("@Id", horarioDeTrabajo.Id.ToString());
-                _accesoDatos.setearParametro("@IdMedico", horarioDeTrabajo.Id.ToString());
+                _accesoDatos.setearConsulta("AgregarHorario");
+                _accesoDatos.setearParametro("@IdMedico", horarioDeTrabajo.IdMedico.ToString());
                 _accesoDatos.setearParametro("@HorarioEntrada", horarioDeTrabajo.HoraEntrada.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Entrada.", nameof(horarioDeTrabajo.HoraEntrada)));
                 _accesoDatos.setearParametro("@HorarioSalida", horarioDeTrabajo.HoraSalida.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Salida.", nameof(horarioDeTrabajo.HoraSalida)));
 
@@ -69,6 +68,61 @@ namespace Business.Modules
 
             return horarioDeTrabajo;
         }
+
+        //public HorarioDeTrabajo agregarHorarioTrabajo(HorarioDeTrabajo horarioDeTrabajo)
+        //{
+
+        //    try
+        //    {
+        //        // Set the stored procedure and parameters
+        //        _accesoDatos.setearConsulta("AgregarHorarioDeTrabajo");
+        //        _accesoDatos.setearParametro("@Id", horarioDeTrabajo.Id.ToString());
+        //        _accesoDatos.setearParametro("@IdMedico", horarioDeTrabajo.Id.ToString());
+        //        _accesoDatos.setearParametro("@HorarioEntrada", horarioDeTrabajo.HoraEntrada.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Entrada.", nameof(horarioDeTrabajo.HoraEntrada)));
+        //        _accesoDatos.setearParametro("@HorarioSalida", horarioDeTrabajo.HoraSalida.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Salida.", nameof(horarioDeTrabajo.HoraSalida)));
+
+        //        // Execute the query
+        //        _accesoDatos.ejecutarLectura();
+
+        //        // Verifica si la lectura tiene filas y obtiene el ID generado
+        //        if (_accesoDatos.Lector.HasRows)
+        //        {
+        //            while (_accesoDatos.Lector.Read())
+        //            {
+        //                var idValue = _accesoDatos.Lector[0];
+        //                if (idValue is int idInt)
+        //                {
+        //                    horarioDeTrabajo.Id = idInt;
+        //                }
+        //                else if (idValue is decimal idDecimal)
+        //                {
+        //                    horarioDeTrabajo.Id = (int)idDecimal;
+        //                }
+        //                else if (idValue is long idLong)
+        //                {
+        //                    horarioDeTrabajo.Id = (int)idLong;
+        //                }
+        //                else
+        //                {
+        //                    throw new InvalidOperationException("Tipo de ID desconocido.");
+        //                }
+        //            }
+        //        }
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // Handle exceptions appropriately
+        //        throw new Exception("Error de conexión de SQL: " + ex.Message, ex);
+        //    }
+        //    finally
+        //    {
+        //        // Ensure the connection is closed
+        //        _accesoDatos.cerrarConexion();
+        //    }
+
+        //    return horarioDeTrabajo;
+        //}
 
         public bool eliminarHorarioTrabajo(int id)
         {
