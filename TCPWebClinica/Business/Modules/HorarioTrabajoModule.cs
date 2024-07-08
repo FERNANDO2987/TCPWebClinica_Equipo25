@@ -22,7 +22,8 @@ namespace Business.Modules
             {
                 // Set the stored procedure and parameters
                 _accesoDatos.setearConsulta("AgregarHorarioDeTrabajo");
-                _accesoDatos.setearParametro("@Id", horarioDeTrabajo.Id.ToString()); // Assuming Id is provided for updates, else should be set to a default value
+                _accesoDatos.setearParametro("@Id", horarioDeTrabajo.Id.ToString());
+                _accesoDatos.setearParametro("@IdMedico", horarioDeTrabajo.Id.ToString());
                 _accesoDatos.setearParametro("@HorarioEntrada", horarioDeTrabajo.HoraEntrada.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Entrada.", nameof(horarioDeTrabajo.HoraEntrada)));
                 _accesoDatos.setearParametro("@HorarioSalida", horarioDeTrabajo.HoraSalida.ToString() ?? throw new ArgumentException("Debe ingresar la Hora de Salida.", nameof(horarioDeTrabajo.HoraSalida)));
 
@@ -108,6 +109,7 @@ namespace Business.Modules
                 {
                     HorarioDeTrabajo aux = new HorarioDeTrabajo();
                     aux.Id = (int)_accesoDatos.Lector["Id"];
+                    aux.IdMedico = (int)_accesoDatos.Lector["IdMedico"];
                     aux.HoraEntrada = (DateTime)_accesoDatos.Lector["HorarioEntrada"];
                     aux.HoraSalida = (DateTime)_accesoDatos.Lector["HorarioSalida"];
 
