@@ -2,6 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+      
+ <div id="pacienteInfo" style="text-align: center;">
+    <h2 style="font-weight: bold;">
+        HC - <asp:Label ID="lblNombreApellido" runat="server" Text=""></asp:Label>
+    </h2>
+</div>
 
              
         <div id="form" style="display: flex; flex-direction: row; justify-content: start; width: 100%; margin-left: 2em;">

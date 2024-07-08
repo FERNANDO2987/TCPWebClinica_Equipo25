@@ -39,6 +39,8 @@ namespace WebApp
                 {
                     int id = int.Parse(Request.QueryString["id"].ToString());
                     CargarTurno(id);
+
+                  
                 }
             }
 
@@ -68,11 +70,13 @@ namespace WebApp
 
         protected void btnModificar_Click(object sender, EventArgs e)
         {
+            EnviarEmailModule enviarEmailModule = new EnviarEmailModule();
             try
             {
                 // Crear instancia de acceso a datos y módulo de turno
                 IAccesoDatos accesoDatos = new AccesoDatos();
                 TurnoModule turnoModule = new TurnoModule(accesoDatos);
+                PacienteModule pacienteModule = new PacienteModule(accesoDatos);
 
                 // Obtener el ID del turno a modificar desde la consulta de la URL
                 int idTurno = int.Parse(Request.QueryString["id"].ToString());
@@ -84,8 +88,8 @@ namespace WebApp
                 {
                     throw new Exception("No se encontró el turno especificado para modificar.");
                 }
+             
 
-                // Actualizar los datos del turno con los valores de los controles de la página
                 turnoExistente.Medico = new Medico { Id = int.Parse(ddlMedicos.SelectedValue) };
                 turnoExistente.Especialidad = new Especialidad { Id = int.Parse(dllEspecialidad.SelectedValue) };
                 turnoExistente.Observaciones = txtObservaciones.Text;
@@ -96,8 +100,25 @@ namespace WebApp
                 // Guardar los cambios en el módulo de turno
                 turnoModule.agregarTurno(turnoExistente);
 
+                // Obtener información del paciente
+                var paciente = pacienteModule.ObtenerPacientePorId(turnoExistente.Paciente.Id);
+
+                // Enviar correo electrónico
+                try
+                {
+                    enviarEmailModule.ArmarCorreo(paciente.Email, "Esto es una prueba piloto", "Hola que tal...");
+                    enviarEmailModule.EnviarEmail();
+                }
+                catch (Exception ex)
+                {
+                    Session.Add("Error al Enviar E-mail", ex);
+                    // Considera manejar el error de envío de correo de manera más específica
+                }
+
+
                 // Redireccionar a la página de visualización de turnos después de la modificación
-                Response.Redirect("Turno.aspx");
+                Response.Redirect("Turno.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
             }
             catch (Exception ex)
             {
@@ -293,10 +314,21 @@ namespace WebApp
         private void CargarTurno(int id)
         {
             TurnoModule turnoModule = new TurnoModule(accesoDatos);
+            PacienteModule pacienteModule = new PacienteModule(accesoDatos); 
             Business.Models.Turno turno = turnoModule.listarTurnos().Find(x => x.Id == id);
+            var paciente = turnoModule.listarTurnosConPacientes().Find(p => p.Id == id);
+            var result = pacienteModule.ObtenerPacientePorId(turno.Id);
 
-            if (turno != null)
+            if (turno != null || paciente!= null || result!=null)
             {
+                // Obtener nombre y apellido del paciente de los controles Label
+
+
+
+
+                lblNombreApellido.Text = $"{result.HistoriaClinica}-{paciente.ApellidoPaciente} {paciente.NombrePaciente}";
+
+
                 ddlMedicos.SelectedValue = turno.Medico.Id.ToString();
                 dllEspecialidad.SelectedValue = turno.Especialidad.Id.ToString();
                 txtObservaciones.Text = turno.Observaciones;
