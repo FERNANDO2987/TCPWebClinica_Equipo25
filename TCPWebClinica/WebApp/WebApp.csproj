@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Administradores.aspx" />
     <Content Include="Horarios.aspx" />
+    <Content Include="NuevoHorario.aspx" />
     <Content Include="NuevoMedico.aspx" />
     <Content Include="Medicos.aspx" />
     <Content Include="Content\Imagenes\carrito3.jpg" />
@@ -120,6 +121,13 @@
     </Compile>
     <Compile Include="Horarios.aspx.designer.cs">
       <DependentUpon>Horarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoHorario.aspx.cs">
+      <DependentUpon>NuevoHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NuevoHorario.aspx.designer.cs">
+      <DependentUpon>NuevoHorario.aspx</DependentUpon>
     </Compile>
     <Compile Include="NuevoMedico.aspx.cs">
       <DependentUpon>NuevoMedico.aspx</DependentUpon>
