@@ -20,7 +20,14 @@ namespace WebApp
 
             if (!(SeguridadModule.esAdmin(Session["Usuario"])))
             {
-                Response.Redirect("Turno.aspx", false);
+                if (SeguridadModule.esMedico(Session["Usuario"]))
+                {
+                    Response.Redirect("TurnosAsignados.aspx", false);
+                }
+                else
+                {
+                    Response.Redirect("Turno.aspx", false);
+                }
                 //Session.Add("error", "Solo los usuarios de tipo administrador pueden acceder al panel");
                 //Response.Redirect("Error.aspx", false);
             }
