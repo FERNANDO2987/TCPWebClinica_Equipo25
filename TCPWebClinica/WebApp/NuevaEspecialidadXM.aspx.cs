@@ -22,13 +22,30 @@ namespace WebApp
             }
             if (!(IsPostBack))
             {
-                if (Request.QueryString["idmed"] != null)
+                if (Request.QueryString["idesp"] != null)
                 {
                     cargarModificar();
+                }
+                else
+                {
+
+                    CargarEspecialidades(ddlEspecialidad);
+                    int idMed = int.Parse(Request.QueryString["idmed"]);
+                    txtId.Text = idMed.ToString();
+                    txtNombre.Visible = false;
                 }
             }
         }
 
+        private void CargarEspecialidades(DropDownList ddlEspecialidad)
+        {
+            List<Especialidad> especialidades = especialidadModule.listarEspecialidad();
+
+            foreach (var especialidad in especialidades)
+            {
+                ddlEspecialidad.Items.Add(new ListItem(especialidad.Nombre, especialidad.Id.ToString()));
+            }
+        }
         protected void cargarModificar()
         {
             Especialidad especialidad = new Especialidad();
@@ -40,6 +57,7 @@ namespace WebApp
 
             btnAgregar.Visible = false;
             btnEliminar.Visible = true;
+            ddlEspecialidad.Visible = false;
 
         }
         protected void btnEliminar_Click(object sender, EventArgs e)
@@ -52,7 +70,18 @@ namespace WebApp
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
+            int idMed = int.Parse(Request.QueryString["idmed"]);
+            int idEsp = int.Parse(ddlEspecialidad.SelectedValue);
+            if(!(especialidadModule.agregarExM(idMed, idEsp)))
+            {
+                Session.Add("error", "El medico seleccionado ya cuenta con esa especialidad");
+                Response.Redirect("Error.aspx", false);
+            }
+            else
+            {
+            Response.Redirect("Medicos.aspx", false);
 
+            }
         }
     }
 }

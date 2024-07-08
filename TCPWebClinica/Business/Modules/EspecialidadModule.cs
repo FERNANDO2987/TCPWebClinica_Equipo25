@@ -196,6 +196,34 @@ namespace Business.Modules
             }
         }
 
+        public bool agregarExM(int idmed, int idesp)
+        {
+            try
+            {
+                // Set the stored procedure and parameters
+                _accesoDatos.setearConsulta("AgregarExM");
+                _accesoDatos.setearParametro("@idM", idmed.ToString()); // Assuming Id is provided for updates, else should be set to a default value
+                _accesoDatos.setearParametro("@idE", idesp.ToString());
+
+
+                // Execute the query
+                _accesoDatos.ejecutarLectura();
+                return true;
+                
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions appropriately
+                return false;
+                throw new Exception("Error de conexión de SQL: " + ex.Message, ex);
+            }
+            finally
+            {
+                // Ensure the connection is closed
+                _accesoDatos.cerrarConexion();
+            }
+        }
+
 
     }
 }

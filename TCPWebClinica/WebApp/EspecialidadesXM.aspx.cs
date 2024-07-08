@@ -17,7 +17,7 @@ namespace WebApp
         {
             if (!(SeguridadModule.esAdmin(Session["Usuario"])))
             {
-                Response.Redirect("Turno.aspx", false);
+                Response.Redirect("Default.aspx", false);
             }
 
             if (!IsPostBack)
@@ -39,6 +39,12 @@ namespace WebApp
             
             Response.Redirect("NuevaEspecialidadXM.aspx?idmed=" + id + "&idesp=" + id2);
 
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(Request.QueryString["id"]);
+            Response.Redirect("NuevaEspecialidadXM.aspx?idmed=" + id, false);
         }
     }
 }

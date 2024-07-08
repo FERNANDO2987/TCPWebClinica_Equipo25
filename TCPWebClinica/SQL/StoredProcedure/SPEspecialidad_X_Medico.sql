@@ -30,3 +30,14 @@ as
 begin 
 	delete Especialidades_X_Medico where IdMedico = @idMedico and IdEspecialidad = @idEspecialidad
 end
+
+GO
+
+CREATE PROCEDURE AgregarExM
+	@idE int,
+	@idM int
+AS
+BEGIN 
+	INSERT INTO Especialidades_X_Medico(IdMedico, IdEspecialidad)
+	VALUES (@idM,@idE)
+END

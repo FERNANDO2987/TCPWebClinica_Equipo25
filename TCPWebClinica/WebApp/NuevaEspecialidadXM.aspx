@@ -11,7 +11,12 @@
                 <p style="color:red;">(*) Campos obligatorios</p>
             <div class="form-floating mb-3">
                 <asp:TextBox type="text" CssClass="form-control" ID="txtId" placeholder="Id" ReadOnly="true"  runat="server" />
-                <label for="Id">ID </label>
+                <label for="Id">ID del medico </label>
+            </div>
+            <div id="especialidad-ls" style="padding-top: 20px;">
+                <asp:DropDownList ID="ddlEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true">
+                    <asp:ListItem Text="Especialidad *" />
+                </asp:DropDownList>
             </div>
             <div class="form-floating mb-3">
                 <asp:TextBox type="text" CssClass="form-control" ID="txtNombre" placeholder="Nombre" ReadOnly="true" required="true" runat="server" />
