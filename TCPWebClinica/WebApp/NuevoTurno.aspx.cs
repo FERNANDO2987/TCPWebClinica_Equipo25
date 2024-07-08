@@ -342,7 +342,7 @@ namespace WebApp
 
                 // Guardar los datos del paciente seleccionado en los controles ocultos
                 hfPacienteId.Value = pacienteId;
-                txtNombreApellidoPaciente.Text = nombreApellido;
+                lblNombreApellido.Text ="Paciente - " + nombreApellido;
 
                 // Mostrar los datos del paciente seleccionado en el div
                 selectedPatientDetails.Style["display"] = "block";

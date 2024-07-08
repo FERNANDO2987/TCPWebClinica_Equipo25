@@ -12,7 +12,7 @@
             <h3>Agregar Turno</h3>
         </div>
 
-          <div id="form3" style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 2em 0;">
+        <div id="form3" style="display: flex; flex-direction: column; align-items: center; width: 100%; margin: 2em 0;">
             <div class="col-12 col-md-8" id="columna3">
                 <div class="form-floating mb-3 search-container">
                     <div class="input-group input-group-custom">
@@ -25,38 +25,43 @@
                 </div>
 
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-    <ContentTemplate>
-        <div class="mt-4">
-            <asp:GridView ID="gvPacientes" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered" OnRowCommand="gvPacientes_RowCommand" DataKeyNames="Id">
-                <Columns>
-                    <asp:BoundField DataField="HistoriaClinica" HeaderText="HC" />
-                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
-                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
-                    <asp:BoundField DataField="Documento" HeaderText="DNI" />
-                    <asp:TemplateField>
-                        <ItemTemplate>
-                            <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CommandName="Seleccionar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                </Columns>
-            </asp:GridView>
-            <asp:TextBox ID="txtNombreApellidoPaciente" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
-            <asp:HiddenField ID="hfPacienteId" runat="server" />
-        </div>
-    </ContentTemplate>
-    <Triggers>
-        <asp:AsyncPostBackTrigger ControlID="txtBuscarPaciente" EventName="TextChanged" />
-    </Triggers>
-</asp:UpdatePanel>
+                    <ContentTemplate>
+                        <div class="mt-4">
+                            <asp:GridView ID="gvPacientes" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered" OnRowCommand="gvPacientes_RowCommand" DataKeyNames="Id">
+                                <Columns>
+                                    <asp:BoundField DataField="HistoriaClinica" HeaderText="HC" />
+                                    <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                                    <asp:BoundField DataField="Apellido" HeaderText="Apellido" />
+                                    <asp:BoundField DataField="Documento" HeaderText="DNI" />
+                                    <asp:TemplateField>
+                                        <ItemTemplate>
+                                            <asp:Button ID="btnSeleccionar" runat="server" Text="Seleccionar" CommandName="Seleccionar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-success" />
+                                        </ItemTemplate>
+                                    </asp:TemplateField>
+                                </Columns>
+                            </asp:GridView>
+                          
+                            <div id="pacienteInfo" style="text-align: center;">
+                                <h2 style="font-weight: bold;">
+                                    <asp:Label ID="lblNombreApellido" runat="server" Text=""></asp:Label>
+                                </h2>
+                            </div>
+                            <asp:HiddenField ID="hfPacienteId" runat="server" />
+                        </div>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="txtBuscarPaciente" EventName="TextChanged" />
+                    </Triggers>
+                </asp:UpdatePanel>
             </div>
         </div>
 
         <!-- Campo oculto para almacenar el ID del paciente seleccionado -->
-     
+
 
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: start; width: 100%; margin-left: 2em;">
-            <div class="col-1  me-5" id= "columna1" style="width: 45%;">
+            <div class="col-1  me-5" id="columna1" style="width: 45%;">
 
 
                 <div id="fechaTurno-ls" style="padding-top: 20px;">
@@ -73,13 +78,13 @@
 
                 <div id="especialidades" style="padding-top: 20px;">
                     <label for="dllEspecialidad">Especialidades *</label>
-                    <asp:DropDownList ID="dllEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true" >
+                    <asp:DropDownList ID="dllEspecialidad" runat="server" class="form-select" aria-label="Default select example" required="true">
                         <asp:ListItem Text="Especialidades *" Enabled="false" />
                     </asp:DropDownList>
                 </div>
             </div>
 
-           <div class="col-2  me-3" id="columna2" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 45%;">
+            <div class="col-2  me-3" id="columna2" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 45%;">
 
 
 
@@ -114,13 +119,13 @@
 
         <div id="agregar" class="col-3" style="display: flex; justify-content: end; width: 100%; margin: 2em 15em 0 0;">
             <asp:Button Text="Agregar" CssClass="btn btn-outline-success" ID="btnAgregar" OnClick="btnAgregar_Click" runat="server" />
-      
+
         </div>
     </div>
 
 
-    
-    <div id="selectedPatientDetails" runat="server" style="display:none;">
+
+    <div id="selectedPatientDetails" runat="server" style="display: none;">
         <h4>Paciente Seleccionado</h4>
         <p id="selectedPatientName" runat="server"></p>
     </div>
@@ -130,7 +135,7 @@
     <script src="Script/mostrarTablaPaciente.js"></script>
 
     <script src="Script/activarBotonBuscar.js"></script>
-   
+
     <script src="Script/activarBoton.js"></script>
 
 
