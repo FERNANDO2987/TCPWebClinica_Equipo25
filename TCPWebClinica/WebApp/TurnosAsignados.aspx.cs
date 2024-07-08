@@ -26,7 +26,8 @@ namespace WebApp
 
         protected void dgvTurnosAsignados_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            var id = int.Parse(dgvTurnosAsignados.SelectedDataKey.Value.ToString());
+            Response.Redirect("AgregarObservacion.aspx?id=" + id, false);
         }
     }
 }

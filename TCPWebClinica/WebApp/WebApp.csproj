@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administradores.aspx" />
+    <Content Include="AgregarObservacion.aspx" />
     <Content Include="EspecialidadesXM.aspx" />
     <Content Include="Horarios.aspx" />
     <Content Include="NuevaEspecialidadXM.aspx" />
@@ -116,6 +117,13 @@
     </Compile>
     <Compile Include="Administradores.aspx.designer.cs">
       <DependentUpon>Administradores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarObservacion.aspx.cs">
+      <DependentUpon>AgregarObservacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarObservacion.aspx.designer.cs">
+      <DependentUpon>AgregarObservacion.aspx</DependentUpon>
     </Compile>
     <Compile Include="EspecialidadesXM.aspx.cs">
       <DependentUpon>EspecialidadesXM.aspx</DependentUpon>
