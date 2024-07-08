@@ -99,3 +99,16 @@ AS
 BEGIN
 	SELECT * FROM HorarioDeTrabajo WHERE IdMedico = @id and Deleted = 0
 END
+
+go
+--------------------------------------------------------------------------
+CREATE PROCEDURE AgregarHorario
+	@idMedico int,
+    @HorarioEntrada datetime,
+	@HorarioSalida datetime
+AS
+BEGIN
+	INSERT INTO HorarioDeTrabajo (HorarioEntrada, HorarioSalida, IdMedico, CreatedDate, Deleted, DeleteDate )
+	VALUES(@HorarioEntrada, @HorarioSalida, @idMedico,GETDATE(),0,null);
+END
+   
