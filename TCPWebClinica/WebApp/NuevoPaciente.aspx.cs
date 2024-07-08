@@ -134,7 +134,10 @@ namespace WebApp
 
                 module.agregarPaciente(paciente);
 
-                Response.Redirect("Pacientes.aspx");
+            
+
+                Response.Redirect("Pacientes.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
             }
             catch (Exception ex)
             {
