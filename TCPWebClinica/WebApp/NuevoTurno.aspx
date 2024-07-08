@@ -56,7 +56,7 @@
 
 
         <div id="form" style="display: flex; flex-direction: row; justify-content: start; width: 100%; margin-left: 2em;">
-            <div class="col-1" id="columna1" style="width: 45%;">
+            <div class="col-1  me-5" id= "columna1" style="width: 45%;">
 
 
                 <div id="fechaTurno-ls" style="padding-top: 20px;">
@@ -79,7 +79,7 @@
                 </div>
             </div>
 
-            <div class="col-2" id="columna2" style="width: 45%;">
+           <div class="col-2  me-3" id="columna2" style="display: flex; flex-direction: column; justify-content: space-evenly; width: 45%;">
 
 
 
