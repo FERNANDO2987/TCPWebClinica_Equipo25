@@ -204,7 +204,8 @@ namespace WebApp
                 p.ObraSocial = new ObraSocial { Id = int.Parse(ddlObraSocial.SelectedValue) };
                 pacienteModule.agregarPaciente(p);
 
-                Response.Redirect("Pacientes.aspx");
+                Response.Redirect("Pacientes.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
 
             }
             catch (Exception ex)
