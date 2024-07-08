@@ -20,3 +20,13 @@ BEGIN
 
   
 END
+
+go
+
+create procedure eliminarEspecialidadXM
+	@idMedico int,
+	@idEspecialidad int
+as
+begin 
+	delete Especialidades_X_Medico where IdMedico = @idMedico and IdEspecialidad = @idEspecialidad
+end
