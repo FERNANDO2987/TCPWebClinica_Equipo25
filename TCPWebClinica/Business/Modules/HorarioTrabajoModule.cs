@@ -135,8 +135,8 @@ namespace Business.Modules
             var result = new List<HorarioDeTrabajo>();
             try
             {
-                _accesoDatos.setearConsulta("ObtenerHorariosPorMedico");
-                _accesoDatos.setearParametro("@IdMedico", idMedico.ToString());
+                _accesoDatos.setearConsulta("ListarHorarios_x_Medico");
+                _accesoDatos.setearParametro("@id", idMedico.ToString());
                 _accesoDatos.ejecutarLectura();
 
                 while (_accesoDatos.Lector.Read())
@@ -160,6 +160,37 @@ namespace Business.Modules
                 _accesoDatos.cerrarConexion();
             }
         }
+
+        //public List<HorarioDeTrabajo> listarHorarioTrabajoPorMedico(int idMedico)
+        //{
+        //    var result = new List<HorarioDeTrabajo>();
+        //    try
+        //    {
+        //        _accesoDatos.setearConsulta("ObtenerHorariosPorMedico");
+        //        _accesoDatos.setearParametro("@IdMedico", idMedico.ToString());
+        //        _accesoDatos.ejecutarLectura();
+
+        //        while (_accesoDatos.Lector.Read())
+        //        {
+        //            HorarioDeTrabajo aux = new HorarioDeTrabajo();
+        //            aux.Id = (int)_accesoDatos.Lector["Id"];
+        //            aux.HoraEntrada = (DateTime)_accesoDatos.Lector["HorarioEntrada"];
+        //            aux.HoraSalida = (DateTime)_accesoDatos.Lector["HorarioSalida"];
+
+        //            result.Add(aux);
+        //        }
+
+        //        return result;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception("Error al obtener los horarios de trabajo por médico: " + ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        _accesoDatos.cerrarConexion();
+        //    }
+        //}
 
     }
 }

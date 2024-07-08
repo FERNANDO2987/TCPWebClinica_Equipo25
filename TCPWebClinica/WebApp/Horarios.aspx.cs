@@ -23,8 +23,8 @@ namespace WebApp
             if (!IsPostBack)
             {
                 int idUrl = int.Parse(Request.QueryString["id"]);
-                //dgvHorarios.DataSource = module.listarHorarioTrabajoPorMedico(idUrl);
-                //dgvHorarios.DataBind();
+                dgvHorarios.DataSource = module.listarHorarioTrabajoPorMedico(idUrl);
+                dgvHorarios.DataBind();
             }
         }
 

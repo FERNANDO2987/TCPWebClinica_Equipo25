@@ -41,8 +41,8 @@
                     <%--<label for="Contraseña">Contraseña *</label>--%>
                 </div>
                 <div class="form-floating mb-3">
-                    <asp:Button ID="btnHorarios" cssclass="btn btn-link" Visible="false" Text="Ver Horarios" runat="server" />
-                    <asp:Button ID="btnEspecialidades" cssclass="btn btn-link" Visible="false" Text="Ver Especialidades" runat="server" />
+                    <asp:Button onclick="btnHorarios_Click" ID="btnHorarios"  cssclass="btn btn-link" Visible="false" Text="Ver Horarios" runat="server" />
+                    <asp:Button onclick="btnEspecialidades_Click" ID="btnEspecialidades" cssclass="btn btn-link" Visible="false" Text="Ver Especialidades" runat="server" />
                 </div>
                 <hr />
                 <div class="form-floating mb-3">

@@ -30,8 +30,7 @@ namespace WebApp
         protected void dgvEspecialidades_SelectedIndexChanged(object sender, EventArgs e)
         {
             var id = int.Parse(dgvEspecialidades.SelectedDataKey.Value.ToString());
-            especialidadModule.eliminarEspecilidad(id);
-            Response.Redirect("Especialidades.aspx", false);
+            Response.Redirect("NuevaEspecialidad.aspx?id=" + id, false);
         }
     }
 }

@@ -176,5 +176,15 @@ namespace WebApp
                 //throw ex;
             }
         }
+
+        protected void btnEspecialidades_Click(object sender, EventArgs e)
+        {
+        }
+
+        protected void btnHorarios_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(Request.QueryString["id"]);
+            Response.Redirect("Horarios.aspx?id=" + id);
+        }
     }
 }

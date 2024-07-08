@@ -11,7 +11,7 @@
                 <Columns>
                     <asp:BoundField HeaderText="ID" DataField="Id" />
                     <asp:BoundField HeaderText="Especialidad" DataField="Nombre" />
-                    <asp:CommandField ShowSelectButton="True" SelectText="Eliminar" ControlStyle-CssClass="btn btn-danger btn-sm" />
+                    <asp:CommandField ShowSelectButton="True" SelectText="Seleccionar" ControlStyle-CssClass="btn btn-secondary btn-sm" />
                 </Columns>
             </asp:GridView>
             <a class="btn btn-primary" href="NuevaEspecialidad.aspx">Agregar</a>

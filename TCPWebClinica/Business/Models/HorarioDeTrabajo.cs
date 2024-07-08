@@ -9,6 +9,7 @@ namespace Business.Models
     public class HorarioDeTrabajo
     {
         public int Id { get; set; }
+        public string Title { get; set; }
         public DateTime HoraEntrada { get; set; }
         public DateTime HoraSalida { get; set; }
 
@@ -17,6 +18,13 @@ namespace Business.Models
             get
             {
                 return $"Entrada: {HoraEntrada.ToString("yyyy-MM-dd HH:mm:ss")}, Salida: {HoraSalida.ToString("yyyy-MM-dd HH:mm:ss")}";
+            }
+        }
+        public string Hora
+        {
+            get
+            {
+                return $"Entrada: {HoraEntrada.ToString("HH:mm:ss")}, Salida: {HoraSalida.ToString("HH:mm:ss")}";
             }
         }
 

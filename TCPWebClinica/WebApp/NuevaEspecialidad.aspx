@@ -17,8 +17,10 @@
                     <asp:TextBox type="text" CssClass="form-control" ID="txtNombre" placeholder="Nombre" required="true" runat="server" />
                     <label for="nombre">Nombre *</label>
                 </div>
-                <div class="ps-5" margin-top: 2em;">
+                <div class="ps-2" margin-top: 2em;">
                     <asp:Button Text="Agregar" CssClass="btn btn-outline-primary m-1" ID="btnAgregar" OnClick="btnAgregar_Click" runat="server" />
+                    <asp:Button Visible="false" Text="Modificar" CssClass="btn btn-outline-success m-1" ID="btnModificar" OnClick="btnModificar_Click" runat="server" />
+                    <asp:Button Visible="false" Text="Eliminar" CssClass="btn btn-outline-danger m-1" ID="btnEliminar" OnClick="btnEliminar_Click" runat="server" />
                 </div>
             </div>
         </div>
