@@ -103,6 +103,34 @@ namespace Business.Modules
             }
         }
 
+        public bool eliminarEspecialidadXM(int idMedico, int idEspecialidad)
+        {
+            try
+            {
+                _accesoDatos.setearConsulta("EliminarEspecialidadXM");
+                _accesoDatos.setearParametro("@idMedico", idMedico.ToString()); 
+                _accesoDatos.setearParametro("@idEspecialidad", idEspecialidad.ToString());
+                _accesoDatos.ejecutarLectura(); 
+
+                if (_accesoDatos.Lector.Read())
+                {
+                    bool resultado = _accesoDatos.Lector.GetBoolean(0);
+                    return resultado;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
+            {
+
+                return false;
+            }
+            finally
+            {
+                _accesoDatos.cerrarConexion(); // Asegurarnos de cerrar la conexión
+            }
+        }
+
         public List<Especialidad> listarEspecialidad()
         {
             var result = new List<Especialidad>();
