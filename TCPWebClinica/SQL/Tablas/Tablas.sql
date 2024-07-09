@@ -139,10 +139,32 @@ create table [dbo].[Horario_x_Medico](
 
 )
 
+GO
 
+CREATE TABLE MedicoHorarios (
+    [Id] INT IDENTITY(1,1) PRIMARY KEY,
+    [MedicoId] INT NOT NULL,
+    [DiaSemana] [INT] NOT NULL, -- Utilizamos INT para almacenar el valor de DayOfWeek (0 para Domingo, 1 para Lunes, etc.)
+    [HoraInicio] [TIME] NOT NULL,
+    [HoraFin] [TIME] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL,
+    [Deleted] [bit] NOT NULL,
+  [DeleteDate] [datetime] NULL
+    CONSTRAINT FK_Medico FOREIGN KEY (MedicoId) REFERENCES Medicos(Id) -- Asumimos que hay una tabla Medicos con una columna Id
+);
 
+--EJEMPLOS PARA CARGAR HORARIOS
+INSERT INTO MedicoHorarios (MedicoId, DiaSemana, HoraInicio, HoraFin, CreatedDate, Deleted, DeleteDate)
+VALUES 
+(1, 1, '09:00', '17:00', GETDATE(), 0, NULL), -- Lunes de 09:00 a 17:00
+(1, 3, '10:00', '18:00', GETDATE(), 0, NULL), -- Miércoles de 10:00 a 18:00
+(1, 5, '08:00', '14:00', GETDATE(), 0, NULL); -- Viernes de 08:00 a 14:00
 
-
+INSERT INTO MedicoHorarios (MedicoId, DiaSemana, HoraInicio, HoraFin, CreatedDate, Deleted, DeleteDate)
+VALUES 
+(4, 2, '09:00', '15:00', GETDATE(), 0, NULL), -- Martes de 09:00 a 15:00
+(4, 4, '12:00', '20:00', GETDATE(), 0, NULL), -- Jueves de 12:00 a 20:00
+(4, 6, '09:00', '13:00', GETDATE(), 0, NULL); -- Sábado de 09:00 a 13:00
 
 
 
