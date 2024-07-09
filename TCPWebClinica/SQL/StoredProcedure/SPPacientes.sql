@@ -19,7 +19,7 @@ CREATE PROCEDURE [dbo].[AgregarPaciente]
 	@Nombre NVARCHAR(100),
 	@Apellido NVARCHAR(100),
 	@Documento int,
-	@FechaNaciemiento DateTime,
+	@FechaNacimiento DateTime,
 	@Celular NVARCHAR(100),
 	@Email NVARCHAR(100),
 	@Sexo NVARCHAR(100),
@@ -35,7 +35,7 @@ BEGIN
 	                               Nombre = @Nombre,
 								   Apellido = @Apellido,
 								   Documento = @Documento,
-								   FechaNacimiento = @FechaNaciemiento,
+								   FechaNacimiento = @FechaNacimiento,
 								   Celular = @Celular,
 								   Email = @Email,
 								   Sexo = @Sexo,
@@ -47,7 +47,7 @@ BEGIN
 
 INSERT INTO Paciente(HC,Nombre,Apellido,Documento,FechaNacimiento,Celular,Email,Sexo,IdObraSocial,CreatedDate,Deleted,DeleteDate)
 
-VALUES(@HC,@Nombre,@Apellido,@Documento,@FechaNaciemiento,@Celular,@Email,@Sexo,@IdObraSocial,GETDATE(),0,NULL)
+VALUES(@HC,@Nombre,@Apellido,@Documento,@FechaNacimiento,@Celular,@Email,@Sexo,@IdObraSocial,GETDATE(),0,NULL)
 
 
 
@@ -56,6 +56,7 @@ VALUES(@HC,@Nombre,@Apellido,@Documento,@FechaNaciemiento,@Celular,@Email,@Sexo,
 	
 	
 END
+
 
 GO
 
