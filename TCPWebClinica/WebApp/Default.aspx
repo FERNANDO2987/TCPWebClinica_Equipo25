@@ -22,23 +22,26 @@
         </div>--%>
         <div class="col">
             <a class="btn btn-outline-success fs-2" style="width: 100%; height: 115px; line-height: 100px;" href="Medicos.aspx">Medicos</a>
-        </div>                                                                   
-        <div class="col">                                                        
+        </div>
+        <div class="col">
+            <a class="btn btn-outline-success fs-2" style="width: 100%; height: 115px; line-height: 100px;" href="GestionHorariosMedicos.aspx">Gestion Horarios de Medicos</a>
+        </div>
+        <div class="col">
             <a class="btn btn-outline-success fs-2" style="width: 100%; height: 115px; line-height: 100px;" href="Pacientes.aspx">Pacientes</a>
-        </div>                                                                   
-        <div class="col">                                                        
+        </div>
+        <div class="col">
             <a class="btn btn-outline-success fs-2" style="width: 100%; height: 115px; line-height: 100px;" href="ObrasSociales.aspx">Obras Sociales</a>
-        </div>                                                                   
-        <div class="col">                                                        
+        </div>
+        <div class="col">
             <a class="btn btn-outline-success fs-2" style="width: 100%; height: 115px; line-height: 100px;" href="Turno.aspx">Turnos</a>
-        </div>                                                                   
-        <div class="col">                                                        
+        </div>
+        <div class="col">
             <a class="btn btn-outline-success fs-2" style="width: 100%; height: 115px; line-height: 100px;" href="Usuarios.aspx">Usuarios</a>
-        </div>                                                                   
-        <div class="col">                                                        
+        </div>
+        <div class="col">
             <a class="btn btn-outline-success fs-2" style="width: 100%; height: 115px; line-height: 100px;" href="Especialidades.aspx">Especialidades</a>
-        </div>                                                                   
-        <div class="col">                                                        
+        </div>
+        <div class="col">
             <a class="btn btn-outline-success fs-2" style="width: 100%; height: 115px; line-height: 100px;" href="EstadoTurnos.aspx">Estado Turno</a>
         </div>
     </div>

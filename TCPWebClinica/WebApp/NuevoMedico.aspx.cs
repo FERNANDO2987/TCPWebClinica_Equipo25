@@ -21,7 +21,7 @@ namespace WebApp
                 if (Request.QueryString["id"] != null)
                 {
                     SetupModificar();
-                    
+
                 }
                 else
                 {
@@ -76,13 +76,7 @@ namespace WebApp
         {
             try
             {
-                // Obtener días seleccionados
-                List<string> diasSeleccionados = new List<string>();
-                if (chkLunes.Checked) diasSeleccionados.Add("Lunes");
-                if (chkMartes.Checked) diasSeleccionados.Add("Martes");
-                if (chkMiercoles.Checked) diasSeleccionados.Add("Miércoles");
-                if (chkJueves.Checked) diasSeleccionados.Add("Jueves");
-                if (chkViernes.Checked) diasSeleccionados.Add("Viernes");
+               
 
                 // Obtener horarios seleccionados
                 string horarioEntradaSeleccionado = ddlHorarioEntrada.SelectedValue;
@@ -206,7 +200,7 @@ namespace WebApp
             Response.Redirect("Horarios.aspx?id=" + id);
         }
 
-      
+
     }
 
 
