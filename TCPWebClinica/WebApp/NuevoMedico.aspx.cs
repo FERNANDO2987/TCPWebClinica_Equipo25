@@ -70,10 +70,24 @@ namespace WebApp
             }
         }
 
+
+
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
             try
             {
+                // Obtener días seleccionados
+                List<string> diasSeleccionados = new List<string>();
+                if (chkLunes.Checked) diasSeleccionados.Add("Lunes");
+                if (chkMartes.Checked) diasSeleccionados.Add("Martes");
+                if (chkMiercoles.Checked) diasSeleccionados.Add("Miércoles");
+                if (chkJueves.Checked) diasSeleccionados.Add("Jueves");
+                if (chkViernes.Checked) diasSeleccionados.Add("Viernes");
+
+                // Obtener horarios seleccionados
+                string horarioEntradaSeleccionado = ddlHorarioEntrada.SelectedValue;
+                string horarioSalidaSeleccionado = ddlHorarioSalida.SelectedValue;
+
                 MedicoModule module = new MedicoModule(new AccesoDatos());
                 UsuariosModule usuariosModule = new UsuariosModule(new AccesoDatos());
                 int horarioEntrada = int.Parse(ddlHorarioEntrada.SelectedValue.Replace(":00hs", ""));
@@ -86,7 +100,6 @@ namespace WebApp
                     Email = txtEmail.Text,
                     Rol = new Rol() { Id = 3, Descripcion = "Medico" }
                 };
-                //usuariosModule.agregarUsuario(usuario);
 
                 Especialidad especialidad = new Especialidad()
                 {
@@ -95,13 +108,12 @@ namespace WebApp
 
                 HorarioDeTrabajo horarioDeTrabajo = new HorarioDeTrabajo()
                 {
-                    HoraEntrada = new DateTime(2024,1,1, horarioEntrada,0,0),
+                    HoraEntrada = new DateTime(2024, 1, 1, horarioEntrada, 0, 0),
                     HoraSalida = new DateTime(2024, 1, 1, horarioSalida, 0, 0),
                 };
 
                 Medico medico = new Medico()
                 {
-                    //Id = 4,
                     Apellido = string.IsNullOrWhiteSpace(txtApellido.Text) ? string.Empty : txtApellido.Text,
                     Nombre = string.IsNullOrWhiteSpace(txtNombre.Text) ? string.Empty : txtNombre.Text,
                     Email = string.IsNullOrWhiteSpace(txtEmail.Text) ? string.Empty : txtEmail.Text,
@@ -109,16 +121,21 @@ namespace WebApp
                     HorarioDeTrabajo = new List<HorarioDeTrabajo>() { horarioDeTrabajo },
                 };
 
-                //module.agregarMedico(medico);
+                // Agregar usuario y médico
                 module.agregarUsuarioyMedico(usuario, medico);
+
+                // Llamar al módulo DiaTrabajoModule para seleccionar los horarios de trabajo
+                DiaTrabajoModule diaTrabajoModule = new DiaTrabajoModule(new AccesoDatos(), module);
+                diaTrabajoModule.SeleccionarHorariosTrabajo();
 
                 Response.Redirect("Medicos.aspx");
             }
             catch (Exception ex)
             {
-                //throw ex;
+                // Manejar la excepción adecuadamente
             }
         }
+
 
         private void CargarHorarioEntrada(DropDownList horario)
         {
@@ -188,5 +205,9 @@ namespace WebApp
             int id = int.Parse(Request.QueryString["id"]);
             Response.Redirect("Horarios.aspx?id=" + id);
         }
+
+      
     }
+
+
 }
