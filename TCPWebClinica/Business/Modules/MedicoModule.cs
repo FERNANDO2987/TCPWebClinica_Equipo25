@@ -11,9 +11,11 @@ namespace Business.Modules
     public class MedicoModule : IMedicoModule
     {
         private readonly IAccesoDatos _accesoDatos;
+ 
         public MedicoModule(IAccesoDatos accesoDatos) 
         {
           _accesoDatos = accesoDatos;
+            
         }   
         public void agregarUsuarioyMedico(Usuario usu, Medico medico)
         {
